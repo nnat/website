@@ -33,7 +33,7 @@
         <!-- <p class="lead">Grow quality food @home</p> -->
     </div>
 
-    <p class="lead text-center">BioBOX is an appliance combining a living ecosystem with latest technology to produce healthy and sustainable food just where you live.</p>
+    <p class="lead text-center">RiseBOX is an appliance combining a living ecosystem with latest technology to produce healthy and sustainable food just where you live.</p>
 
     <div id="leadSuccess" class="alert alert-success" role="alert" style="display:none">
 
@@ -47,9 +47,9 @@
         <!-- <div class="center-block"> -->
         <%= form_for @lead, remote: true, html: {class: 'form-inline _leadForm', role: 'form'} do |f| %>
             <div class="form-group">
-                <%= f.text_field :email, class: 'form-control input-lg', size: '35', placeholder: 'Enter your email for updates' %>
+                <%= f.text_field :email, class: 'form-control input-lg', size: '35', placeholder: 'Enter your email for updates', id: 'lead-email' %>
             </div>
-            <button type="submit" class="btn btn-success btn-lg">Get notified</button>
+            <button type="submit" class="btn btn-success btn-lg">Stay in touch</button>
         <% end %>
         <!-- </div> -->
     </div>
@@ -57,15 +57,15 @@
     <div class="row marketing">
         <div class="col-lg-6">
             <h4><span class="glyphicon glyphicon-tint"></span>&nbsp;&nbsp;Freshest food</h4>
-            <p class="text-justify">Tasty, juicy, fully mature and with all the vitamin & minerals. BioBOX products are always premium quality.</p>
+            <p class="text-justify">Tasty, juicy, fully mature and with all the vitamins & minerals. The food you grow with RiseBOX is always premium quality.</p>
 
             <h4><span class="glyphicon glyphicon-dashboard"></span>&nbsp;&nbsp;Hassle Free</h4>
-            <p class="text-justify">No farming skills needed. BioBOX watches the environment, growth parameters and constantly optimizes the system even when you're out.</p>
+            <p class="text-justify">No farming skills needed. RiseBOX watches the environment, growth parameters and constantly optimizes the system even when you're out.</p>
         </div>
 
         <div class="col-lg-6">
             <h4><span class="glyphicon glyphicon-leaf"></span>&nbsp;&nbsp;100% Organic</h4>
-            <p class="text-justify">No chemical fertilizers, treatments nor antibiotic. Your safe as you know exactly what you eat. <br/><br/>   </p>
+            <p class="text-justify">No chemical fertilizers, treatments nor antibiotic. You are safe and know exactly what you eat. <br/><br/>   </p>
 
             <!-- <h4><span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;Education & Entertainment</h4>
             <p>A living ecosystem next to you is an incredible opportunity to admire and learn from nature</p> -->
@@ -76,7 +76,7 @@
     </div>
 
     <div class="footer">
-        <p>© BioBox SAS 2014</p>
+        <p>© RiseBox SAS 2014</p>
     </div>
 
 </div>

@@ -2,7 +2,7 @@ class LeadsController < ApplicationController
   def create
     puts "before #{params}"
     @lead = Lead.new(lead_params)
-    redirect_to(root_path) unless @lead.save
+    @lead_saved = @lead.save
   end
 
   private
