@@ -35,6 +35,8 @@ end
 
 group :production do
   gem 'pg'
+  gem 'rails_log_stdout',           git: 'https://github.com/heroku/rails_log_stdout.git', branch: 'master'
+  gem 'rails3_serve_static_assets', git: 'https://github.com/heroku/rails3_serve_static_assets.git', branch: 'master'
 end
 
 # Use ActiveModel has_secure_password
