@@ -19,6 +19,19 @@ body {
   line-height: 40px;
 }
 
+.header .logo {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+.header h1.baseline {
+  margin-top: 10px;
+  font-size: 24px;
+  color: #777;
+  padding-right: 5px;
+}
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;
@@ -40,7 +53,7 @@ body {
 .jumbotron {
   text-align: bottom;
   border-bottom: 1px solid #e5e5e5;
-  background: image-url('home/kitchen_1024.jpg') no-repeat center center;
+  background: image-url('home/kitchen_765.jpg') no-repeat center center;
 
   width: 100%;
   height: 380px;
