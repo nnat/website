@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#index'
+  get 'well_not_ready_yet' => 'home#well_not_ready_yet'
 
   resources :leads
 
