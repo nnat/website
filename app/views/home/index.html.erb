@@ -1,16 +1,17 @@
 <div class="container">
 
     <div class="header">
-        <!-- <ul class="nav nav-pills pull-right">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul> -->
+
         <!-- <h1><%# image_tag "home/logo3.jpeg", size: '150x90'%><small>Grow quality food @home</small></h1> -->
         <div class="row">
             <div class="col-lg-12 logo">
                 <%= image_tag "home/logo.png", width: '150'%>
                 <h1 class="baseline pull-right">Grow quality food @home</h1>
+                <!-- <ul class="nav nav-pills pull-right">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">How it works</a></li>
+                    <li><a href="#">About</a></li>
+                </ul> -->
             </div>
         </div>
     </div>
@@ -41,7 +42,7 @@
         <!-- <div class="center-block"> -->
         <%= form_for @lead, remote: true, html: {class: 'form-inline _leadForm', role: 'form'} do |f| %>
             <div class="form-group">
-                <%= f.text_field :email, class: 'form-control input-lg', size: '35', placeholder: 'Enter your email for updates', id: 'lead-email' %>
+                <%= f.text_field :email, class: 'form-control input-lg', size: '35', placeholder: 'Enter your email for updates', id: 'lead-email', autofocus: true %>
             </div>
             <button type="submit" class="btn btn-success btn-lg">Stay in touch</button>
         <% end %>
@@ -52,8 +53,8 @@
         <div class="col-lg-6 mbm">
             <h4><span class="glyphicon glyphicon-tint"></span>&nbsp;&nbsp;Freshest food</h4>
             <p class="text-justify">Tasty, juicy, fully mature and with all the vitamins & minerals. The food you grow with RiseBox is always premium quality.</p>
-        </div> 
-        <div class="col-lg-6 mbm">   
+        </div>
+        <div class="col-lg-6 mbm">
             <h4><span class="glyphicon glyphicon-leaf"></span>&nbsp;&nbsp;100% Organic</h4>
             <p class="text-justify">No chemical fertilizers, treatments nor antibiotic. You are safe and know exactly what you eat.</p>
         </div>
@@ -70,8 +71,14 @@
             <p class="text-justify">Food keeps growing locally 365 days a year and up to 3 times faster. Enjoy your favorite food at any season, environment isn't hurt</p>
         </div>
     </div>
+
+    <blockquote class="mbl text-center">
+      <p>You're an inventive people aren't you? ... Then invent</p>
+      <footer>Daniel Quinn, <cite title="Ishmael: An Adventure of the Mind and Spirit">Ishmael</cite></footer>
+    </blockquote>
+
     <div class="footer">
-        <p class="text-center">© RiseBox SAS 2014 - Contact-us : <%= mail_to 'hello@risebox.co' %></p>
+        <p class="text-center">© RiseBox 2014 - Contact-us : <%= mail_to 'hello@risebox.co' %></p>
     </div>
 
 </div>
