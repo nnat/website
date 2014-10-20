@@ -5,23 +5,20 @@
         <!-- <h1><%# image_tag "home/logo3.jpeg", size: '150x90'%><small>Grow quality food @home</small></h1> -->
         <div class="row">
             <div class="col-lg-12 logo">
-                <%= image_tag "home/logo.png", width: '150'%>
+                <div class="pull-left">
+                    <%= link_to image_tag("home/logo.png", width: '150'), root_path %><br />
+                </div>
                 <h1 class="baseline pull-right">Grow quality food @home</h1>
-                <!-- <ul class="nav nav-pills pull-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">How it works</a></li>
-                    <li><a href="#">About</a></li>
-                </ul> -->
+                <!--
+                <ul class="nav nav-pills head-menu pull-right"> 
+                    <li><a href="#" id="how-nav-menu">How it works</a></li>
+                    <li><a href="#" id="about-nav-menu">About</a></li>
+                    <li><a href="#" id="blog-nav-menu">Blog</a></li>  
+                </ul>
+                -->
             </div>
         </div>
     </div>
-
-
-<!-- <div class="row">
-    <div class="col-lg-9 col-lg-offset-3">
-        <%= image_tag "home/home.jpg", class: "img-rounded img-responsive" %>
-    </div>
-</div> -->
 
     <div class="jumbotron" style="background-color: white;">
 
@@ -78,7 +75,27 @@
     </blockquote>
 
     <div class="footer">
-        <p class="text-center">© Risebox 2014 - Contact-us : <%= mail_to 'hello@risebox.co' %></p>
+        <p class="text-center">
+            © Risebox 2014 - Contact-us : <%= mail_to 'hello@risebox.co' %> - Follow us : 
+            <a href="http://facebook.com/getrisebox" target="_blank">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-square-o fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x"></i>
+                </span>
+            </a>
+            <a href="http://twitter.com/getrisebox" target="_blank">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-square-o fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+            <a href="http://blog.risebox.co" target="_blank">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-square-o fa-stack-2x"></i>
+                    <i class="fa fa-rss fa-stack-1x"></i>
+                </span>
+            </a>
+        </p>
     </div>
 
 </div>
