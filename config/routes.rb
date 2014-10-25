@@ -3,10 +3,12 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
+  get '/' => 'home#index'
   # get 'well_not_ready_yet' => 'home#well_not_ready_yet'
-
-  resources :leads
+  scope "(:locale)", locale: /en|fr/ do
+    root 'home#index'
+    resources :leads
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
