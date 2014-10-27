@@ -6,22 +6,29 @@
         <div class="row">
             <div class="col-lg-12 logo">
                 <div class="pull-left">
-                    <%= link_to image_tag("home/logo.png", width: '150'), root_path %><br />
+                    <%= link_to image_tag("home/logo.png", width: '150'), root_path %>
+                    <br />Grow quality food @home
                 </div>
-                <h1 class="baseline pull-right">Grow quality food @home</h1>
                 <!--
-                <ul class="nav nav-pills head-menu pull-right"> 
+                <h1 class="baseline pull-right">Grow quality food @home</h1>
+                -->
+                <ul class="nav nav-pills head-menu pull-right">
                     <li><a href="#" id="how-nav-menu">How it works</a></li>
                     <li><a href="#" id="about-nav-menu">About</a></li>
-                    <li><a href="#" id="blog-nav-menu">Blog</a></li>  
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                          <%= I18n.locale == :fr ? 'Français' : 'English' %> <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= url_for(locale: (I18n.locale == :fr ? :en : :fr)) %>"><%= I18n.locale == :fr ? 'English' : 'Français' %></a></li>
+                        </ul>
+                    </li>
                 </ul>
-                -->
             </div>
         </div>
     </div>
 
     <div class="jumbotron" style="background-color: white;">
-
     </div>
 
 
