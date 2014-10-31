@@ -1,0 +1,6 @@
+en:
+  lead:
+    validation:
+      presence: "we need a valid email, please try again"
+      format: "we need a valid email, please try again"
+      uniqueness: 'you already subscribed, thank you'

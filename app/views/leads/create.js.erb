@@ -1,7 +1,7 @@
 <% if @lead_saved %>
 	$('#leadError').hide();
-    $('#leadSuccess').text("Thank you, we'll keep you informed").fadeIn().delay(3000).fadeOut();
+    $('#leadSuccess').text("<%= raw t('.success') %>").fadeIn().delay(3000).fadeOut();
     $('#lead-email').val('');
 <% else %>
-    $('#leadError').text('Oops, <%=h(@lead.errors.messages.values.join(" and "))%>.').fadeIn();
+    $('#leadError').text("<%=t('.oops')%>, <%=raw @lead.errors.messages.values.join(' '+t('.and')+' ') %>.").fadeIn();
 <% end %>

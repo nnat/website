@@ -7,14 +7,14 @@
             <div class="col-lg-12 logo">
                 <div class="pull-left">
                     <%= link_to image_tag("home/logo.png", width: '150'), root_path %>
-                    <br />Grow quality food @home
+                    <br /><%= t('.tagline') %>
                 </div>
                 <!--
                 <h1 class="baseline pull-right">Grow quality food @home</h1>
                 -->
                 <ul class="nav nav-pills head-menu pull-right">
-                    <li><a href="#" id="how-nav-menu">How it works</a></li>
-                    <li><a href="#" id="about-nav-menu">About</a></li>
+                    <li><a href="#" id="how-nav-menu"><%= t('.nav.hiw') %></a></li>
+                    <li><a href="#" id="about-nav-menu"><%= t('.nav.about') %></a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                           <%= I18n.locale == :fr ? 'Français' : 'English' %> <span class="caret"></span>
@@ -32,7 +32,7 @@
     </div>
 
 
-    <p class="lead text-center">Risebox combines a living ecosystem with latest technology to produce healthy and sustainable food just where you live.</p>
+    <p class="lead text-center"><%= t('.headline') %></p>
 
     <div id="leadSuccess" class="alert alert-success" role="alert" style="display:none">
 
@@ -46,49 +46,49 @@
         <!-- <div class="center-block"> -->
         <%= form_for @lead, remote: true, html: {class: 'form-inline _leadForm', role: 'form'} do |f| %>
             <div class="form-group">
-                <%= f.text_field :email, class: 'form-control input-lg', size: '35', placeholder: 'Enter your email for updates', id: 'lead-email', autofocus: true %>
+                <%= f.text_field :email, class: 'form-control input-lg', size: '35', placeholder: t('.subscribe.placeholder'), id: 'lead-email', autofocus: true %>
             </div>
-            <button type="submit" class="btn btn-success btn-lg">Stay in touch</button>
+            <button type="submit" class="btn btn-success btn-lg"><%= t('.subscribe.button') %></button>
         <% end %>
         <!-- </div> -->
     </div>
 
     <div class="row">
         <div class="col-lg-6 mbm">
-            <h4><span class="glyphicon glyphicon-tint"></span>&nbsp;&nbsp;Freshest food</h4>
-            <p class="text-justify">Tasty, juicy, fully mature and with all the vitamins & minerals. The food you grow with Risebox is always premium quality.</p>
+            <h4><span class="glyphicon glyphicon-tint"></span>&nbsp;&nbsp;<%= t('.features.n1.title') %></h4>
+            <p class="text-justify"><%= t('.features.n1.text') %></p>
         </div>
         <div class="col-lg-6 mbm">
-            <h4><span class="glyphicon glyphicon-leaf"></span>&nbsp;&nbsp;100% Organic</h4>
-            <p class="text-justify">No chemical fertilizers, treatments nor antibiotic. You are safe and know exactly what you eat.</p>
+            <h4><span class="glyphicon glyphicon-leaf"></span>&nbsp;&nbsp;<%= t('.features.n2.title') %></h4>
+            <p class="text-justify"><%= t('.features.n2.text') %></p>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-6 mbm">
-            <h4><span class="glyphicon glyphicon-dashboard"></span>&nbsp;&nbsp;Hassle Free</h4>
-            <p class="text-justify">No farming skills needed. Risebox watches the environment, growth parameters and constantly optimizes the system even when you're out.</p>
+            <h4><span class="glyphicon glyphicon-dashboard"></span>&nbsp;&nbsp;<%= t('.features.n3.title') %></h4>
+            <p class="text-justify"><%= t('.features.n3.text') %></p>
         </div>
             <!-- <h4><span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;Education & Entertainment</h4>
             <p>A living ecosystem next to you is an incredible opportunity to admire and learn from nature</p> -->
         <div class="col-lg-6 mbm">
-            <h4><span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;Good for the planet</h4>
-            <p class="text-justify">Food keeps growing locally 365 days a year and up to 3 times faster. Enjoy your favorite food at any season, environment isn't hurt</p>
+            <h4><span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;<%= t('.features.n4.title') %></h4>
+            <p class="text-justify"><%= t('.features.n4.text') %></p>
         </div>
     </div>
 
     <blockquote class="mbl text-center">
-      <p>You're an inventive people aren't you? ... Then invent</p>
-      <footer>Daniel Quinn, <cite title="Ishmael: An Adventure of the Mind and Spirit">Ishmael</cite></footer>
+      <p><%= t('.quote.text')%></p>
+      <footer><%= t('.quote.author')%>, <cite title="<%= t('.quote.ref.long')%>"><%= t('.quote.ref.short')%></cite></footer>
     </blockquote>
 
     <div class="footer text-center">
         <p>
-            Our team's blog : <%= link_to 'http://blog.risebox.co', 'http://blog.risebox.co', target: '_blank' %>
+            <%= t('.contact.blog') %> : <%= link_to 'http://blog.risebox.co', 'http://blog.risebox.co', target: '_blank' %>
         </p>
         <p>
-           Contact-us : <%= mail_to 'hello@risebox.co' %>
+           <%= t('.contact.email') %> : <%= mail_to 'hello@risebox.co' %>
         </p>
-        <p>Follow us : 
+        <p><%= t('.contact.social') %> :
             <a href="http://facebook.com/getrisebox" target="_blank">
                 <span class="fa-stack fa-lg">
                     <i class="fa fa-square-o fa-stack-2x"></i>

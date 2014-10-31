@@ -1,0 +1,6 @@
+fr:
+  lead:
+    validation:
+      presence: "nous avons besoin d'un email valide, essayez à nouveau"
+      format: "nous avons besoin d'un email valide, essayez à nouveau"
+      uniqueness: 'vous êtes déjà inscrit, merci'

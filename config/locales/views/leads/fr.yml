@@ -1,3 +1,6 @@
 fr:
   leads:
     create:
+      success: "Thank you, we'll keep you informed"
+      oops: "Désolé"
+      and: "et"

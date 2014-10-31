@@ -1,3 +1,34 @@
 fr:
   home:
     index:
+      tagline: Faites pousser des légumes chez vous
+      nav:
+        hiw: Comment ça marche
+        about: A propos
+      headline: Risebox combine un éco-système vivant et les dernières technologies pour produire une nourriture saine et soutenable directement chez vous.
+      subscribe:
+        placeholder: Mon email
+        button: Tenez-moi informé
+      features:
+        n1:
+          title: Fraicheur garantie
+          text: 'Gouteux, juteux, bien mûrs et plein de vitamines et minéraux. Risebox produit toujours une nourriture de qualité premium.'
+        n2:
+          title: 100% Bio
+          text: "Pas d'engrais, de traitemens chimiques ou d'antibiotiques. Vous savez que vous mangez une nourriture saine."
+        n3:
+          title: Facile
+          text: "Pas besoin de savoir jardiner. Risebox surveille les conditions climatiques, les paramètres de croissance et optimise le système en continu même lorsque vous êtes absent."
+        n4:
+          title: Bon pour la planète
+          text: "Votre nourriture pousse 365 jours par an et jusqu'à 3 fois plus vite. Profitez de vos fruit et légumes en toute saison, l'environment est préservé."
+      quote:
+        text: "You're an inventive people aren't you? ... Then invent"
+        author: Daniel Quinn
+        ref:
+          long: "Ishmael: L'homme une fois disparu, y aura-t-il un espoir pour le gorille ?"
+          short: Ishmael
+      contact:
+        blog: "Blog de l'équipe"
+        email: Nous contacter
+        social: Nous suivre

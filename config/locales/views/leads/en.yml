@@ -1,3 +1,6 @@
 en:
   leads:
     create:
+      success: "Merci, nous vous tiendrons informé"
+      oops: "Oops"
+      and: and

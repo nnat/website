@@ -1,3 +1,34 @@
 en:
   home:
     index:
+      tagline: Grow quality food @home
+      nav:
+        hiw: How it works
+        about: About
+      headline: Risebox combines a living ecosystem with latest technology to produce healthy and sustainable food just where you live.
+      subscribe:
+        placeholder: Enter your email for updates
+        button: Stay in touch
+      features:
+        n1:
+          title: Freshest food
+          text: 'Tasty, juicy, fully mature and with all the vitamins & minerals. The food you grow with Risebox is always premium quality.'
+        n2:
+          title: 100% Organic
+          text: 'No chemical fertilizers, treatments nor antibiotic. You are safe and know exactly what you eat.'
+        n3:
+          title: Hassle Free
+          text: "No farming skills needed. Risebox watches the environment, growth parameters and constantly optimizes the system even when you're out."
+        n4:
+          title: Good for the planet
+          text: "Food keeps growing locally 365 days a year and up to 3 times faster. Enjoy your favorite food at any season, environment isn't hurt"
+      quote:
+        text: "You're an inventive people aren't you? ... Then invent"
+        author: Daniel Quinn
+        ref:
+          long: 'Ishmael: An Adventure of the Mind and Spirit'
+          short: Ishmael
+      contact:
+        blog: "Our team's blog"
+        email: Contact-us
+        social: Follow us
