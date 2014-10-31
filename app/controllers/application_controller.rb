@@ -4,22 +4,16 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_locale
 
-  def default_url_options(options={})
-    { locale: I18n.locale }
-  end
-
 private
 
   def set_locale
-    if params[:locale].present?
-      I18n.locale = params[:locale]
-    else
-      #temporary :en
-      I18n.locale = :en 
-      #the right instruction : guess from broser or else french
-      #I18n.locale = locale_from_accept_language_header || :fr
-      redirect_to url_for(locale: I18n.locale)
+    unless Rails.env.test?
+      I18n.locale = params[:locale] || locale_from_accept_language_header || I18n.default_locale
     end
+  end
+
+  def default_url_options(options={})
+    { locale: I18n.locale }
   end
 
   def locale_from_accept_language_header
