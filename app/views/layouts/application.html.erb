@@ -2,12 +2,13 @@
 <html>
 
 <head>
-    <title>RiseBox - grow healthy and sustainable food @home</title>
+    <title><%= t('.title') %></title>
     <%= favicon_link_tag image_path(FAVICON_PATH) %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= yield :head %>
 </head>
 
 <body>

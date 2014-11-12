@@ -1,6 +1,11 @@
 en:
   home:
     index:
+      meta:
+        og_title: Grow quality food @home
+        og_description: Risebox combines a living ecosystem with latest technology to produce healthy and sustainable food just where you live.
+        description: Risebox combines a living ecosystem with latest technology to produce healthy and sustainable food just where you live.
+        keywords: "fruits, vegetables, fresh, bio, sustainable, kitchen garden, aquaponics, fish, ecology"
       tagline: Grow quality food @home
       nav:
         hiw: How it works

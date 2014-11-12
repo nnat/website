@@ -1,6 +1,11 @@
 fr:
   home:
     index:
+      meta:
+        og_title: 'Risebox: Faites pousser du bio chez vous'
+        og_description: "Risebox c'est un éco-système vivant et connecté qui produit une nourriture savoureuse, saine et soutenable, chez vous."
+        description: "Risebox c'est un éco-système vivant et connecté qui produit une nourriture savoureuse, saine et soutenable, chez vous."
+        keywords: "fruits, légumes, frais, bio, durable, potager, aquaponie, poissons, écologie"
       tagline: Faites pousser du bio chez vous
       nav:
         hiw: Comment ça marche
