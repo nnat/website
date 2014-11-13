@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   get '/' => 'home#index'
-  get 'how_it_works' => 'home#how_it_works'
   scope "(:locale)", locale: /en|fr/ do
+    get 'how_it_works' => 'home#how_it_works'
     root 'home#index'
     resources :leads
   end
