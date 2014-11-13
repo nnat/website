@@ -1,0 +1,98 @@
+<% content_for :head do %>
+    <meta property="og:title" content="<%= t '.meta.og_title' %>" />
+    <meta property="og:description" content="<%= t '.meta.og_description' %>" />
+    <meta property="description" content="<%= t '.meta.description' %>" />
+    <meta property="keywords" content="<%= t '.meta.keywords' %>" />
+<% end %>
+
+<div class="container">
+    <%= render 'nav' %>
+
+    <h1 class="text-center">Comment ça marche ?</h1>
+    <br/ >
+
+    <p class="text-justify">
+        Risebox est un potager vertical d’interieur où pousse une nourriture saine et fraiche. Vos légumes poussent sous vos yeux, dans votre cuisine ou votre salon : aucun traitement, aucun transport, vous les cueillez au moment de les déguster.
+    </p>
+
+    <h2>Le principe : l'aquaponie</h2>
+
+    <p class="text-justify">
+        Risebox est un système aquaponique : des poissons et des végétaux se développent en symbiose au sein d’un écosystème en équilibre.<br/>
+        Cette technique, connue depuis l'antiquité, fonctionne sur le principe tout simple:
+    </p>
+
+    <%= image_tag("home/aquaponie.jpg", width: '100%') %>
+
+    <p class="text-justify">
+        Ce mode de culture présente de nombreux avantages qui en font une solution aux enjeux de notre époque :
+        <ul>
+            <li><strong>Sobre en eau</strong> : l’aquaponie consomme <strong>90% d’eau en moins</strong> par rapport à l’aquaculture et à la culture en plein champ</li>
+            <li><strong>Garanti biologique</strong> : l’écosystème poissons-légumes se suffit à lui même et ne supporte <strong>aucun intrant chimique</strong></li>
+            <li><strong>Productif</strong> : les végétaux poussent <strong>3 fois plus vite</strong> qu’en culture traditionnelle, et ont besoin de moins d’espace car la nourriture et l’eau sont abondantes</li>
+            <li><strong>Résilient</strong> : les plantes poussant sur un lit de billes d’argile, elles sont <strong>insensibles à la pollution des sols</strong> et à certains parasites</li>
+        </ul>
+    </p>
+
+
+    <h2>Risebox : l'aquaponie pour tous</h2>
+
+    <div class="well">
+        Risebox est bien plus qu'un système aquaponique d'intérieur : c'est LA solution clé en main, utilisable par tous pour produire sa propre nourriture chez soi.
+    </div>
+
+    <p class="text-justify">
+        Nous utilisons les dernières technologies et vous accompagnons pour vous garantir un potager qui produit beaucoup et toute l’année.
+    </p>
+
+    <div class="row">
+        <div class="col-lg-6 mbm">
+            <%= image_tag("home/aquaponie.jpg", width: '100%', class: 'img-circle') %>
+        </div>
+        <div class="col-lg-6 mbm">
+            <h4>Risebox produit beaucoup avec peu d’espace et peu d’énergie</h4>
+            <ul>
+                <li>L' espace de culture est disposé en étage pour <strong>minimiser l’espace au sol</strong></li>
+                <li>Placé en intérieur, la Risebox <strong>réutilise la chaleur du foyer</strong> et reste protégé des aléas climatiques ainsi que des nuisibles</li>
+                <li>Un Eclairage LED économe: si la lumière devient insuffisante, un éclairage automatique se met en place pour apporter à vos cultures le complément de lumière dont elles ont besoin pour produire toute l’année</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 mbm">
+            <h4>Risebox vous demande peu de temps et vous aide à vous lancer</h4>
+                <ul>
+                <li>Risebox est un potager connecté. De nombreux capteurs (température, composition chimique de l'eau, ensoleillement) surveillent en permanence vos cultures et notre plateforme cloud est là pour vous prévenir et vous donner la marche à suivre en cas de besoin</li>
+                <li>Une App qui vous simplifie la culture : suivez l’évolution de votre potager, recevez des idées de plantations, des conseils d’entretien et de récolte. Sur le shop, trouvez rapidement des semences et des poissons adaptés à l’aquaponie et de la nourriture bio pour vos poissons.</li>
+                <li>Commandez votre Risebox, choisissez vos légumes et vos poissons : notre équipe met en place l’écosystème, et vous l’installe à domicile dés que vos premiers légumes ont poussé. Un problème, des questions : nous sommes là.</li>
+            </ul>
+        </div>
+        <div class="col-lg-6 mbm">
+            <%= image_tag("home/aquaponie.jpg", width: '100%', class: 'img-circle') %>
+        </div>
+
+    </div>
+
+    <!-- <p class="text-justify">
+        Risebox produit beaucoup avec peu d’espace et peu d’énergie
+        <ul>
+            <li>L' espace de culture est disposé en étage pour <strong>minimiser l’espace au sol</strong></li>
+            <li>Placé en intérieur, la Risebox <strong>réutilise la chaleur du foyer</strong> et reste protégé des aléas climatiques ainsi que des nuisibles</li>
+            <li>Un Eclairage LED économe: si la lumière devient insuffisante, un éclairage automatique se met en place pour apporter à vos cultures le complément de lumière dont elles ont besoin pour produire toute l’année</li>
+        </ul>
+    </p> -->
+
+    <!-- <p class="text-justify">
+        Risebox vous demande peu de temps et vous aide à vous lancer
+        <ul>
+            <li>Risebox est un potager connecté. De nombreux capteurs (température, composition chimique de l'eau, ensoleillement) surveillent en permanence vos cultures et notre plateforme cloud est là pour vous prévenir et vous donner la marche à suivre en cas de besoin</li>
+            <li>Une App qui vous simplifie la culture : suivez l’évolution de votre potager, recevez des idées de plantations, des conseils d’entretien et de récolte. Sur le shop, trouvez rapidement des semences et des poissons adaptés à l’aquaponie et de la nourriture bio pour vos poissons.</li>
+            <li>Commandez votre Risebox, choisissez vos légumes et vos poissons : notre équipe met en place l’écosystème, et vous l’installe à domicile dés que vos premiers légumes ont poussé. Un problème, des questions : nous sommes là.</li>
+        </ul>
+    </p>
+ -->
+    <%= render 'subscribe' %>
+
+    <%= render 'footer' %>
+</div>

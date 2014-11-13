@@ -1,0 +1,16 @@
+<div id="leadSuccess" class="alert alert-success" role="alert" style="display:none">
+</div>
+
+<div id="leadError" class="alert alert-danger" role="alert" style="display:none">
+</div>
+
+<div class="text-center mbl">
+    <!-- <div class="center-block"> -->
+    <%= form_for @lead, remote: true, html: {class: 'form-inline _leadForm', role: 'form'} do |f| %>
+        <div class="form-group">
+            <%= f.text_field :email, class: 'form-control input-lg', size: '35', placeholder: t('.placeholder'), id: 'lead-email', autofocus: true %>
+        </div>
+        <button type="submit" class="btn btn-success btn-lg"><%= t('.button') %></button>
+    <% end %>
+    <!-- </div> -->
+</div>

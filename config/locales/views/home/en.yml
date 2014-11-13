@@ -1,19 +1,24 @@
 en:
   home:
+    nav:
+      hiw: How it works
+      about: About
+      tagline: Grow quality food @home
+    subscribe:
+      placeholder: Enter your email for updates
+      button: Stay in touch
+    footer:
+      contact:
+        blog: "Our team's blog"
+        email: Contact-us
+        social: Follow us
     index:
       meta:
         og_title: Grow quality food @home
         og_description: Risebox combines a living ecosystem with latest technology to produce healthy and sustainable food just where you live.
         description: Risebox combines a living ecosystem with latest technology to produce healthy and sustainable food just where you live.
         keywords: "fruits, vegetables, fresh, bio, sustainable, kitchen garden, aquaponics, fish, ecology"
-      tagline: Grow quality food @home
-      nav:
-        hiw: How it works
-        about: About
       headline: Risebox combines a living ecosystem with latest technology to produce healthy and sustainable food just where you live.
-      subscribe:
-        placeholder: Enter your email for updates
-        button: Stay in touch
       features:
         n1:
           title: Freshest food
@@ -33,7 +38,9 @@ en:
         ref:
           long: 'Ishmael: An Adventure of the Mind and Spirit'
           short: Ishmael
-      contact:
-        blog: "Our team's blog"
-        email: Contact-us
-        social: Follow us
+    how_it_works:
+      meta:
+        og_title: 'title'
+        og_description: "og_desc"
+        description: "desc"
+        keywords: "keywords"
