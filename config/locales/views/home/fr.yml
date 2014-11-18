@@ -1,7 +1,7 @@
 fr:
   home:
     nav:
-      hiw: Comment ça marche
+      faq: Comment ça marche
       about: A propos
       tagline: Faites pousser du bio chez vous
     subscribe:
@@ -38,7 +38,7 @@ fr:
         ref:
           long: Ishmael
           short: Ishmael
-    how_it_works:
+    faq:
       meta:
         og_title: 'titre'
         og_description: "og_desc"

@@ -1,0 +1,46 @@
+<% content_for :head do %>
+    <meta property="og:title" content="<%= t '.meta.og_title' %>" />
+    <meta property="og:description" content="<%= t '.meta.og_description' %>" />
+    <meta property="description" content="<%= t '.meta.description' %>" />
+    <meta property="keywords" content="<%= t '.meta.keywords' %>" />
+<% end %>
+
+<div class="container">
+    <%= render 'nav' %>
+
+    <h1 class="text-center">Questions / réponses</h1>
+    
+    <a href="#quoi">Qu'est-ce qu'une Risebox ?</a><br/>
+    <a href="#quoi">Comment Risebox fonctionne-t-elle ?</a><br/>
+
+
+    <h2 id="quoi">Qu'est-ce qu'une Risebox ?</h2>
+    <p class="text-justify">
+        Risebox est un potager vertical d’interieur où pousse une nourriture saine et fraiche. Vos légumes poussent sous vos yeux, dans votre cuisine ou votre salon : aucun traitement, aucun transport, vous les cueillez au moment de les déguster.
+    </p>
+
+    <h2 id="comment">Comment Risebox fonctionne-t-elle ?</h2>
+
+    <p class="text-justify">
+        Risebox est un système aquaponique : des poissons et des végétaux se développent en symbiose au sein d’un écosystème en équilibre.<br/>
+        Cette technique, connue depuis l'antiquité, fonctionne sur un principe tout simple:
+    </p>
+
+    <%= image_tag("home/aquaponie.jpg", width: '100%') %>
+
+    <p class="text-justify">
+        Ce mode de culture présente de nombreux avantages qui en font une solution aux enjeux de notre époque :
+        <ul>
+            <li><strong>Sobre en eau</strong> : l’aquaponie consomme <strong>90% d’eau en moins</strong> par rapport à l’aquaculture et à la culture en plein champ</li>
+            <li><strong>Garanti biologique</strong> : l’écosystème poissons-légumes se suffit à lui même et ne supporte <strong>aucun intrant chimique</strong></li>
+            <li><strong>Productif</strong> : les végétaux poussent <strong>3 fois plus vite</strong> qu’en culture traditionnelle, et ont besoin de moins d’espace car la nourriture et l’eau sont abondantes</li>
+            <li><strong>Résilient</strong> : les plantes poussant sur un lit de billes d’argile, elles sont <strong>insensibles à la pollution des sols</strong> et à certains parasites</li>
+        </ul>
+    </p>
+
+    
+    
+    <%= render 'subscribe' %>
+
+    <%= render 'footer' %>
+</div>

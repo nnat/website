@@ -1,7 +1,7 @@
 en:
   home:
     nav:
-      hiw: How it works
+      faq: How it works
       about: About
       tagline: Grow quality food @home
     subscribe:
@@ -38,7 +38,7 @@ en:
         ref:
           long: 'Ishmael: An Adventure of the Mind and Spirit'
           short: Ishmael
-    how_it_works:
+    faq:
       meta:
         og_title: 'title'
         og_description: "og_desc"
