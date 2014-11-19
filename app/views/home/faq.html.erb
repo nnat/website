@@ -8,7 +8,10 @@
 <div class="container">
     <%= render 'nav' %>
 
-    <h1 class="text-center">Questions / réponses</h1>
+    <h1 class="text-center">Comment ça marche</h1>
+    <p class="justify-text">
+        Nous avons recensé ici les questions que vous nous posez fréquemment sur Risebox. Si votre question ne figure pas dans cette liste, n'hésitez pas à nous la poser sur <%= mail_to "hello@risebox.co" %>.
+    </p>
     <ul class="faq-index">
         <li><a href="#quoi">Qu'est-ce qu'une Risebox ?</a></li>
         <li><a href="#comment">Comment Risebox fonctionne-t-elle ?</a></li>
@@ -188,10 +191,6 @@
 
     <br /><br />
 
-    <p class="text-center">
-        Votre question ne figure pas dans cette liste, contactez nous : <%= mail_to "hello@risebox.co" %>.
-    <p>
-    <br />
     <p class="text-center">
         Pour être prévenu dés que Risebox sera disponible en avant-première, laissez-nous votre email ci-dessous :
     <p>
