@@ -9,7 +9,7 @@
     <%= render 'nav' %>
 
     <h1 class="text-center">Questions / réponses</h1>
-    <ul style="padding-left: 14px;">
+    <ul class="faq-index">
         <li><a href="#quoi">Qu'est-ce qu'une Risebox ?</a></li>
         <li><a href="#comment">Comment Risebox fonctionne-t-elle ?</a></li>
         <li><a href="#avantages">Quels sont les avantages de l'aquaponie ?</a></li>
@@ -23,20 +23,26 @@
         <li><a href="#pousser">Qu’est ce que je peux y faire pousser ?</a></li>
         <li><a href="#achats">Comment se procurer des semences ou les plants et quel nourriture donner aux poissons ?</a></li>
     </ul>
+    <br />
+    <div class="panel panel-info" id="quoi">
+        <div class="panel-heading">
+            <h3 class="panel-title">Qu'est-ce qu'une Risebox ?</h3>    
+        </div>
+        <div class="panel-body text-justify">
+            Risebox est un potager vertical d’interieur où pousse toute l'année une nourriture saine et fraiche. Vos légumes poussent sous vos yeux, dans votre cuisine ou votre salon : aucun traitement, aucun transport, vous les cueillez au moment de les déguster.
+        </div>
+    </div>
+    <div class="panel panel-info" id="comment">
+        <div class="panel-heading">
+            <h3 class="panel-title">Comment Risebox fonctionne-t-elle ?</h3>
+        </div>
+        <div class="panel-body">
+            Risebox est un système aquaponique : des poissons et des végétaux se développent en symbiose au sein d’un écosystème en équilibre.<br/><br />
+            Cette technique fonctionne sur un principe tout simple :
+            <%= image_tag("home/aquaponie.jpg", class: 'large-image') %>
+        </div>
+    </div>
 
-    <h3 id="quoi">Qu'est-ce qu'une Risebox ?</h3>
-    <p class="text-justify">
-        Risebox est un potager vertical d’interieur où pousse toute l'année une nourriture saine et fraiche. Vos légumes poussent sous vos yeux, dans votre cuisine ou votre salon : aucun traitement, aucun transport, vous les cueillez au moment de les déguster.
-    </p>
-
-    <h3 id="comment">Comment Risebox fonctionne-t-elle ?</h3>
-
-    <p>
-        Risebox est un système aquaponique : des poissons et des végétaux se développent en symbiose au sein d’un écosystème en équilibre.<br/><br />
-        Cette technique fonctionne sur un principe tout simple :
-        <%= image_tag("home/aquaponie.jpg", width: '80%') %>
-    </p>
-    
     <h3 id="avantages">Quels sont les avantages de l'aquaponie ?</h3>
     <p class="text-justify">
         Les avantages de l'aquaponie sont nombreux :

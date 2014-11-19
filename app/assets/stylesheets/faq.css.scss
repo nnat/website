@@ -1,0 +1,13 @@
+.faq-index {
+	padding-left: 14px;
+}
+
+.large-image {
+	max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  	.large-image {
+		max-width: 80%;
+	}
+}
