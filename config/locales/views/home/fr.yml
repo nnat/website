@@ -17,7 +17,7 @@ fr:
         og_title: 'Risebox: Faites pousser du bio chez vous'
         og_description: "Risebox c'est un éco-système vivant et connecté qui produit une nourriture savoureuse, saine et soutenable, chez vous."
         description: "Risebox c'est un éco-système vivant et connecté qui produit une nourriture savoureuse, saine et soutenable, chez vous."
-        keywords: "fruits, légumes, frais, bio, durable, potager, aquaponie, poissons, écologie"
+        keywords: "agriculture urbaine, fruits, légumes, frais, bio, durable, potager, aquaponie, poissons, écologie, résilience"
       headline: "Risebox c'est un éco-système vivant et connecté qui produit une nourriture savoureuse, saine et soutenable, chez vous."
       features:
         n1:
@@ -40,7 +40,7 @@ fr:
           short: Ishmael
     faq:
       meta:
-        og_title: 'titre'
-        og_description: "og_desc"
-        description: "desc"
-        keywords: "mot clés"
+        og_title: 'Risebox: Comment ça marche ?'
+        og_description: "Découvrez tout ce qu'il y a à savoir sur Risebox: le potager vertical d'intérieur fonctionnant grâce à l'aquaponie"
+        description: "Découvrez tout ce qu'il y a à savoir sur Risebox: le potager vertical d'intérieur fonctionnant grâce à l'aquaponie"
+        keywords: "agriculture urbaine, fruits, légumes, frais, bio, durable, potager, aquaponie, poissons, écologie, résilience"
