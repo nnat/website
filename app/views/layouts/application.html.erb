@@ -9,6 +9,7 @@
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= yield :head %>
+    <meta property="og:site_name" content="Risebox" />
     <link rel="alternate" href="<%=url_for(only_path: false, locale: :en) %>" />
     <link rel="alternate" href="<%=url_for(only_path: false, locale: :fr) %>" />
 </head>
