@@ -1,6 +1,11 @@
 Rails.application.configure do
-  FAVICON_PATH     = "favicon.ico"
   # Settings specified here will take precedence over those in config/application.rb.
+  IP_FILTERING = ENV['IP_FILTERING'] == 'true'
+  IP_WHITELIST = {  '31.35.37.50'    => 'ATH IP',
+                    '81.57.249.138'  => 'NNA_IP',
+                    '127.0.0.1'      => 'Possible heroku self http call' }
+
+  FAVICON_PATH     = "favicon.ico"
 
   # Code is not reloaded between requests.
   config.cache_classes = true
