@@ -1,6 +1,6 @@
 #!/bin/bash
 # Deploy script to heroku
-TERALIBRIS_SUBNET=120.0
+LOCAL_SUBNET=120.0
 
 currentBranch() {
   git branch | grep "*" | sed "s/* //"
@@ -8,8 +8,8 @@ currentBranch() {
 
 safeMatchingEnvForBranch() {
   case $1 in
-    "dev") env="rb-dev";;
-    "nna") env="rb-nna";;
+    "dev") env="rbdev";;
+    "nna") env="rbnna";;
     #"master") env="heroku";;
     *) echo "none"
        exit ;;
@@ -17,34 +17,34 @@ safeMatchingEnvForBranch() {
   echo "$env"
 }
 
-chez_teralibris() {
-  ifconfig  | grep inet | grep "$TERALIBRIS_SUBNET"
+chez_local() {
+  ifconfig  | grep inet | grep "$LOCAL_SUBNET"
 }
 
 
 case $1 in
-  "rb-nna") branch="nna"
-            heroku_app="$1";;
-  "rb-dev") branch="dev"
-            heroku_app="$1";;
+  "rbnna") branch="nna"
+           heroku_app="$1";;
+  "rbdev") branch="dev"
+           heroku_app="$1";;
   "risebox") branch="master"
           heroku_app="heroku";;
   "") branch=$(currentBranch)
       heroku_app=$(safeMatchingEnvForBranch $(currentBranch))
       if [ "$heroku_app" = "none" ]; then
         echo "No matching env found"
-        echo "Choose 'rb-nna', 'rb-dev' or 'risebox' !"
+        echo "Choose 'rbnna', 'rbdev' or 'risebox' !"
         exit
       fi
       echo "No target env specified: safely deploying to $heroku_app";;
-  *) echo "Choose 'rb-nna', 'rb-dev' or 'risebox' !"
+  *) echo "Choose 'rbnna', 'rbdev' or 'risebox' !"
      exit ;;
 esac
 
 echo "-- Pushing $branch to $heroku_app"
 git checkout $branch
 
-# if [ "$?" = "0" ] && [ -n "$(chez_teralibris)" ]; then
+# if [ "$?" = "0" ] && [ -n "$(chez_local)" ]; then
 #   echo "-- Pushing to CI"
 #   git push origin $branch
 # fi
