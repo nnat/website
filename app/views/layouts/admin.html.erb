@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Admin Tool</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <%= favicon_link_tag image_path(FAVICON_PATH) %>
+        <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+        <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+        <%= csrf_meta_tags %>
+        <%= yield :head %>
+    </head>
+    <body>
+        <div class="container-fluid admin-page">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <%= link_to 'Risebox', root_path, class: "navbar-brand" %>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><%= link_to 'Monitoring', admin_root_path%></li>
+                        <li><%= link_to 'Metrics', admin_metrics_path %></li>
+                    </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+
+            <div id="flash" class="flash">
+                <% if notice.present? %><div class="notice"><%= notice %></div><% end %>
+                <% if alert.present? %><div class="alert"><%= alert %></div><% end %>
+            </div>
+
+            <h1 class="h2"><%= @title %><%= " > #{@sub_title}" if @sub_title.present? %></h1>
+
+            <%= yield %>
+
+            <div class="footer text-center">
+                <p class="text-center">
+                    © Risebox 2014
+                </p>
+            </div>
+        </div>
+        <script>
+            <%= yield :load_script %>
+        </script>
+    </body>
+</html>

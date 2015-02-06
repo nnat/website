@@ -1,6 +1,13 @@
 Rails.application.configure do
-  FAVICON_PATH     = "favicon.ico"
+  #Load .env content as ENV variables used for ENV['PORT']
+  Hash[File.read('.env').scan(/(.+?)=(.+)/)].each {|k,v| ENV[k.to_s] = v} if File.exist?('.env')
+  ENV['PORT'] ||= '3000'
+
   # Settings specified here will take precedence over those in config/application.rb.
+  IP_FILTERING = false
+  IP_WHITELIST = { '127.0.0.1'      => 'needed to access dev' }
+
+  FAVICON_PATH     = "favicon.ico"
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
