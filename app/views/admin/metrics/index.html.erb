@@ -1,7 +1,8 @@
 <% admin_title 'Metrics', 'Cumulated' %>
 <p><strong>Number of leads :</strong> <%= @lead_count %></p>
-<p><strong>Last 5 leads :</strong><br />
+<p><strong>Last <%= @nb_last_leads %> leads :</strong><br />
     <% @last_leads.each do |lead| %>
          - <%= lead.email %> : <%= lead.created_at %><br />
     <% end %>
 </p>
+<p><i>NB : to see more than  last leads, add "&amp;nb=[your number]" to url</i></p>

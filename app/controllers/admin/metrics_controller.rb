@@ -1,6 +1,7 @@
 class Admin::MetricsController < Admin::BaseController
   def index
     @lead_count   = Lead.count
-    @last_leads = Lead.last(params[:nb] || 5)
+    @nb_last_leads = params[:nb].present? ? params[:nb].to_i : 5
+    @last_leads = Lead.last(@nb_last_leads)
   end
 end
