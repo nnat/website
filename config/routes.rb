@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   scope "(:locale)", locale: /en|fr/ do
     get 'comment-ca-marche' => 'home#faq', as: 'faq'
+    get 'reservez-votre-risebox' => 'home#program', as: 'program'
+    get 'participer-au-programme-early-adopter' => 'home#apply', as: 'apply'
     root 'home#index'
     resources :leads
   end

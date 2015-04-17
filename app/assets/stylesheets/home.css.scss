@@ -3,7 +3,7 @@ body {
   padding-bottom: 20px;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views 
+/* Everything but the jumbotron gets side spacing for mobile first views
 .header,
 .marketing,
 .footer {
@@ -59,10 +59,18 @@ body {
 .jumbotron {
   text-align: bottom;
   border-bottom: 1px solid #e5e5e5;
-  background: image-url('home/kitchen_765.jpg') no-repeat center center;
 
   width: 100%;
+}
+
+.kitchen-img {
+  background: image-url('home/kitchen_765.jpg') no-repeat center center;
   height: 380px;
+}
+
+.program-img {
+  background: image-url('home/program.jpg') no-repeat center center;
+  height: 240px;
 }
 
 .jumbotron .btn {

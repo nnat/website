@@ -1,0 +1,119 @@
+<% content_for :head do %>
+    <meta property="og:title" content="<%= t '.meta.og_title' %>" />
+    <meta property="og:description" content="<%= t '.meta.og_description' %>" />
+    <meta property="description" content="<%= t '.meta.description' %>" />
+    <meta property="keywords" content="<%= t '.meta.keywords' %>" />
+<% end %>
+
+<div class="container">
+    <%= render 'nav' %>
+
+    <br /><br />
+
+    <div style="position:relative;">
+        <%= image_tag 'program/nicolas_install2.jpg', size: '800x468' %>
+        <div style="top:20px;left:40px;position: absolute;">
+            <h1 class="text-center">Vivez l'expérience Risebox</h1>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="lead text-center">
+        Participez à notre programme "early adopter" et profitez de votre Risebox à partir de Septembre 2015
+    </div>
+
+    <div class="text-center mbl">
+        <%= link_to 'Je réserve ma place', apply_path, class: 'btn btn-success btn-lg' %>
+    </div>
+
+<!--     <div class="well well-lg">
+        <p>
+        Risebox représente beaucoup pour nous. Pour nos premiers, on veut que tous ce passe bien. C'est pourquoi plutôt que de faire appel à du financement participatif, nous avons pensé programme pour des pionniers.
+        <br /><br />
+        A très bientôt
+        <br />
+        Nicolas & Adrien
+        </p>
+    </div>
+    <br/> -->
+
+    <h2 class="text-center">
+        Votre future Risebox...
+    </h2>
+    <br/>
+
+    <div class="row">
+        <div class="col-lg-6 mbm">
+            <h4><span class="glyphicon glyphicon-euro"></span>&nbsp;&nbsp;Innovation</h4>
+            <p class="text-justify mbl">Vous avez pour la première fois, un potager d'intérieur réellement productif et efficace énergétiquement. Risebox n'est pas un gadget, récoltez vos légumes chaque semaine</p>
+
+            Pour la première fois, vous produisez une nourriture saine en interieur et efficace énergétiquement. Risebox n'est pas un gadget, récoltez vos légumes chaque semaine
+
+            <!-- <p class="text-justify mbl">Risebox est conçu dans un soucis d'efficacité energétique. L'éclairage utilise des LEds de tute dernière génération qui n'émmette que des fréquences utiles à la plante. Le circuit d'eau optimisé fonctionne avec une pompe de faible puissance, sans oxygénateur, ni chauffage ni filtre d'aquarium</p> -->
+
+
+            <br />
+            <h4><span class="glyphicon glyphicon-dashboard"></span>&nbsp;&nbsp;Technologie bienveillante</h4>
+            <p class="text-justify mbl">LEDS, Capteurs, analyseur d'eau, algorithmes: c'est un bijoux technologique dont le but est de vous simplifier la vie et de vous offrir des légumes savoureux. Pilotez votre Risebox depuis un smartphone, vous avez la main verte.</p>
+            <br />
+            <h4><span class="glyphicon glyphicon-euro"></span>&nbsp;&nbsp;Un éco-système bien vivant</h4>
+            <p class="text-justify mbl">Nous faisons grandir l'éco-système de votre Risebox plusieurs semaines à l'avance et nous la livrons avec vos plantes et vos poissons en parfaite symbiose.</p>
+            <br />
+            <h4><span class="glyphicon glyphicon-heart"></span>&nbsp;&nbsp;Fait main with love</h4>
+            <p class="text-justify mbl">Réalisé exclusivement pour vous dans notre atelier, c'est un exemplaire unique</p>
+        </div>
+        <div class="col-lg-6 mbm">
+            <%= image_tag 'program/risebox3.jpg', size: '342x519' %>
+        </div>
+    </div>
+
+    <br/><br/>
+
+    <h2 class="text-center">
+        ...en mode privilégié
+    </h2>
+    <br/>
+
+    <div class="row">
+        <div class="col-lg-4 mbm">
+            <h4>Livré et installé chez vous</h4>
+            <p>L'équipe se déplace, installe et régle votre Risebox, et vous explique tout. . Vous n'avez plus qu'à admirer vos poissons et récolter dans quelques jours :)</p>
+        </div>
+        <div class="col-lg-4 mbm">
+            <h4>Tout est inclus</h4>
+            <p>Durant toute la durée du programme nous fournissons gratuitement des graines apatée, des plants pour gagner du temps et la nourriture pour les poissons</p>
+        </div>
+        <div class="col-lg-4 mbm">
+            <h4>Support premium</h4>
+            <p>Nous sommes joignables 7j/7 et nous intervennons chez vous si besoin. Si quelque chose ne fonctionne plus: on remplace. Vous n'êtes pas satisfait: on rembourse</p>
+        </div>
+    </div>
+
+    <div class="text-center mbl">
+        <%= link_to "J'y participe", apply_path, class: 'btn btn-success btn-lg' %>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3 mbm">
+            <%= image_tag 'program/divers.jpg', size: '200x200' %>
+        </div>
+        <div class="col-lg-3 mbm">
+            <%= image_tag 'program/radis.jpg', size: '200x200' %>
+        </div>
+        <div class="col-lg-3 mbm">
+            <%= image_tag 'program/salade.jpg', size: '200x200' %>
+        </div>
+        <div class="col-lg-3 mbm">
+            <%= image_tag 'program/fraise2.jpg', size: '200x200' %>
+        </div>
+    </div>
+
+    <div class="text-center mbl">
+        Toujours pas convaincu ?<br />
+        Dites-nous ce qui vous gène à <strong>jsuispassur@risebox.co</strong>
+    </div>
+
+    <%= render 'footer' %>
+
+</div>

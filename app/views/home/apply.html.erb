@@ -1,0 +1,32 @@
+<% content_for :head do %>
+    <meta property="og:title" content="<%= t '.meta.og_title' %>" />
+    <meta property="og:description" content="<%= t '.meta.og_description' %>" />
+    <meta property="description" content="<%= t '.meta.description' %>" />
+    <meta property="keywords" content="<%= t '.meta.keywords' %>" />
+<% end %>
+
+<div class="container">
+    <%= render 'nav' %>
+
+    <br /><br />
+    <h1 class="text-center">Allez on y va !</h1>
+
+    <br /><br />
+
+    <div class="panel panel-success">
+        <div class="panel-heading">
+        <h3 class="panel-title">Conditions</h3>
+      </div>
+      <div class="panel-body">
+        <ol>
+            <li>Le programme s'adresse aux habitants d'Ile de France</li>
+            <li>Le prix total est de 1299€.</li>
+            <li>Il dure 6 mois. Bien sûr à terme vous gardez votre Risebox.</li>
+            <li>Les places sont très limités. Faites vite...</li>
+        </ol>
+      </div>
+    </div>
+
+    Formulaire
+
+</div>

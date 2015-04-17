@@ -10,7 +10,7 @@
 
     <%= render 'nav' %>
 
-    <div class="jumbotron" style="background-color: white;">
+    <div class="jumbotron kitchen-img" style="background-color: white;">
     </div>
 
     <p class="lead text-center"><%= t('.headline') %></p>
@@ -39,6 +39,17 @@
             <p class="text-justify"><%= t('.features.n4.text') %></p>
         </div>
     </div>
+
+    <br /><br />
+    <div class="jumbotron program-img">
+        <p class="lead text-center" style="text-shadow: 0px 0px 9px #777; color: white;">
+            Envie d'une Risebox avant tout le monde ?
+        </p>
+        <div class="text-center mbl">
+            <%= link_to "Découvrez notre programme early adopter", program_path, class: 'btn btn-success btn-lg' %>
+        </div>
+    </div>
+
 
     <blockquote class="mbl text-center">
       <p><%= t('.quote.text')%></p>

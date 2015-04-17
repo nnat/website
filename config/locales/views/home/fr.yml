@@ -2,6 +2,7 @@ fr:
   home:
     nav:
       faq: Comment ça marche
+      program: Réservez votre Risebox
       about: A propos
       tagline: Faites pousser du bio chez vous
     subscribe:
@@ -44,3 +45,15 @@ fr:
         og_description: "Découvrez tout ce qu'il y a à savoir sur Risebox: le potager vertical d'intérieur fonctionnant grâce à l'aquaponie"
         description: "Découvrez tout ce qu'il y a à savoir sur Risebox: le potager vertical d'intérieur fonctionnant grâce à l'aquaponie"
         keywords: "agriculture urbaine, fruits, légumes, frais, bio, durable, potager, aquaponie, poissons, écologie, résilience"
+    program:
+      meta:
+        og_title: 'Essayez Risebox avant tout le monde'
+        og_description: ""
+        description: ""
+        keywords: ""
+    apply:
+      meta:
+        og_title: 'Allez, on le fait'
+        og_description: ""
+        description: ""
+        keywords: ""

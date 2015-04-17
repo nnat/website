@@ -8,4 +8,12 @@ class HomeController < ApplicationController
     @lead = Lead.new
   end
 
+  def program
+    @section = :program
+  end
+
+  def apply
+    @section = :program
+  end
+
 end

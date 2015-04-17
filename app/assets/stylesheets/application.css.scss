@@ -20,3 +20,9 @@
 @import "home";
 @import "faq";
 @import "admin";
+
+.nav-pills > li.important > a {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
