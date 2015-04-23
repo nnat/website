@@ -11,12 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140918205526) do
+ActiveRecord::Schema.define(version: 20150422204914) do
 
   create_table "leads", force: true do |t|
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "post_code"
+    t.datetime "applied_at"
   end
 
 end

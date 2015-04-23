@@ -1,0 +1,55 @@
+<% content_for :head do %>
+    <meta property="og:title" content="<%= t '.meta.og_title' %>" />
+    <meta property="og:description" content="<%= t '.meta.og_description' %>" />
+    <meta property="description" content="<%= t '.meta.description' %>" />
+    <meta property="keywords" content="<%= t '.meta.keywords' %>" />
+<% end %>
+
+<div class="container">
+    <%= render 'home/nav' %>
+
+    <br /><br />
+    <h1 class="text-center">Allez on y va !</h1>
+
+    <br /><br />
+
+    <div class="row">
+        <div class="col-lg-6 mbm">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                <h3 class="panel-title">Conditions</h3>
+              </div>
+              <div class="panel-body">
+                <ol>
+                    <li>Le programme s'adresse aux habitants d'Ile de France</li>
+                    <li>Le prix total est de 1299€.</li>
+                    <li>Il dure 6 mois. Bien sûr à terme vous gardez votre Risebox.</li>
+                    <li>Les places sont très limités. Faites vite...</li>
+                </ol>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mbm">
+            <%# form_for(@room, url: {action: "update"}, html: {class: 'form-inline', role: 'form'}) do |f| %>
+            <%= form_for @lead, url: {action: "create"}, html: {role: 'form'} do |f| %>
+                <div class="form-group form-group-lg">
+                    <%= f.label :first_name, class: 'sr-only' %>
+                    <%= f.text_field :first_name, class: "form-control", placeholder: "votre prénom" %>
+                </div>
+                <div class="form-group form-group-lg">
+                    <%= f.label :last_name, class: 'sr-only' %>
+                    <%= f.text_field :last_name, class: "form-control", placeholder: "votre nom" %>
+                </div>
+                <div class="form-group form-group-lg">
+                    <%= f.label :email, class: 'sr-only' %>
+                    <%= f.email_field :email, class: "form-control", placeholder: "votre email" %>
+                </div>
+                <div class="form-group form-group-lg">
+                    <%= f.label :post_code, class: 'sr-only' %>
+                    <%= f.text_field :post_code, class: "form-control", placeholder: "votre Code Postal" %>
+                </div>
+                <%= f.submit "Je réserve ma Risebox" , class: "btn btn-success btn-lg btn-block" %>
+            <% end %>
+        </div>
+    </div>
+</div>

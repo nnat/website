@@ -13,7 +13,10 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /en|fr/ do
     get 'comment-ca-marche' => 'home#faq', as: 'faq'
     get 'reservez-votre-risebox' => 'home#program', as: 'program'
-    get 'participer-au-programme-early-adopter' => 'home#apply', as: 'apply'
+    # get 'participer-au-programme-early-adopter' => 'home#apply', as: 'apply'
+    resources :program_leads, only: [:new, :create]
+    get 'felicitations' => 'home#congratulations', as: 'congratulations'
+
     root 'home#index'
     resources :leads
   end

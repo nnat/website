@@ -12,7 +12,7 @@ class HomeController < ApplicationController
     @section = :program
   end
 
-  def apply
+  def congratulations
     @section = :program
   end
 
