@@ -4,52 +4,377 @@
     <meta property="description" content="<%= t '.meta.description' %>" />
     <meta property="keywords" content="<%= t '.meta.keywords' %>" />
 <% end %>
+<style>
+._floatingForm.affix {
+    position: relative;
+    }
+@media screen and (min-width: 1200px) {
+    ._floatingForm.affix {
+        position: fixed;
+        width: 20%;
+    }
+}
+    /*!
+ *   AdminLTE v1.0
+ *   Author: AlmsaeedStudio.com
+ *   License: Open source - MIT
+ *  Please visit http://opensource.org/licenses/MIT for more information
+!*/
+/*
 
+/*====================================
+  --- TIMELINE LIKE ABOUT SECTION CSS ----
+======================================*/
+
+.timeline {
+  margin: 0 0 30px 0;
+  padding: 0;
+  list-style: none;
+}
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  width: 5px;
+  background: #ddd;
+  left: 31px;
+  border: 1px solid #eee;
+  margin: 0;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.timeline > li {
+  position: relative;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+.timeline > li:before,
+.timeline > li:after {
+  display: table;
+  content: " ";
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li > .timeline-item {
+  margin-top: 10px;
+  border: 0px solid #dfdfdf;
+  background: #fff;
+  color: #555;
+  margin-left: 60px;
+  margin-right: 15px;
+  padding: 5px;
+  position: relative;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.timeline > li > .timeline-item > .time {
+  color: #999;
+  float: right;
+  margin: 2px 0 0 0;
+}
+.timeline > li > .timeline-item > .timeline-header {
+  margin: 0;
+  color: #555;
+  border-bottom: 1px solid #f4f4f4;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1.1;
+}
+.timeline > li > .timeline-item > .timeline-header > a {
+  font-weight: 600;
+}
+.timeline > li > .timeline-item > .timeline-body,
+.timeline > li > .timeline-item > .timeline-footer {
+  padding: 10px;
+}
+.timeline > li.time-label > span {
+  font-weight: 600;
+  padding: 5px;
+  display: inline-block;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.timeline > li > .fa,
+.timeline > li > .glyphicon,
+.timeline > li > .ion {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+  line-height: 30px;
+  position: absolute;
+  color: #666;
+  background: #eee;
+  border-radius: 50%;
+  text-align: center;
+  left: 18px;
+  top: 0;
+}
+
+
+/*====================================
+  --- BACKGROUND COLORS OPTIONS ----
+======================================*/
+
+.bg-red,
+.bg-yellow,
+.bg-aqua,
+.bg-blue,
+.bg-light-blue,
+.bg-green,
+.bg-navy,
+.bg-teal,
+.bg-olive,
+.bg-lime,
+.bg-orange,
+.bg-fuchsia,
+.bg-purple,
+.bg-maroon,
+.bg-black {
+  color: #f9f9f9 !important;
+}
+.bg-gray {
+  background-color: #eaeaec !important;
+}
+.bg-black {
+  background-color: #222222 !important;
+}
+.bg-red {
+  background-color: #f56954 !important;
+}
+.bg-yellow {
+  background-color: #f39c12 !important;
+}
+.bg-aqua {
+  background-color: #00c0ef !important;
+}
+.bg-blue {
+  background-color: #37AFFF !important;
+}
+.bg-light-blue {
+  background-color: #3c8dbc !important;
+}
+.bg-green {
+  background-color: #00a65a !important;
+}
+.bg-navy {
+  background-color: #001f3f !important;
+}
+.bg-teal {
+  background-color: #39cccc !important;
+}
+.bg-olive {
+  background-color: #3d9970 !important;
+}
+.bg-lime {
+  background-color: #01ff70 !important;
+}
+.bg-orange {
+  background-color: #ff851b !important;
+}
+.bg-fuchsia {
+  background-color: #f012be !important;
+}
+.bg-purple {
+  background-color: #932ab6 !important;
+}
+.bg-maroon {
+  background-color: #85144b !important;
+}
+
+/*====================================
+  --- TEXT COLORS OPTIONS ----
+======================================*/
+
+.text-red {
+  color: #f56954 !important;
+}
+.text-yellow {
+  color: #f39c12 !important;
+}
+.text-aqua {
+  color: #00c0ef !important;
+}
+.text-blue {
+  color: #0073b7 !important;
+}
+.text-light-blue {
+  color: #3c8dbc !important;
+}
+.text-green {
+  color: #00a65a !important;
+}
+.text-navy {
+  color: #001f3f !important;
+}
+.text-teal {
+  color: #39cccc !important;
+}
+.text-olive {
+  color: #3d9970 !important;
+}
+.text-lime {
+  color: #01ff70 !important;
+}
+.text-orange {
+  color: #ff851b !important;
+}
+.text-fuchsia {
+  color: #f012be !important;
+}
+.text-purple {
+  color: #932ab6 !important;
+}
+.text-maroon {
+  color: #85144b !important;
+}
+</style>
 <div class="container">
     <%= render 'home/nav' %>
 
-    <br /><br />
-    <h1 class="text-center">Allez on y va !</h1>
+    <br />
+    <h1 class="lead text-center" style="margin-bottom: 10px; font-size: 30px">
+        Programme ouvert aux habitants du 75, 92 et 95.
+        <br />Place limitées
+    </h1>
+
+    <div class="text-center">
+        Vous habitez dans un autre département ?<br />
+        <%= link_to 'Laissez-nous vos coodonnées', '#' %>, on vous prévient dès que vous pouvez bénéficier du programme
+    </div>
 
     <br /><br />
 
     <div class="row">
-        <div class="col-lg-6 mbm">
-            <div class="panel panel-success">
-                <div class="panel-heading">
-                <h3 class="panel-title">Conditions</h3>
-              </div>
-              <div class="panel-body">
-                <ol>
-                    <li>Le programme s'adresse aux habitants d'Ile de France</li>
-                    <li>Le prix total est de 1299€.</li>
-                    <li>Il dure 6 mois. Bien sûr à terme vous gardez votre Risebox.</li>
-                    <li>Les places sont très limités. Faites vite...</li>
-                </ol>
-              </div>
+        <div class="col-lg-7 mbm">
+            <h3>Comment ça se passe ?</h3>
+            <div style="position: relative">
+                <ul class="timeline">
+                    <li class="time-label">
+                        <span class="bg-light-blue"> Aujourd'hui
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="fa fa-hand-o-up bg-blue"></i>
+                        <div class="timeline-item">
+                            <h3 class="timeline-header">Vous réservez</h3>
+                            <div class="timeline-body">
+                                Placer une réservation en déposant 100€ remboursable
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <i class="fa fa-euro bg-blue"></i>
+                        <div class="timeline-item">
+                            <h3 class="timeline-header no-border">Vous confirmez votre participation</h3>
+                            <div class="timeline-body">
+                            </div>
+                            On se rencontre à l'atelier pour vous montrer la Risebox en fonctionnement et répondre à vos questions. Si vous confirmez vous réglez le solde de la participation au programme, soit 1190€.
+                        </div>
+                    </li>
+
+                    <li class="time-label">
+                        <span class="bg-green"> Cet été
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="fa fa-wrench bg-purple"></i>
+                        <div class="timeline-item">
+                            <h3 class="timeline-header">On fabrique</h3>
+                            <div class="timeline-body">
+                                Nous construisons votre Risebox et nous préparons l'écosystème pour vous
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="time-label">
+                        <span class="bg-green"> A partir de Septembre
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="fa fa-truck bg-maroon"></i>
+                        <div class="timeline-item">
+                            <h3 class="timeline-header">On vous livre</h3>
+                            <div class="timeline-body">
+                               Nous commençons les livraisons dans l'ordre de pré-commande. Votre Risebox est déjà plantée et nous fournissons les poissons.
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <i class="fa fa-smile-o bg-blue"></i>
+                        <div class="timeline-item">
+                            <h3 class="timeline-header">On vous accompagne</h3>
+                            <div class="timeline-body">
+                                Pendant toute la durée du programme tout est inclus :
+                                <br />
+                                <ul>
+                                    <li>Le support de l'équipe</li>
+                                    <li>La nourriture pour les poissons</li>
+                                    <li>Les plantations</li>
+                                </ul>
+                                Ce sera également l'occasion de nous faire de vos remarques et vos idées qui contribueront à l'élaboration de la prochaine version.
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="time-label">
+                        <span class="bg-green"> 6 mois plus tard
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="fa fa-paper-plane bg-blue"></i>
+                        <div class="timeline-item">
+                            <h3 class="timeline-header">Vous choisissez</h3>
+                            <div class="timeline-body">
+                                Vous conservez votre exemplaire unique ou nous l'échangeons contre un avoir valable sur la version commerciale de la Risebox.
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="col-lg-6 mbm">
-            <%# form_for(@room, url: {action: "update"}, html: {class: 'form-inline', role: 'form'}) do |f| %>
-            <%= form_for @lead, url: {action: "create"}, html: {role: 'form'} do |f| %>
-                <div class="form-group form-group-lg">
-                    <%= f.label :first_name, class: 'sr-only' %>
-                    <%= f.text_field :first_name, class: "form-control", placeholder: "votre prénom" %>
-                </div>
-                <div class="form-group form-group-lg">
-                    <%= f.label :last_name, class: 'sr-only' %>
-                    <%= f.text_field :last_name, class: "form-control", placeholder: "votre nom" %>
-                </div>
-                <div class="form-group form-group-lg">
-                    <%= f.label :email, class: 'sr-only' %>
-                    <%= f.email_field :email, class: "form-control", placeholder: "votre email" %>
-                </div>
-                <div class="form-group form-group-lg">
-                    <%= f.label :post_code, class: 'sr-only' %>
-                    <%= f.text_field :post_code, class: "form-control", placeholder: "votre Code Postal" %>
-                </div>
-                <%= f.submit "Je réserve ma Risebox" , class: "btn btn-success btn-lg btn-block" %>
-            <% end %>
+        <div class="col-lg-5 mbm scrollspy">
+            <div class="_floatingForm" data-spy="affix">
+                <h3>Embarquez avec nous !</h3>
+                <%= form_for @lead, url: {action: "create"}, html: {role: 'form'} do |f| %>
+                        <div class="form-group form-group-lg">
+                            <%= f.label :first_name, class: 'sr-only' %>
+                            <%= f.text_field :first_name, class: "form-control", placeholder: "votre prénom" %>
+                        </div>
+                        <div class="form-group form-group-lg">
+                            <%= f.label :last_name, class: 'sr-only' %>
+                            <%= f.text_field :last_name, class: "form-control", placeholder: "votre nom" %>
+                        </div>
+                        <div class="form-group form-group-lg">
+                            <%= f.label :email, class: 'sr-only' %>
+                            <%= f.email_field :email, class: "form-control", placeholder: "votre email" %>
+                        </div>
+                        <%= f.submit "Je réserve ma Risebox" , class: "btn btn-success btn-lg btn-block" %>
+                <% end %>
+            </div>
         </div>
     </div>
 </div>
+<script>
+//     $( document ).ready(function() {
+//         var formTop = $('._floatingForm').offset().top;
+//         $(window).scroll(function() {
+//             scroll = $(window).scrollTop();
+//             if (scroll > formTop) {
+//                $('._floatingForm' ).css('margin-top',scroll - formTop + 'px');
+//             }
+//         });
+//     });
+</script>
