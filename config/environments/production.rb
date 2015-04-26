@@ -2,6 +2,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   IP_FILTERING = ENV['IP_FILTERING'] == 'true'
   IP_WHITELIST = {  '31.35.37.50'    => 'ATH IP',
+                    '90.57.225.235'  => 'FRONTITI_IP',
                     '81.57.249.138'  => 'NNA_IP',
                     '212.85.146.161' => 'ELECTROLAB_IP',
                     '127.0.0.1'      => 'Possible heroku self http call' }
