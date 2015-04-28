@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require risebox/rb-base.js
 //= require jquery
 //= require bootstrap-sprockets
-//= require_tree .
-
+//= require risebox/floating-forms.js
