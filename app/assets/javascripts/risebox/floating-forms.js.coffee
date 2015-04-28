@@ -1,9 +1,19 @@
 rb.decorateFloatingForms = ->
-  # $('._floatingForm').affix()
-  formTop = $('._floatingForm').offset().top
-  $(window).scroll () ->
-    scroll = $(window).scrollTop()
-    if (scroll > formTop)
-      $('._floatingForm' ).addClass('affix')
+  floatingForm = $('._floatingForm')
+  formBottom = floatingForm.offset().top + floatingForm.height()
+  screenHeight = (window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight)
+  if screenHeight <= formBottom
+  	bottomSpace = 0
+  else
+    bottomSpace = screenHeight - formBottom
+  floatingForm.css "bottom", "#{bottomSpace}px"
+
+  $(window).scroll () =>
+    scroll = $(window).scrollTop() + screenHeight
+    console.log "scroll : #{scroll}   formBottom : #{formBottom}"
+    if scroll > (formBottom + bottomSpace)
+      floatingForm.addClass('affix')
+      floatingForm.removeClass('affix-top')
     else
-      $('._floatingForm' ).addClass('affix-top')
+      floatingForm.addClass('affix-top')
+      floatingForm.removeClass('affix')

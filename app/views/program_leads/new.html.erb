@@ -5,7 +5,7 @@
     <meta property="keywords" content="<%= t '.meta.keywords' %>" />
 <% end %>
 <% content_for :load_script do %>
-    //rb.decorateFloatingForms();
+    rb.decorateFloatingForms();
 <% end %>
 <style>
 ._floatingForm.affix {
@@ -14,7 +14,7 @@
 @media screen and (min-width: 1200px) {
     ._floatingForm.affix {
         position: fixed;
-        width: 21%;
+        width: 22.5%;
     }
 }
     /*!
@@ -349,7 +349,7 @@
             </div>
         </div>
         <div class="col-lg-5 mbm scrollspy">
-            <div class="_floatingForm affix">
+            <div class="_floatingForm">
                 <h3>Embarquez avec nous !</h3>
                 <%= form_for @lead, url: {action: "create"}, html: {role: 'form'}, id: 'payment-form' do |f| %>
                         <span class="payment-errors"></span>
