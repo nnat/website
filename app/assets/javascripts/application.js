@@ -17,3 +17,4 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require risebox/floating-forms.js
+//= require risebox/stripe

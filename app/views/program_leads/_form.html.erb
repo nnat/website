@@ -1,0 +1,48 @@
+<% content_for :load_script do %>
+    rb.decorateFloatingForms();
+    rb.initStripe('#new_lead');
+<% end %>
+
+<div class="_floatingForm">
+  <h3>Embarquez avec nous !</h3>
+  <%= form_for @lead, url: {action: "create"}, html: {role: 'form'}, id: 'payment-form' do |f| %>
+    <span class="payment-errors"></span>
+    <div class="form-group">
+        <%= f.label :first_name, class: 'sr-only' %>
+        <%= f.text_field :first_name, class: "form-control", placeholder: "votre prénom" %>
+    </div>
+    <div class="form-group">
+        <%= f.label :last_name, class: 'sr-only' %>
+        <%= f.text_field :last_name, class: "form-control", placeholder: "votre nom" %>
+    </div>
+    <div class="form-group">
+        <%= f.label :email, class: 'sr-only' %>
+        <%= f.email_field :email, class: "form-control", placeholder: "votre email" %>
+    </div>
+    <div class="form-group">
+        <%= label_tag :card_number, "Carte de crédit", class: 'sr-only' %>
+        <%= text_field_tag :card_number, nil, name: nil, class: "form-control", placeholder: "votre n° de carte visa ou matercard", data: {stripe: 'number'}  %>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-xs-7"><span class="help-block text-muted" style="margin-top: 0px; margin-bottom: 0px"><small>&nbsp;Expiration</small></span></div>
+            <div class="col-xs-5"><span class="help-block text-muted" style="margin-top: 0px; margin-bottom: 0px"><small>&nbsp;Code sécurité</small></span></div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3" style="padding-right: 0px">
+            <%= text_field_tag :card_month, nil, name: nil, id: "card_month", class: "form-control", placeholder: "MM", data: {stripe: 'exp-month'}%>
+          </div>
+          <div class="col-xs-4">
+            <%= text_field_tag :card_year, nil, name: nil, id: "card_year", class: "form-control", placeholder: "AAAA", data: {stripe: 'exp-year'} %>
+          </div>
+          <div class="col-xs-3" style="padding-right: 0px">
+            <%= text_field_tag :card_code, nil, name: nil, class: "form-control", placeholder: "CVV", data: {stripe: 'cvc'} %>
+          </div>
+          <div class="col-xs-2" style="padding-left: 3px">
+            <%= image_tag 'program/cvv.png', size: '39x26'%>
+          </div>
+        </div>
+    </div>
+    <%= f.submit "Je réserve ma Risebox" , class: "btn btn-success btn-lg btn-block", id: 'payment-submit' %>
+  <% end %>
+</div>
