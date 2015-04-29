@@ -11,7 +11,7 @@ Rails.application.configure do
   JOBS_RUN         = true
   JOBS_SYNCHRONOUS = true
 
-  TEST_EMAIL        = ''
+  TEST_EMAIL        = 'team@risebox.co'
   MAILS_INTERCEPTED = false
 
   #Load .env content as ENV variables used for ENV['PORT']
