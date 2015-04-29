@@ -11,7 +11,7 @@
             -->
             <ul class="nav nav-pills head-menu pull-right">
                 <li class="<%= 'active' if (@section == :faq)%>" ><%= link_to t('.faq'), faq_path, id: 'faq-nav-menu' %></li>
-                <li class="important <%= 'active' if (@section == :program)%>"><%= link_to t('.program'), program_path(locale: :fr), id: 'program-nav-menu' %></a></li>
+                <li class="<%= (@section == :program) ? 'active' : 'important' %>"><%= link_to t('.program'), program_path(locale: :fr), id: 'program-nav-menu' %></a></li>
 
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-target="#" data-toggle="dropdown">
