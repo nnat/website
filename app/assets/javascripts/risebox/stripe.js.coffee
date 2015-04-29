@@ -34,7 +34,7 @@ stripeResponseHandler = (status, response) ->
 
   if (response.error)
     # Show the errors on the form
-    $form.find('.payment-errors').text(stripeErrorMessage(response.error.type));
+    $form.find('.payment-errors').text(stripeErrorMessage(response.error.code));
     $form.find('#payment-submit').prop('disabled', false);
   else
     # response contains id and card, which contains additional card details
