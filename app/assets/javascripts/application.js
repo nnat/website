@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require risebox/rb-base.js
-//= require jquery
 //= require bootstrap-sprockets
 //= require risebox/floating-forms.js
 //= require risebox/stripe
