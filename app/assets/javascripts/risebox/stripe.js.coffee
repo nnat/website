@@ -1,5 +1,5 @@
 rb.initStripe = (formId, stripePublicKey) ->
-  Stripe.setPublishableKey(stripePublicKey);
+  Stripe.setPublishableKey(stripePublicKey)
   rb.stripeFormId = formId
   $(formId).submit (event) ->
     $form = $(this)
@@ -34,12 +34,12 @@ stripeResponseHandler = (status, response) ->
 
   if (response.error)
     # Show the errors on the form
-    $form.find('.payment-errors').text(stripeErrorMessage(response.error.code));
+    $form.find('.payment-errors').text(stripeErrorMessage(response.error.code))
     $form.find('#payment-submit').prop('disabled', false);
   else
     # response contains id and card, which contains additional card details
     token = response.id
     # Insert the token into the form so it gets submitted to the server
-    $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+    $form.append($('<input type="hidden" name="stripeToken" />').val(token))
     # and submit
     $form.get(0).submit()
