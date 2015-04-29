@@ -34,7 +34,7 @@ stripeResponseHandler = (status, response) ->
 
   if (response.error)
     # Show the errors on the form
-    $form.find('._payment-errors').show().text(stripeErrorMessage(response.error.type))
+    $form.find('._payment-errors').show().text(stripeErrorMessage(response.error.code))
     $form.find('#payment-submit').prop('disabled', false)
   else
     $form.find('._payment-errors').hide()
