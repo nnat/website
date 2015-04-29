@@ -1,6 +1,6 @@
 <% content_for :load_script do %>
     rb.decorateFloatingForms();
-    rb.initStripe('#new_lead');
+    rb.initStripe('#new_lead','<%=STRIPE_PUBLIC_KEY%>');
 <% end %>
 
 <div class="_floatingForm">

@@ -1,4 +1,5 @@
-rb.initStripe = (formId) ->
+rb.initStripe = (formId, stripePublicKey) ->
+  Stripe.setPublishableKey(stripePublicKey);
   rb.stripeFormId = formId
   $(formId).submit (event) ->
     $form = $(this)
