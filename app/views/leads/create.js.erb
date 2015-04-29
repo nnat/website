@@ -3,5 +3,5 @@
     $('#leadSuccess').text("<%= raw t('.success') %>").fadeIn().delay(3000).fadeOut();
     $('#lead-email').val('');
 <% else %>
-    $('#leadError').text("<%=t('.oops')%>, <%=raw @lead.errors.messages.values.join(' '+t('.and')+' ') %>.").fadeIn();
+    $('#leadError').text("<%=t('.oops')%>, <%=raw @lead.errors.messages.values.join(' '+t('.and')+' ') %>.").fadeIn().delay(3000).fadeOut();
 <% end %>
