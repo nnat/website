@@ -31,6 +31,9 @@ class ProgramLeadsController < ApplicationController
 
     @lead.update_attributes(lead_params.merge(applied_at: Time.now))
     redirect_to congratulations_path
+  end
+
+  def congrats
 
   end
 

@@ -12,8 +12,4 @@ class HomeController < ApplicationController
     @section = :program
   end
 
-  def congratulations
-    @section = :program
-  end
-
 end
