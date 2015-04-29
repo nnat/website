@@ -1,4 +1,19 @@
 Rails.application.configure do
+  REDIS_PROVIDER_URL = 'redis://localhost:6379/'
+
+  NEWRELIC_API_URL = 'https://api.newrelic.com/api/v1/accounts/123/applications/234'
+
+  # Settings specified here will take precedence over those in config/application.rb.
+  WORKER_AUTOSCALE = false
+  SCALER_CONFIG = {
+                    default:    {min_workers: 0, max_workers: 1, job_threshold: 1, queues: 'send_emails' }
+                  }
+  JOBS_RUN         = true
+  JOBS_SYNCHRONOUS = true
+
+  TEST_EMAIL        = ''
+  MAILS_INTERCEPTED = false
+
   #Load .env content as ENV variables used for ENV['PORT']
   Hash[File.read('.env').scan(/(.+?)=(.+)/)].each {|k,v| ENV[k.to_s] = v} if File.exist?('.env')
   ENV['PORT'] ||= '3000'
@@ -23,6 +38,10 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default_url_options   = { host: "localhost:#{ENV['PORT']}" }
+  config.action_mailer.delivery_method       = :test
+  config.action_mailer.default_options       = { from:      'Risebox <contact@risebox.co>',
+                                                 reply_to:  'no-reply@risebox.co' }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

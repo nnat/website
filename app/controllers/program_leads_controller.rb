@@ -20,9 +20,10 @@ class ProgramLeadsController < ApplicationController
         :source => token,
         :description => @lead.email
       )
-      
+
 
     rescue Stripe::CardError => e
+      # JobRunner.run(SendEmail, 'payment_alert', 'Lead', @lead.id)
       flash.now[:alert] = "Désolé la transaction n'a pas pu aboutir. Envoyez-nous un email"
       render :new
       return
