@@ -1,4 +1,13 @@
 Rails.application.configure do
+  REDIS_PROVIDER_URL = 'redis://localhost:6379/'
+
+  NEWRELIC_API_URL = 'https://api.newrelic.com/api/v1/accounts/123/applications/234'
+
+  WORKER_AUTOSCALE = false
+  SCALER_CONFIG = {
+                    default:    {min_workers: 0, max_workers: 1, job_threshold: 1, queues: 'send_emails' }
+                  }
+
   FAVICON_PATH     = "favicon.ico"
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -30,7 +39,10 @@ Rails.application.configure do
   # Tell Action Mailer not to deliver emails to the real world.
   # The :test delivery method accumulates sent emails in the
   # ActionMailer::Base.deliveries array.
-  config.action_mailer.delivery_method = :test
+  config.action_mailer.delivery_method     = :test
+  config.action_mailer.default_options     = { from:      'Risebox <contact@risebox.co>',
+                                               reply_to:  'no-reply@risebox.co' }
+  config.action_mailer.default_url_options = { host: 'www.risebox.co' }
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr

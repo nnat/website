@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150422204914) do
+ActiveRecord::Schema.define(version: 20150429111951) do
+
+  create_table "app_settings", force: true do |t|
+    t.string   "key",        limit: 50
+    t.string   "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "app_settings", ["key"], name: "index_app_settings_on_key"
 
   create_table "leads", force: true do |t|
     t.string   "email"

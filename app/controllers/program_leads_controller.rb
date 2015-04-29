@@ -20,11 +20,12 @@ class ProgramLeadsController < ApplicationController
         :source => token,
         :description => @lead.email
       )
-      
+
 
     rescue Stripe::CardError => e
       @payment_error = e.to_json
       @payment_error_message = payment_error_message(e)
+      JobRunner.run(SendEmail, 'payment_alert', 'Lead', @lead.id)
       render :new
       return
     end
