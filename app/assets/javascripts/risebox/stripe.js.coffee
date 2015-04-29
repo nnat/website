@@ -22,7 +22,7 @@ stripeErrorMessage = (code) ->
     when 'expired_card' then "La carte a expirée"
     when 'incorrect_cvc' then "Le cryptogramme n'est pas correct"
     when 'incorrect_zip' then "Le zip code est incorrect"
-    when 'card_declined' then "La carte a été déclinée"
+    when 'card_declined' then "La carte a été refusée"
     when 'missing' then "Il n'y a pas de carte pour cet l'utilisateur"
     when 'processing_error' then "Une erreur est survenue lors du traitement de la carte"
     when 'rate_limit' then "Une erreur est survenue car trop de requêtes ont été réalisées"

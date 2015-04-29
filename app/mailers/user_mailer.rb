@@ -12,6 +12,15 @@ class UserMailer < ActionMailer::Base
     mail(to: @user.email, subject: "Risebox - Alerte sur votre device")
   end
 
+  def payment_alert lead, error_details
+    headers['X-SMTPAPI'] = single_recipient_header 'payment_alert'
+    @lead        = lead
+    @error_time  = error_details[:time]
+    @error       = error_details[:error]
+    @lead_email  = error_details[:lead_email]
+    mail(to: 'team@risebox.co', subject: "[URGENT][Risebox]Erreur de paiement #{@lead_email}")
+  end
+
 private
 
   def single_recipient_header category, bypass_list_management=false

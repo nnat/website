@@ -3,13 +3,14 @@
 <% end %>
 <% content_for :load_script do %>
     rb.decorateFloatingForms();
-    rb.initStripe('#new_lead','<%=STRIPE_PUBLIC_KEY%>');
+    rb.initStripe('#payment-form','<%=STRIPE_PUBLIC_KEY%>');
 <% end %>
 
 <div class="_floatingForm">
   <h3>Embarquez avec nous !</h3>
-  <%= form_for @lead, url: {action: "create"}, html: {role: 'form'}, id: 'payment-form' do |f| %>
-    <div class="_payment-errors alert alert-danger" style="display:none"></div>
+  <%= form_for @lead, url: {action: "create"}, html: {role: 'form', method: :post, id: 'payment-form'} do |f| %>
+    <div class="_payment-errors alert alert-danger" style="<%= @payment_error_message.present? ? nil : 'display:none' %>"><%= @payment_error_message %>
+    </div>
     <div class="form-group">
         <div class="row">
             <div class="col-xs-6">
