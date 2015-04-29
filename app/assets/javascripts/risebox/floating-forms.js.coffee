@@ -7,10 +7,12 @@ rb.decorateFloatingForms = ->
   else
     bottomSpace = screenHeight - formBottom
   floatingForm.css "bottom", "#{bottomSpace}px"
+  formWidth = floatingForm.width()
 
   $(window).scroll () =>
     scroll = $(window).scrollTop() + screenHeight
     console.log "scroll : #{scroll}   formBottom : #{formBottom}"
+    floatingForm.css "width", "#{formWidth}px"
     if scroll > (formBottom + bottomSpace)
       floatingForm.addClass('affix')
       floatingForm.removeClass('affix-top')
