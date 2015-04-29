@@ -14,7 +14,7 @@
                 <li class="important <%= 'active' if (@section == :program)%>"><%= link_to t('.program'), program_path, id: 'program-nav-menu' %></a></li>
 
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <a class="dropdown-toggle" data-target="#" data-toggle="dropdown">
                       <%= I18n.locale == :fr ? 'Français' : 'English' %> <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
