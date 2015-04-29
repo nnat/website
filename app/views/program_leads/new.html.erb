@@ -1,0 +1,45 @@
+<% content_for :head do %>
+    <meta property="og:title" content="<%= t '.meta.og_title' %>" />
+    <meta property="og:description" content="<%= t '.meta.og_description' %>" />
+    <meta property="description" content="<%= t '.meta.description' %>" />
+    <meta property="keywords" content="<%= t '.meta.keywords' %>" />
+<% end %>
+
+<style>
+
+._floatingForm.affix {
+    position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+    ._floatingForm.affix {
+        position: fixed;
+        width: 22.5%;
+    }
+}
+</style>
+<div class="container">
+    <%= render 'home/nav' %>
+
+    <br />
+    <h1 class="lead text-center" style="margin-bottom: 10px; font-size: 30px">
+        Programme ouvert aux habitants du 75, 92 et 95.
+        <br />Place limitées
+    </h1>
+
+    <div class="text-center">
+        Vous habitez un autre département ? <br />
+        <%= link_to 'Laissez-nous vos coodonnées', '#' %>, nous vous recontactons dés que Risebox est disponible près de chez vous
+    </div>
+
+    <br /><br />
+
+    <div class="row">
+        <div class="col-lg-7 mbm">
+            <%= render 'timeline' %>
+        </div>
+        <div class="col-lg-5 mbm scrollspy">
+            <%= render 'form' %>
+        </div>
+    </div>
+</div>
