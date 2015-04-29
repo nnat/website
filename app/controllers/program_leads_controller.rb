@@ -36,6 +36,9 @@ class ProgramLeadsController < ApplicationController
     end
 
     redirect_to congratulations_path
+  end
+
+  def congrats
 
   end
 
