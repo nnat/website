@@ -34,9 +34,10 @@ stripeResponseHandler = (status, response) ->
 
   if (response.error)
     # Show the errors on the form
-    $form.find('.payment-errors').text(stripeErrorMessage(response.error.type))
+    $form.find('._payment-errors').show().text(stripeErrorMessage(response.error.type))
     $form.find('#payment-submit').prop('disabled', false)
   else
+    $form.find('._payment-errors').hide()
     # response contains id and card, which contains additional card details
     token = response.id
     # Insert the token into the form so it gets submitted to the server

@@ -6,7 +6,7 @@
 <div class="_floatingForm">
   <h3>Embarquez avec nous !</h3>
   <%= form_for @lead, url: {action: "create"}, html: {role: 'form'}, id: 'payment-form' do |f| %>
-    <span class="payment-errors"></span>
+    <span class="_payment-errors alert alert-danger" style="display:none"></span>
     <div class="form-group">
         <div class="row">
             <div class="col-xs-6">
