@@ -34,12 +34,12 @@ class ProgramLeadsController < ApplicationController
       render :new
       return
     end
-
+    flash[:lead] = @lead.id
     redirect_to congratulations_path
   end
 
   def congrats
-
+    @lead = Lead.find_by_id(flash[:lead])
   end
 
 private
@@ -50,7 +50,7 @@ private
 
 
   def lead_params
-    params.require(:lead).permit(:email, :first_name, :last_name, :post_code)
+    params.require(:lead).permit(:email, :first_name, :last_name, :phone)
   end
 
   def payment_error_message error

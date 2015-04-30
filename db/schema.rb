@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150429111951) do
+ActiveRecord::Schema.define(version: 20150430140729) do
 
   create_table "app_settings", force: true do |t|
     t.string   "key",        limit: 50
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20150429111951) do
     t.string   "last_name"
     t.string   "post_code"
     t.datetime "applied_at"
+    t.string   "phone"
   end
 
 end

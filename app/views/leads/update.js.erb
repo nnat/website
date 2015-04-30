@@ -1,0 +1,6 @@
+<% if @updated %>
+	$('#phoneForm').hide();
+	$('#phoneSuccess').show().delay(3000).fadeOut();
+<% else %>
+	$('#phoneError').show().delay(3000).fadeOut();
+<% end %>

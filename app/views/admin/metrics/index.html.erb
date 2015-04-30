@@ -1,16 +1,28 @@
 <% admin_title 'Metrics', 'Cumulated' %>
-<div class="panel panel-info">
+<div class="panel panel-info"style="width: 700px">
 	<div class="panel-heading">
 		<h3 class="panel-title">Number of leads : <%= @lead_count %></h3>
 	</div>
 	<div class="panel-body">
-		<strong>Last <%= @nb_last_leads %> leads :</strong><br />
-	    <% @last_leads.each do |lead| %>
-	         - <%= lead.email %> : <%= time_ago_in_words lead.created_at %> ago<br />
-	    <% end %>
+		<table class="table">
+			<thead>
+				<tr>
+			  		<th>Email</th>
+			  		<th>Created</th>
+				</tr>
+			</thead>
+			<tbody>
+		    <% @last_leads.each do |lead| %>
+		        <tr>
+		          <th scope="row"><%= lead.email %></th>
+		          <td><%= time_ago_in_words lead.created_at %></td>
+		        </tr>
+		    <% end %>
+		    </tbody>
+		</table>
 	</div>
 	<div class="panel-footer">
-		<i>NB : to see more than  last leads, add "&amp;nb=[your number]" to url</i>
+		<i>Last <strong><%= @nb_last_leads %></strong> leads. To see more, add "&amp;nb=[your number]" to url</i>
 	</div>
 </div>
 
@@ -19,8 +31,27 @@
 		<h3 class="panel-title">Paying leads : <%= @paying_leads.count %></h3>
 	</div>
 	<div class="panel-body">
-	    <% @paying_leads.each do |lead| %>
-         - <%= lead.first_name %> <%= lead.last_name %> (<%= lead.email %>) - created <%= time_ago_in_words lead.created_at %> ago - paid <%= time_ago_in_words lead.applied_at %> ago<br />
-    	<% end %>
+		<table class="table">
+			<thead>
+				<tr>
+			  		<th>Name</th>
+			  		<th>Email</th>
+			  		<th>Phone</th>
+			  		<th>Applied</th>
+			  		<th>Created</th>
+				</tr>
+			</thead>
+			<tbody>
+			    <% @paying_leads.each do |lead| %>
+			    	<tr>
+		          		<th scope="row"><%= lead.first_name %> <%= lead.last_name %></th>
+		          		<td><%= lead.email %></td>
+		          		<td><%= lead.phone %></td>
+		          		<td><%= time_ago_in_words lead.applied_at %></td>
+		          		<td><%= time_ago_in_words lead.created_at %></td>
+		         	</tr>
+		    	<% end %>
+		    </tbody>
+		</table>
 	</div>
 </div>
