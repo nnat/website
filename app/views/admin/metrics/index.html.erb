@@ -1,8 +1,26 @@
 <% admin_title 'Metrics', 'Cumulated' %>
-<p><strong>Number of leads :</strong> <%= @lead_count %></p>
-<p><strong>Last <%= @nb_last_leads %> leads :</strong><br />
-    <% @last_leads.each do |lead| %>
-         - <%= lead.email %> : <%= lead.created_at %><br />
-    <% end %>
-</p>
-<p><i>NB : to see more than  last leads, add "&amp;nb=[your number]" to url</i></p>
+<div class="panel panel-info">
+	<div class="panel-heading">
+		<h3 class="panel-title">Number of leads : <%= @lead_count %></h3>
+	</div>
+	<div class="panel-body">
+		<strong>Last <%= @nb_last_leads %> leads :</strong><br />
+	    <% @last_leads.each do |lead| %>
+	         - <%= lead.email %> : <%= time_ago_in_words lead.created_at %> ago<br />
+	    <% end %>
+	</div>
+	<div class="panel-footer">
+		<i>NB : to see more than  last leads, add "&amp;nb=[your number]" to url</i>
+	</div>
+</div>
+
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h3 class="panel-title">Paying leads : <%= @paying_leads.count %></h3>
+	</div>
+	<div class="panel-body">
+	    <% @paying_leads.each do |lead| %>
+         - <%= lead.first_name %> <%= lead.last_name %> (<%= lead.email %>) - created <%= time_ago_in_words lead.created_at %> ago - paid <%= time_ago_in_words lead.applied_at %> ago<br />
+    	<% end %>
+	</div>
+</div>
