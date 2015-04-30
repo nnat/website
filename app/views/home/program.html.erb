@@ -29,8 +29,6 @@
         <%= link_to 'Je réserve ma Risebox', new_program_lead_path, class: 'btn btn-success btn-lg' %>
     </div>
 
-
-
     <h2 class="text-center">
         Inclus dans votre Risebox
     </h2>
@@ -60,26 +58,37 @@
         </div>
     </div>
 
-    <br/><br/>
+    <br/>
 
     <h2 class="text-center">
-        ...en mode privilégié
+        Notre offre early adopter
     </h2>
     <br/>
 
+    <p class="lead text-center">
+        Risebox représente beaucoup pour nous. Pour que l'expérience de nos premiers clients soit parfaite, nous avons conçu un programme où tout est inclus.
+        <!-- C'est pourquoi plutôt que de faire appel à du financement participatif, nous avons pensé programme pour des pionniers. -->
+    </p>
+
     <div class="row">
-        <div class="col-lg-4 mbm">
-            <h4>Livré et installé chez vous</h4>
-            <p>Nous faisons grandir l'éco-système de votre Risebox plusieurs semaines à l'avance et nous la livrons avec vos plantes et vos poissons en parfaite symbiose.</p>
-            <p>L'équipe se déplace, installe et régle votre Risebox, et vous explique tout. . Vous n'avez plus qu'à admirer vos poissons et récolter dans quelques jours :)</p>
+        <div class="col-lg-3 mbm">
+            <h4>Un modèle unique</h4>
+            <p>
+                Votre Risebox est fabriquée à la main dans notre atelier et personnalisée à votre goût. Nous lui apportons des centaines d'heures d'amélioration par rapport à notre dernier prototype.
+            </p>
         </div>
-        <div class="col-lg-4 mbm">
-            <h4>Tout est inclus</h4>
-            <p>Durant toute la durée du programme nous fournissons gratuitement des graines apatée, des plants pour gagner du temps et la nourriture pour les poissons</p>
+        <div class="col-lg-3 mbm">
+            <h4>Préparé et livré</h4>
+            <p>Nous faisons grandir l'éco-système de votre Risebox plusieurs semaines à l'avance. L'équipe se déplace, installe et régle votre Risebox, et vous explique tout.
+            </p>
         </div>
-        <div class="col-lg-4 mbm">
+        <div class="col-lg-3 mbm">
             <h4>Support premium</h4>
-            <p>Nous sommes joignables 7j/7 et nous intervennons chez vous si besoin. Si quelque chose ne fonctionne plus: on remplace. Vous n'êtes pas satisfait: on rembourse</p>
+            <p>Nous sommes à votre écoute 7j/7 et nous intervennons chez vous si besoin. Si quelque chose ne fonctionne plus: on remplace. Vous n'êtes pas satisfait: on rembourse</p>
+        </div>
+        <div class="col-lg-3 mbm">
+            <h4>Fournitures incluses</h4>
+            <p>Durant toute la durée du programme nous fournissons gratuitement des graines adaptées, des plants pour gagner du temps et la nourriture pour les poissons</p>
         </div>
     </div>
 
@@ -100,6 +109,60 @@
         <div class="col-lg-3 mbm">
             <%= image_tag 'program/fraise2.jpg', size: '200x200' %>
         </div>
+    </div>
+
+    <h2 class="text-center">
+        Vos questions
+    </h2>
+    <br/>
+
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-success">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Combien ça coute ?
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            La participation coûte 1290€. Comme nous avons peu de places, nous demandons 100€ pour vous garantir la participation au programme. Le solde est à régler une fois que vous confirmez votre commande. Si vous changez d'avis nous remboursons l'intégralité.
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-success">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Qui peut participer ?
+            </a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            Pour le moment, le programme early adopter est ouvert aux habitants de Paris (75), les hauts de seine (92) et du val d'oise (95). Si vous êtes interessés et que vous habitez dans un autre département (ou pays) <a href="mailto:hello@risebox.co">contactez-nous</a> et nous vous préviendrons dès que vous pourrez profiter de notre programme.
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-success">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Quelle est la taille d'une Risebox ?
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            La Risebox mesure 1,20m de large, 2m de haut et 50cm de profondeur. Si vous avez des contraintes d'espace, <a href="mailto:hello@risebox.co">contactez-nous</a> pour que nous étudions avec vous les possibilités de personnalisation.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mbl">
+        <%= link_to 'Je réserve ma Risebox', new_program_lead_path, class: 'btn btn-success btn-lg' %>
     </div>
 
     <div class="text-center mbl">
