@@ -3,6 +3,34 @@
     <meta property="og:description" content="<%= t '.meta.og_description' %>" />
     <meta property="description" content="<%= t '.meta.description' %>" />
     <meta property="keywords" content="<%= t '.meta.keywords' %>" />
+    <style>
+        blockquote {
+          background: #fff;
+          margin: 1.5em 10px;
+          padding: 0.5em 10px;
+          quotes: "\201C""\201D""\2018""\2019";
+        }
+        blockquote:before {
+          color: #ccc;
+          content: open-quote;
+          font-size: 6em;
+          line-height: 0.1em;
+          margin-right: 0.25em;
+          vertical-align: -0.4em;
+        }
+        blockquote:after {
+          color: #ccc;
+          content: close-quote;
+          font-size: 6em;
+          line-height: 0.4em;
+          margin-left: 6.6em;
+          vertical-align: -0.4em;
+        }
+        blockquote p {
+          display: inline;
+          font-size: 21px;
+        }
+    </style>
 <% end %>
 
 <div class="container">
@@ -27,8 +55,11 @@
         <%= link_to 'Je réserve ma Risebox', new_program_lead_path, class: 'btn btn-success btn-lg' %>
     </div>
 
-
-    <div class="lead text-center">Risebox est unique : un potager aquaponique d'intérieur intelligent, réellement productif et efficace énergétiquement. Récoltez vos légumes frais chaque semaine, retrouvez le plaisir des légumes du jardin en intérieur.</div>
+    <blockquote>
+        <p>Risebox est unique : un potager aquaponique d'intérieur intelligent, et réellement productif.</p>
+        <p>Récoltez vos légumes frais chaque semaine, retrouvez le plaisir des légumes du jardin en intérieur.</p>
+    </blockquote>
+    <!--<div class="lead text-center">Risebox est unique : un potager aquaponique d'intérieur intelligent, réellement productif et efficace énergétiquement. Récoltez vos légumes frais chaque semaine, retrouvez le plaisir des légumes du jardin en intérieur.</div>-->
 
     <h2 class="text-center">
         Inclus dans votre Risebox
@@ -74,7 +105,7 @@
         <div class="col-lg-3 mbm">
             <h4>Un modèle unique</h4>
             <p>
-                Votre Risebox est fabriquée à la main dans notre atelier et personnalisée à votre goût. Nous lui apportons des centaines d'heures d'amélioration par rapport à notre dernier prototype.
+                Votre Risebox est fabriquée à la main dans notre atelier et personnalisée à votre goût. Elle est le fruit de centaines d'heures d'amélioration par rapport à notre dernier prototype.
             </p>
         </div>
         <div class="col-lg-3 mbm">
