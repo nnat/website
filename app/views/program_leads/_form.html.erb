@@ -7,7 +7,7 @@
 <% end %>
 
 <div class="_floatingForm">
-  <h3>Embarquez avec nous !</h3>
+  <!-- <h3>Embarquez avec nous !</h3> -->
   <%= form_for @lead, url: {action: "create"}, html: {role: 'form', method: :post, id: 'payment-form'} do |f| %>
     <div class="_payment-errors alert alert-danger" style="<%= @payment_error_message.present? ? nil : 'display:none' %>"><%= @payment_error_message %>
     </div>

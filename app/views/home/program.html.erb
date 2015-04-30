@@ -48,7 +48,7 @@
     <br /><br />
 
     <div class="lead text-center">
-        Participez à notre <strong style="color: orange">programme early adopter</strong> et profitez de votre Risebox à partir de Septembre 2015
+        Participez à notre <strong style="color: orange">programme early adopter</strong> et profitez de votre Risebox dès Septembre 2015
     </div>
 
     <div class="text-center mbl">
@@ -57,9 +57,10 @@
 
     <blockquote>
         <p>Risebox est unique : un potager aquaponique d'intérieur intelligent, et réellement productif.</p>
-        <p>Récoltez vos légumes frais chaque semaine, retrouvez le plaisir des légumes du jardin en intérieur.</p>
+        <p>Récoltez vos légumes frais chaque semaine et retrouvez le plaisir des légumes du jardin en intérieur.</p>
     </blockquote>
-    <!--<div class="lead text-center">Risebox est unique : un potager aquaponique d'intérieur intelligent, réellement productif et efficace énergétiquement. Récoltez vos légumes frais chaque semaine, retrouvez le plaisir des légumes du jardin en intérieur.</div>-->
+    <!-- <div class="lead text-center">Risebox est unique: un potager aquaponique d'intérieur intelligent, économe et productif.</div>
+ -->
 
     <h2 class="text-center">
         Inclus dans votre Risebox
@@ -67,22 +68,22 @@
     <br/>
     <div class="row">
         <div class="col-lg-6 mbm">
-            <h4><span class="glyphicon glyphicon-euro"></span>&nbsp;Eclairage LED optimisé</h4>
+            <h4><span class="fa fa-lightbulb-o"></span>&nbsp;Eclairage LED optimisé</h4>
             <p class="text-justify mbl">Il émet uniquement le spectre de lumière utile au plantes pour une pousse optimale et 50% d'économie d'énergie.</p>
 
-            <h4><span class="glyphicon glyphicon-dashboard"></span>&nbsp;Circuit d'eau passif</h4>
+            <h4><span class="glyphicon glyphicon-tint"></span>&nbsp;Circuit d'eau passif</h4>
             <p class="text-justify mbl">Fiable, conçu pour réduire la consommation électrique et le bruit tout en apportant circulation et oxygénation.</p>
 
-            <h4><span class="glyphicon glyphicon-euro"></span>&nbsp;Un bel aquarium</h4>
+            <h4><span class="glyphicon glyphicon-eye-open"></span>&nbsp;Bel aquarium</h4>
             <p class="text-justify mbl">200l pour admirer vos poissons, le moteur de la Risebox</p>
 
-            <h4><span class="glyphicon glyphicon-heart"></span>&nbsp;2 bacs de culture universels</h4>
+            <h4><span class="fa fa-pagelines"></span>&nbsp;Bacs de culture universels</h4>
             <p class="text-justify mbl">Capables de faire pousser toutes sortes de plantes sur une surface équivalente à un potager de 6m2.</p>
 
-            <h4><span class="glyphicon glyphicon-heart"></span>&nbsp;Ordinateur embarqué</h4>
+            <h4><span class="glyphicon glyphicon-hdd"></span>&nbsp;Ordinateur embarqué</h4>
             <p class="text-justify mbl">Risebox surveille et optimise votre écosystème pour vous. Il anticipe les incidents et vous donne la marche à suivre.</p>
 
-            <h4><span class="glyphicon glyphicon-heart"></span>&nbsp;App pratique</h4>
+            <h4><span class="glyphicon glyphicon-phone"></span>&nbsp;App pratique</h4>
             <p class="text-justify mbl">Suivez votre Risebox, bénéficiez de nos conseils et de notre boutique. Vous avez la main verte!</p>
         </div>
         <div class="col-lg-6 mbm">
@@ -110,7 +111,7 @@
         </div>
         <div class="col-lg-3 mbm">
             <h4>Préparé et livré</h4>
-            <p>Nous faisons grandir l'éco-système de votre Risebox plusieurs semaines à l'avance. L'équipe se déplace, installe et régle votre Risebox, et vous explique tout.
+            <p>Nous faisons grandir l'éco-système de votre Risebox plusieurs semaines à l'avance. L'équipe se déplace, installe, règle le système et vous explique tout.
             </p>
         </div>
         <div class="col-lg-3 mbm">
@@ -123,9 +124,13 @@
         </div>
     </div>
 
+    <br />
+
     <div class="text-center mbl">
         <%= link_to "Je réserve ma Risebox", new_program_lead_path, class: 'btn btn-success btn-lg' %>
     </div>
+
+    <br />
 
     <p class="lead text-center">
         Risebox est vraiment productif, voici ce que vous pourrez bientôt faire pousser chez vous :)
@@ -161,20 +166,6 @@
 
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
       <div class="panel panel-success">
-        <div class="panel-heading" role="tab" id="headingOne">
-          <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Combien ça coute ?
-            </a>
-          </h4>
-        </div>
-        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-          <div class="panel-body">
-            La participation coûte 1290€. Comme nous avons peu de places, nous demandons 100€ pour vous garantir la participation au programme. Le solde est à régler une fois que vous confirmez votre commande. Si vous changez d'avis nous remboursons l'intégralité.
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-success">
         <div class="panel-heading" role="tab" id="headingTwo">
           <h4 class="panel-title">
             <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -182,12 +173,27 @@
             </a>
           </h4>
         </div>
-        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+        <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
           <div class="panel-body">
-            Pour le moment, le programme early adopter est ouvert aux habitants de Paris (75), les hauts de seine (92) et du val d'oise (95). Si vous êtes interessés et que vous habitez dans un autre département (ou pays) <a href="mailto:hello@risebox.co">contactez-nous</a> et nous vous préviendrons dès que vous pourrez profiter de notre programme.
+            Pour le moment, le programme early adopter est ouvert aux habitants de Paris (75), les Hauts de seine (92) et du Val d'oise (95). Si vous êtes interessés et que vous habitez dans un autre département (ou pays) <a href="mailto:hello@risebox.co">contactez-nous</a> et nous vous préviendrons dès que vous pourrez profiter de notre programme.
           </div>
         </div>
       </div>
+      <div class="panel panel-success">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Combien ça coute ?
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            La participation coûte 1290€. Comme nous avons peu de places, nous demandons 100€ pour vous garantir la participation au programme. Le solde est à régler une fois que vous confirmez votre commande. Si vous changez d'avis nous remboursons l'intégralité.
+          </div>
+        </div>
+      </div>
+
       <div class="panel panel-success">
         <div class="panel-heading" role="tab" id="headingThree">
           <h4 class="panel-title">
@@ -204,13 +210,15 @@
       </div>
     </div>
 
+    <br />
+
     <div class="text-center mbl">
         <%= link_to 'Je réserve ma Risebox', new_program_lead_path, class: 'btn btn-success btn-lg' %>
     </div>
 
     <div class="text-center mbl">
         Toujours pas convaincu ?<br />
-        Dites-nous ce qui vous gène à <strong>jsuispassur@risebox.co</strong>
+        <a href="mailto:hello@risebox.co">Contactez-nous</a> et dites-nous tout.
     </div>
 
     <!--
