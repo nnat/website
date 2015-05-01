@@ -2,6 +2,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   IP_FILTERING = ENV['IP_FILTERING'] == 'true'
   IP_WHITELIST = {  '176.190.161.244' => 'ATH IP',
+                    '86.150.226.23'   => 'ATH EN IP',
                     '90.57.225.235'   => 'FRONTITI_IP',
                     '81.57.249.138'   => 'NNA_IP',
                     '212.85.146.161'  => 'ELECTROLAB_IP',
