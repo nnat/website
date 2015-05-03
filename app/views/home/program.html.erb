@@ -36,7 +36,7 @@
 <div class="container">
     <%= render 'nav' %>
 
-    <br />
+    <br /><br />
 
     <div style="position:relative;">
         <%= image_tag 'program/nicolas_install2.jpg', style: "max-width: 100%" %>
@@ -45,7 +45,7 @@
         </div>
     </div>
 
-    <br /><br />
+    <br />
 
     <div class="lead text-center">
         Participez à notre <strong style="color: orange">programme early adopter</strong> et profitez de votre Risebox dès Septembre 2015
@@ -58,13 +58,17 @@
         <p>Risebox est unique : un potager aquaponique d'intérieur intelligent, et réellement productif.</p>
         <p>Récoltez vos légumes frais chaque semaine et retrouvez le plaisir des légumes du jardin en intérieur.</p>
     </blockquote> -->
+    <br /><br />
 
-    <div class="lead text-center">Risebox est unique : un potager aquaponique d'intérieur intelligent et réellement productif. Récoltez vos légumes frais chaque semaine, retrouvez le plaisir des légumes du jardin en intérieur.</div>
+
+    <br/>
 
     <h2 class="text-center">
         Inclus dans votre Risebox
     </h2>
     <br/>
+    <div class="lead text-center">Le meilleur de la nature et de la technologie.</div>
+
     <div class="row">
         <div class="col-lg-6 mbm">
             <h4><span class="fa fa-lightbulb-o"></span>&nbsp;Eclairage LED optimisé</h4>
@@ -90,7 +94,7 @@
         </div>
     </div>
 
-    <br/>
+    <br/><br/>
 
     <h2 class="text-center">
         Notre offre early adopter
@@ -129,85 +133,42 @@
         <%= link_to "Je réserve ma Risebox", new_program_lead_path, class: 'btn btn-success btn-lg' %>
     </div>
 
-    <br />
+    <br /><br />
 
     <p class="lead text-center">
-        Risebox est vraiment productif, voici ce que vous pourrez bientôt faire pousser chez vous :)
+        Risebox est vraiment productif: voici ce que vous pourrez bientôt faire pousser chez vous :)
     </p>
 
     <div class="row">
-        <div class="col-lg-4 mbm">
+        <div class="col-sm-4 mbm">
             <%= image_tag 'program/salade.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
         </div>
-        <div class="col-lg-4 mbm">
+        <div class="col-sm-4 mbm">
             <%= image_tag 'program/radis.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
         </div>
-        <div class="col-lg-4 mbm">
+        <div class="col-sm-4 mbm">
             <%= image_tag 'program/oseille.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-4 mbm">
+        <div class="col-sm-4 mbm">
             <%= image_tag 'program/fraise.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
         </div>
-        <div class="col-lg-4 mbm">
+        <div class="col-sm-4 mbm">
             <%= image_tag 'program/poivron.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
         </div>
-        <div class="col-lg-4 mbm">
+        <div class="col-sm-4 mbm">
             <%= image_tag 'program/thym.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
         </div>
     </div>
 
-    <h2 class="text-center">
-        Vos questions
-    </h2>
-    <br/>
+    <br /><br />
 
-    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-      <div class="panel panel-success">
-        <div class="panel-heading" role="tab" id="headingTwo">
-          <h4 class="panel-title">
-            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Qui peut participer ?
-            </a>
-          </h4>
-        </div>
-        <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
-          <div class="panel-body">
-            Pour le moment, le programme early adopter est ouvert aux habitants de Paris (75), les Hauts de seine (92) et du Val d'oise (95). Si vous êtes interessés et que vous habitez dans un autre département (ou pays) <a href="mailto:hello@risebox.co">contactez-nous</a> et nous vous préviendrons dès que vous pourrez profiter de notre programme.
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-success">
-        <div class="panel-heading" role="tab" id="headingOne">
-          <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Combien ça coute ?
-            </a>
-          </h4>
-        </div>
-        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-          <div class="panel-body">
-            La participation coûte 1290€. Comme nous avons peu de places, nous demandons 100€ pour vous garantir la participation au programme. Le solde est à régler une fois que vous confirmez votre commande. Si vous changez d'avis nous remboursons l'intégralité.
-          </div>
-        </div>
-      </div>
+    <%= render "timeline2" %>
 
-      <div class="panel panel-success">
-        <div class="panel-heading" role="tab" id="headingThree">
-          <h4 class="panel-title">
-            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Quelle est la taille d'une Risebox ?
-            </a>
-          </h4>
-        </div>
-        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-          <div class="panel-body">
-            La Risebox mesure 1,20m de large, 2m de haut et 50cm de profondeur. Si vous avez des contraintes d'espace, <a href="mailto:hello@risebox.co">contactez-nous</a> pour que nous étudions avec vous les possibilités de personnalisation.
-          </div>
-        </div>
-      </div>
-    </div>
+    <br /><br />
+
+    <%= render "questions" %>
 
     <br />
 

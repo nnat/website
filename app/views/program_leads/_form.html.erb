@@ -15,22 +15,23 @@
         <div class="row">
             <div class="col-xs-6">
                 <%= f.label :first_name, class: 'sr-only' %>
-                <%= f.text_field :first_name, class: "form-control", placeholder: "votre prénom" %>
+                <%= f.text_field :first_name, class: "form-control input-lg", placeholder: "votre prénom" %>
             </div>
             <div class="col-xs-6">
                 <%= f.label :last_name, class: 'sr-only' %>
-                <%= f.text_field :last_name, class: "form-control", placeholder: "votre nom" %>
+                <%= f.text_field :last_name, class: "form-control input-lg", placeholder: "votre nom" %>
             </div>
         </div>
     </div>
     <div class="form-group">
         <%= f.label :email, class: 'sr-only' %>
-        <%= f.email_field :email, class: "form-control", placeholder: "votre email" %>
+        <%= f.email_field :email, class: "form-control input-lg", placeholder: "votre email" %>
     </div>
+    <br/>
     <div class="form-group">
         <%= label_tag :card_number, "Carte de crédit", class: 'sr-only' %>
         <div class="input-group">
-            <%= text_field_tag :card_number, nil, name: nil, class: "form-control", placeholder: "votre n° de carte visa ou matercard", data: {stripe: 'number'}  %>
+            <%= text_field_tag :card_number, nil, name: nil, class: "form-control input-lg", placeholder: "votre n° de carte visa ou matercard", data: {stripe: 'number'}  %>
             <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
         </div>
     </div>
@@ -41,25 +42,27 @@
         </div>
         <div class="row">
           <div class="col-xs-3" style="padding-right: 0px">
-            <%= text_field_tag :card_month, nil, name: nil, id: "card_month", class: "form-control", placeholder: "MM", data: {stripe: 'exp-month'}%>
+            <%= text_field_tag :card_month, nil, name: nil, id: "card_month", class: "form-control input-lg", placeholder: "MM", data: {stripe: 'exp-month'}%>
           </div>
           <div class="col-xs-4">
-            <%= text_field_tag :card_year, nil, name: nil, id: "card_year", class: "form-control", placeholder: "AAAA", data: {stripe: 'exp-year'} %>
+            <%= text_field_tag :card_year, nil, name: nil, id: "card_year", class: "form-control input-lg", placeholder: "AAAA", data: {stripe: 'exp-year'} %>
           </div>
           <div class="col-xs-3" style="padding-right: 0px">
-            <%= text_field_tag :card_code, nil, name: nil, class: "form-control", placeholder: "CVV", data: {stripe: 'cvc'} %>
+            <%= text_field_tag :card_code, nil, name: nil, class: "form-control input-lg", placeholder: "CVV", data: {stripe: 'cvc'} %>
           </div>
           <div class="col-xs-2" style="padding-left: 3px">
             <%= image_tag 'program/cvv.png', size: '39x26'%>
           </div>
         </div>
     </div>
+    <br/>
     <div class="form-group">
         <ul class="nav nav-pills nav-stacked">
             <li class="active"><a href="#" style="cursor: default;"><span class="badge pull-right"><span class="glyphicon glyphicon-eur"></span>100</span> Dépôt de réservation</a>
             </li>
         </ul>
     </div>
+    <br/><br/>
     <%= f.submit "Je valide ma réservation" , class: "btn btn-success btn-lg btn-block", id: 'payment-submit' %>
   <% end %>
 </div>
