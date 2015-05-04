@@ -21,6 +21,13 @@ class UserMailer < ActionMailer::Base
     mail(to: 'team@risebox.co', subject: "[URGENT][Risebox]Erreur de paiement #{@lead_email}")
   end
 
+  def payment_receipt lead, payment_details
+    headers['X-SMTPAPI'] = single_recipient_header 'payment_receipt'
+    @lead        = lead
+    @tx_time     = payment_details[:time]
+    mail(to: @lead.email, subject: "Risebox - Confirmation de réservation")
+  end
+
 private
 
   def single_recipient_header category, bypass_list_management=false

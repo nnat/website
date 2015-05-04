@@ -1,0 +1,16 @@
+<p>Bonjour <%=@lead.first_name%>, </p>
+
+<p>Nous avons bien enregistré votre paiement d'un montant de 100€ TTC effectué le <%= "#{@tx_time.day}/#{@tx_time.month}/#{@tx_time.year}" %> à <%= "#{@tx_time.hour}:#{@tx_time.min}" %></p>
+
+<p>Votre numéro de transaction est le <%= @lead.transaction_number%>.</p>
+
+<p>Nous réservons votre place pour notre programme early adopter.</p>
+
+<p>Nous vous contactons très rapidement pour préparer votre venue à l'atelier.</p>
+
+<p>Bienvenue chez Risebox.</p>
+
+<p>
+    Nicolas et Adrien <br />
+    Co-fondateurs Risebox
+</p>

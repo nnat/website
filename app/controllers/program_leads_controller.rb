@@ -26,8 +26,8 @@ class ProgramLeadsController < ApplicationController
         :description => @lead.email
       )
 
-      @lead.update_attributes(lead_params.merge(applied_at: Time.now))
-
+      @lead.update_attributes(lead_params.merge(applied_at: Time.now, transaction_number: charge.id))
+      JobRunner.run(SendEmail, 'payment_receipt', 'Lead', @lead.id, {'time' => Time.now})
     rescue  => e
       @payment_error_message = payment_error_message(e)
       JobRunner.run(SendEmail, 'payment_alert', 'Lead', @lead.id, {'time' => Time.now, 'lead_email' => @lead.email, 'error' => e.to_json})
@@ -54,7 +54,7 @@ private
   end
 
   def payment_error_message error
-    unless error.is_a? Stripe::CardError 
+    unless error.is_a? Stripe::CardError
       return "Une erreur technique est survenue. Votre carte n'a pas été débitée et notre équipe a été prévenue. Vous pouvez essayer de nouveau"
     end
     #here, we know the error is related to the strip charge call, so we have stripe error code for sure
