@@ -21,6 +21,7 @@ Rails.application.routes.draw do
       resources :program_leads, only: :create
       get 'felicitations' => 'program_leads#congrats', as: :congratulations
     end
+    match "early-adopter(/*path)", constraints: http_catchall, via: [:get], to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
 
     resources :leads
 
