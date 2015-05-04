@@ -4,11 +4,8 @@
         <div class="col-lg-12 logo">
             <div class="pull-left">
                 <%= link_to image_tag("home/logo.png", width: '150'), root_path %>
-                <br /><h1 class="tagline">Risebox : <%= t('.tagline') %></h1>
+                <br /><span class="tagline"><%= t('.tagline') %></span>
             </div>
-            <!--
-            <h1 class="baseline pull-right">Grow quality food @home</h1>
-            -->
             <ul class="nav nav-pills head-menu pull-right">
                 <li class="<%= 'active' if (@section == :faq)%>" ><%= link_to t('.faq'), faq_path, id: 'faq-nav-menu' %></li>
                 <li class="<%= (@section == :program) ? 'active' : 'important' %>"><%= link_to t('.program').html_safe, program_path(locale: :fr), id: 'program-nav-menu' %></a></li>
