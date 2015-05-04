@@ -14,17 +14,22 @@ Rails.application.routes.draw do
 
   scope "(:locale)", locale: /en|fr/ do
     get 'comment-ca-marche' => 'home#faq', as: 'faq'
-    get 'programme-early-adopter' => 'home#program', as: 'program'
-    resources :program_leads, only: :create
-    get 'reservez-votre-risebox' => 'program_leads#new', as: :new_program_lead
-    get 'felicitations' => 'program_leads#congrats', as: :congratulations
+
+    scope 'early-adopter', constraints: https_constraint do
+      get '/' => 'home#program', as: 'program'
+      get 'reservez-votre-risebox' => 'program_leads#new', as: :new_program_lead
+      resources :program_leads, only: :create
+      get 'felicitations' => 'program_leads#congrats', as: :congratulations
+    end
+
+    resources :leads
 
     root 'home#index'
-    resources :leads
   end
 
   mount Resque::Server, at: '/jobs', as: 'jobs'
 
   # catch all /app and /pastouch without https and redirect to same url using https
+  match "early-adopter(/*path)", constraints: http_catchall, via: [:get], to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
   match "pastouch(/*path)", constraints: http_catchall, via: [:get], to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
 end
