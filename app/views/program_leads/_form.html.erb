@@ -15,19 +15,18 @@
         <div class="row">
             <div class="col-xs-6">
                 <%= f.label :first_name, class: 'sr-only' %>
-                <%= f.text_field :first_name, class: "form-control input-lg", placeholder: "votre prénom" %>
+                <%= f.text_field :first_name, class: "form-control input-lg", required: true, placeholder: "votre prénom" %>
             </div>
             <div class="col-xs-6">
                 <%= f.label :last_name, class: 'sr-only' %>
-                <%= f.text_field :last_name, class: "form-control input-lg", placeholder: "votre nom" %>
+                <%= f.text_field :last_name, class: "form-control input-lg", required: true, placeholder: "votre nom" %>
             </div>
         </div>
     </div>
     <div class="form-group">
         <%= f.label :email, class: 'sr-only' %>
-        <%= f.email_field :email, class: "form-control input-lg", placeholder: "votre email" %>
+        <%= f.email_field :email, class: "form-control input-lg", required: true, placeholder: "votre email" %>
     </div>
-    <br/>
     <div class="form-group">
         <%= label_tag :card_number, "Carte de crédit", class: 'sr-only' %>
         <div class="input-group">
@@ -55,7 +54,6 @@
           </div>
         </div>
     </div>
-    <br/>
     <div class="form-group">
         <ul class="nav nav-pills nav-stacked">
             <li class="active"><a href="#" style="cursor: default;"><span class="badge pull-right"><span class="glyphicon glyphicon-eur"></span>100</span> Dépôt de réservation</a>
@@ -63,7 +61,6 @@
             <span class="help-block text-muted" style="margin-top: 0px; margin-bottom: 0px"><small><i>&nbsp;Réservé aux habitants du 75, 92 et 95. Sinon <a href="mailto:hello@risebox.co">contactez-nous</a>.</i></small></span>
         </ul>
     </div>
-    <br/>
     <%= f.submit "Je valide ma réservation" , class: "btn btn-success btn-lg btn-block", id: 'payment-submit' %>
   <% end %>
 </div>
