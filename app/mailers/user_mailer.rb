@@ -24,7 +24,7 @@ class UserMailer < ActionMailer::Base
   def payment_receipt lead, payment_details
     headers['X-SMTPAPI'] = single_recipient_header 'payment_receipt'
     @lead        = lead
-    @tx_time     = payment_details[:time]
+    @tx_time     = Time.parse(payment_details[:time])
     mail(to: @lead.email, subject: "Risebox - Confirmation de réservation")
   end
 
