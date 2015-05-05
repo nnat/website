@@ -27,7 +27,7 @@ class ProgramLeadsController < ApplicationController
       )
 
       @lead.update_attributes(lead_params.merge(applied_at: Time.now, transaction_number: charge.id))
-      JobRunner.run(SendEmail, 'payment_receipt', 'Lead', @lead.id, {'time' => Time.now})
+      JobRunner.run(SendEmail, 'payment_receipt', 'Lead', @lead.id, {'time' => Time.now.to_s})
     rescue  => e
       @payment_error_message = payment_error_message(e)
       JobRunner.run(SendEmail, 'payment_alert', 'Lead', @lead.id, {'time' => Time.now, 'lead_email' => @lead.email, 'error' => e.to_json})
