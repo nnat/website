@@ -4,10 +4,16 @@ Rails.application.routes.draw do
 
   https_constraint = (Rails.env.production? ? {protocol: 'https://'} : {})
   http_catchall    = (Rails.env.production? ? {protocol: 'http://'}  : -> (params, request) {false})
+  resque_app = Rack::Auth::Basic.new(Resque::Server) do |username, password|
+    username == ENV['ADMIN_LOGIN'] && password == ENV['ADMIN_PWD']
+  end
+
+# mount protected_app in Rails
 
   namespace :admin, path: '/pastouch', constraints: https_constraint do
     get '/'        => 'monitoring#index', as: :root
     get '/metrics' => 'metrics#index'
+    mount resque_app, at: '/jobs', as: 'jobs'
   end
 
   get '/' => 'home#index'
@@ -27,8 +33,6 @@ Rails.application.routes.draw do
 
     root 'home#index'
   end
-
-  mount Resque::Server, at: '/jobs', as: 'jobs'
 
   # catch all /app and /pastouch without https and redirect to same url using https
   match "early-adopter(/*path)", constraints: http_catchall, via: [:get], to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
