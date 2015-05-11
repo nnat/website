@@ -2,8 +2,8 @@ fr:
   home:
     nav:
       faq: "Comment&nbsp;ça&nbsp;marche"
-      program: "Réservez votre Risebox"
       about: A propos
+      program: "Réservez votre Risebox"
       tagline: Faites pousser du bio chez vous
     subscribe:
       placeholder: Mon email
