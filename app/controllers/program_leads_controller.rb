@@ -3,6 +3,7 @@ class ProgramLeadsController < ApplicationController
 
   def new
     @lead = Lead.new
+    render(program_opened? ? 'new' : 'new_closed')
   end
 
   def create
@@ -12,27 +13,35 @@ class ProgramLeadsController < ApplicationController
     @lead.first_name = lead_params[:first_name]
     @lead.last_name = lead_params[:last_name]
 
-    token = params[:stripeToken]
+    if program_opened?
+      token = params[:stripeToken]
+      # Create the charge on Stripe's servers - this will charge the user's card
+      begin
+        @lead.save!
 
-    # Create the charge on Stripe's servers - this will charge the user's card
-    begin
+        charge = Stripe::Charge.create(
+          :amount => 10000, # amount in cents, again
+          :currency => "eur",
+          :source => token,
+          :description => @lead.email
+        )
 
-      @lead.save!
-
-      charge = Stripe::Charge.create(
-        :amount => 10000, # amount in cents, again
-        :currency => "eur",
-        :source => token,
-        :description => @lead.email
-      )
-
-      @lead.update_attributes(lead_params.merge(applied_at: Time.now, transaction_number: charge.id))
-      JobRunner.run(SendEmail, 'payment_receipt', 'Lead', @lead.id, {'time' => Time.now.to_s})
-    rescue  => e
-      @payment_error_message = payment_error_message(e)
-      JobRunner.run(SendEmail, 'payment_alert', 'Lead', @lead.id, {'time' => Time.now, 'lead_email' => @lead.email, 'error' => e.to_json})
-      render :new
-      return
+        @lead.update_attributes(lead_params.merge(applied_at: Time.now, transaction_number: charge.id))
+        JobRunner.run(SendEmail, 'payment_receipt', 'Lead', @lead.id, {'time' => Time.now.to_s})
+      rescue  => e
+        @payment_error_message = payment_error_message(e)
+        JobRunner.run(SendEmail, 'payment_alert', 'Lead', @lead.id, {'time' => Time.now, 'lead_email' => @lead.email, 'error' => e.to_json})
+        render :new
+        return
+      end
+    else
+      @lead.post_code = lead_params[:post_code]
+      saved = @lead.save
+      if !saved
+        @payment_error_message = "Nous navons pas pu enregistrer vos coordonnées, vérifie votre saisie et essayez de nouveau."
+        render new_closed
+        return
+      end
     end
     flash[:lead] = @lead.id
     redirect_to congratulations_path
@@ -40,6 +49,7 @@ class ProgramLeadsController < ApplicationController
 
   def congrats
     @lead = Lead.find_by_id(flash[:lead])
+    render(program_opened? ? 'congrats' : 'congrats_closed')
   end
 
 private
@@ -50,7 +60,11 @@ private
 
 
   def lead_params
-    params.require(:lead).permit(:email, :first_name, :last_name, :phone)
+    params.require(:lead).permit(:email, :first_name, :last_name, :phone, :post_code)
+  end
+
+  def program_opened?
+    PROGRAM_OPENED
   end
 
   def payment_error_message error

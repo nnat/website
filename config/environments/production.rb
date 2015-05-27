@@ -25,6 +25,8 @@ Rails.application.configure do
   TEST_EMAIL        = "test@risebox.co"
   MAILS_INTERCEPTED = ENV['MAILS_INTERCEPTED'] == 'true'
 
+  PROGRAM_OPENED = (ENV['PROGRAM_OPENED'] == 'true')
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 

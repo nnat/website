@@ -1,0 +1,46 @@
+<% content_for :head do %>
+    <meta property="og:title" content="<%= t '.meta.og_title' %>" />
+    <meta property="og:description" content="<%= t '.meta.og_description' %>" />
+    <meta property="description" content="<%= t '.meta.description' %>" />
+    <meta property="keywords" content="<%= t '.meta.keywords' %>" />
+<% end %>
+
+<style>
+
+._floatingForm.affix {
+    position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+    ._floatingForm.affix {
+        position: fixed;
+        width: 22.5%;
+    }
+}
+</style>
+<div class="container">
+    <%= render 'home/nav' %>
+
+    <h1 class="lead text-center" style="margin-bottom: 10px; font-size: 30px">
+        Aie, notre programme est complet, mais...
+    </h1>
+    <p class="lead text-center">
+        Laissez nous vos coordonnées et nous vous proposerons la Risebox en priorité dès qu'elle sera disponible dans votre région.
+    </p>
+
+<!--     <div class="text-center">
+        Vous habitez un autre département ? <br />
+        <%= link_to 'Laissez-nous vos coodonnées', '#' %>, nous vous recontactons dés que Risebox est disponible près de chez vous
+    </div> -->
+
+
+    <div class="row">
+        <div class="col-sm-6 hidden-xs" style="margin-bottom: 10px">
+            <%= image_tag "home/program4.jpg", class: "img-responsive" %>
+        </div>
+        <div class="col-sm-6" style="margin-bottom: 10px;">
+            <%= render 'form_closed' %>
+        </div>
+    </div>
+
+</div>
