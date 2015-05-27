@@ -6,6 +6,7 @@ Rails.application.configure do
                     '90.57.225.235'   => 'FRONTITI_IP',
                     '81.57.249.138'   => 'NNA_IP',
                     '212.85.146.161'  => 'ELECTROLAB_IP',
+                    '81.34.184.46'    => 'HOTEL_PUJOL_IP',
                     '127.0.0.1'       => 'Possible heroku self http call' }
 
   FAVICON_PATH     = "favicon.ico"
