@@ -1,0 +1,16 @@
+<% content_for :head do %>
+    <meta property="og:title" content="<%= t '.meta.og_title' %>" />
+    <meta property="og:description" content="<%= t '.meta.og_description' %>" />
+    <meta property="description" content="<%= t '.meta.description' %>" />
+    <meta property="keywords" content="<%= t '.meta.keywords' %>" />
+<% end %>
+
+<div class="container">
+    <%= render 'nav' %>
+
+    <h1 class="text-center">A propos</h1>
+    <br />
+    <p class="justify-text">
+        Chez Risebox, nous voulons permettre à chaque urbain d'avoir un potager productif chez lui, même en appartement. Nous utilisons la technologie pour adapter l’aquaponie à nos habitats de petite taille et à notre rythme de vie urbain et connecté. Notre but est de rendre l’auto-production accessible à tous.
+    </p>
+</div>

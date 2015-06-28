@@ -12,4 +12,8 @@ class HomeController < ApplicationController
     @section = :program
   end
 
+  def about
+    @section = :about
+  end
+
 end
