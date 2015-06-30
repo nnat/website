@@ -2,7 +2,7 @@ fr:
   home:
     nav:
       faq: "Comment&nbsp;ça&nbsp;marche"
-      about: A propos
+      mission: Notre mission
       program: "Réservez votre Risebox"
       tagline: Faites pousser du bio chez vous
     subscribe:
@@ -51,3 +51,9 @@ fr:
         og_description: "Participez à notre programme early adopter et profitez de votre potager aquaponique Risebox dès Octobre 2015. Retrouvez le plaisir des légumes du jardin chez vous, en intérieur."
         description: "Participez à notre programme early adopter et profitez de votre potager aquaponique Risebox dès Octobre 2015. Retrouvez le plaisir des légumes du jardin chez vous, en intérieur."
         keywords: "agriculture urbaine, fruits, légumes, frais, bio, durable, potager, aquaponie, poissons, écologie, résilience"
+    mission:
+      meta:
+        og_title: "La mission de Risebox: faire de l'agriculture urbaine une réalité pour tous"
+        og_description: "Nous voulons donner à chacun les outils et les savoir faire pour produire sa nourriture chez lui, même en appartement. Nous concevons un potager aquaponique d'intérieur"
+        description: "Nous voulons donner à chacun les outils et les savoir faire pour produire sa nourriture chez lui, même en appartement. Nous concevons un potager aquaponique d'intérieur"
+        keywords: "agriculture individuelle, durable, potager, révolution, nourriture saine, technologie"

@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   scope "(:locale)", locale: /en|fr/ do
     get 'comment-ca-marche' => 'home#faq', as: 'faq'
-    get 'a-propos' => 'home#about', as: 'about'
+    get 'notre-mission' => 'home#mission', as: 'mission'
 
     scope 'early-adopter', constraints: https_constraint do
       get '/' => 'home#program', as: 'program'

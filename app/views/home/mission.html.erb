@@ -1,0 +1,76 @@
+<% content_for :head do %>
+    <meta property="og:title" content="<%= t '.meta.og_title' %>" />
+    <meta property="og:description" content="<%= t '.meta.og_description' %>" />
+    <meta property="description" content="<%= t '.meta.description' %>" />
+    <meta property="keywords" content="<%= t '.meta.keywords' %>" />
+<% end %>
+
+<style>
+    blockquote {
+      background: #fff;
+      margin: 1.5em 10px;
+      margin-bottom: 0px;
+      padding: 0.5em 10px;
+      quotes: "\201C""\201D""\2018""\2019";
+    }
+    blockquote:before {
+      color: #ccc;
+      content: open-quote;
+      font-size: 6em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em;
+    }
+    blockquote:after {
+      color: #ccc;
+      content: close-quote;
+      font-size: 6em;
+      line-height: 0.4em;
+      margin-left: 6.6em;
+      vertical-align: -0.4em;
+    }
+    blockquote p {
+      display: inline;
+      font-size: 21px;
+    }
+</style>
+
+<div class="container">
+    <%= render 'nav' %>
+
+    <h1 class="text-center">Notre mission</h1>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <p class="lead text-justify">
+                <small>Chez Risebox nous croyons que la nourriture de demain doit être savoureuse, saine et produite localement.</small>
+            </p>
+            <p class="lead text-justify">
+                <small>Nous voulons donner à chacun les outils et les savoir faire pour produire sa nourriture chez lui, même en appartement.</small>
+                <small>Pour cela, nous concevons une microferme aquaponique d'intérieur : un écosystème vivant et connecté qui produit toute l'année des fruits et légumes naturels et savoureux.</small>
+            </p>
+        </div>
+    </div>
+
+    <blockquote>
+        <p>Nous sommes à l'aube d'une révolution : celle de l'agriculture individuelle et durable.</p>
+    </blockquote>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <img src="<%= image_url('home/team.jpg') %>" alt="" class="img-responsive center-block">
+            <br />
+            <p class="lead text-justify">
+                <small>
+                    Nous sommes Nicolas et Adrien, deux passionnés de technologie et de nature. Nous travaillons ensemble depuis plusieurs années et nous avons pris conscience des enjeux que pose l'agriculture actuelle.
+                </small>
+            </p>
+            <p class="lead text-justify">
+                <small>
+                    En créant Risebox, nous concentrons toute notre énergie à proposer une autre voie.
+                </small>
+            </p>
+        </div>
+    </div>
+
+</div>
