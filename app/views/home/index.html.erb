@@ -37,6 +37,19 @@
             <p class="text-justify"><%= t('.features.n4.text') %></p>
         </div>
     </div>
+    <blockquote class="mbl text-center">
+      <p><%= t('.quote.text')%></p>
+      <footer><%= t('.quote.author')%>, <cite title="<%= t('.quote.ref.long')%>"><%= t('.quote.ref.short')%></cite></footer>
+    </blockquote>
+    <br />
+    <div class="jumbotron program-img">
+        <p class="lead text-center" style="text-shadow: 0px 0px 9px #777; color: white; margin-top: 30px;">
+            Envie d'une Risebox avant tout le monde ?
+        </p>
+        <div class="text-center">
+            <%= link_to "Découvrez notre programme early adopter", program_path(locale: :fr), class: 'btn btn-warning btn-lg', style: "white-space: normal;" %>
+        </div>
+    </div>
 
     <h2 class="headline lead text-center" style="font-size: 24px">Ils parlent de Risebox:</h2>
 
@@ -57,6 +70,7 @@
             </a>
         </div>
     </div>
+
     <div class="row">
         <div class="col-sm-6 mbm">
             <a href="http://www.bpifrance.fr/Vivez-Bpifrance/Actualites/Alimentation-un-futur-indigeste-16776" target="_blank">
@@ -69,22 +83,6 @@
             </a>
         </div>
     </div>
-
-    <br />
-    <div class="jumbotron program-img">
-        <p class="lead text-center" style="text-shadow: 0px 0px 9px #777; color: white; margin-top: 30px;">
-            Envie d'une Risebox avant tout le monde ?
-        </p>
-        <div class="text-center">
-            <%= link_to "Découvrez notre programme early adopter", program_path(locale: :fr), class: 'btn btn-warning btn-lg', style: "white-space: normal;" %>
-        </div>
-    </div>
-
-
-    <blockquote class="mbl text-center">
-      <p><%= t('.quote.text')%></p>
-      <footer><%= t('.quote.author')%>, <cite title="<%= t('.quote.ref.long')%>"><%= t('.quote.ref.short')%></cite></footer>
-    </blockquote>
 
     <%= render 'footer' %>
 
