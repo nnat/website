@@ -38,22 +38,22 @@
 <div class="container">
     <%= render 'nav' %>
 
-    <h1 class="text-center">Notre mission</h1>
+    <h1 class="text-center"><%= t '.title' %></h1>
 
     <div class="row">
         <div class="col-sm-12">
             <p class="lead text-justify">
-                <small>Chez Risebox nous croyons que la nourriture de demain doit être savoureuse, saine et produite localement.</small>
+                <small><%= t '.statement.why' %></small>
             </p>
             <p class="lead text-justify">
-                <small>Nous voulons donner à chacun les outils et les savoir faire pour produire sa nourriture chez lui, même en appartement.</small>
-                <small>Pour cela, nous concevons une microferme aquaponique d'intérieur : un écosystème vivant et connecté qui produit toute l'année des fruits et légumes naturels et savoureux.</small>
+                <small><%= t '.statement.how' %></small>
+                <small><%= t '.statement.what' %></small>
             </p>
         </div>
     </div>
 
     <blockquote>
-        <p>Nous sommes à l'aube d'une révolution : celle de l'agriculture individuelle et durable.</p>
+        <p><%= t '.quote' %></p>
     </blockquote>
 
     <div class="row">
@@ -62,12 +62,12 @@
             <br />
             <p class="lead text-justify">
                 <small>
-                    Nous sommes Nicolas et Adrien, deux passionnés de technologie et de nature. Nous travaillons ensemble depuis plusieurs années et nous avons pris conscience des enjeux que pose l'agriculture actuelle.
+                    <%= t '.who' %>
                 </small>
             </p>
             <p class="lead text-justify">
                 <small>
-                    En créant Risebox, nous concentrons toute notre énergie à proposer une autre voie.
+                    <%= t '.why_risebox' %>
                 </small>
             </p>
         </div>

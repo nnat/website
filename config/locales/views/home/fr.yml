@@ -39,6 +39,8 @@ fr:
         ref:
           long: Ishmael
           short: Ishmael
+      press:
+        title: 'Ils parlent de Risebox:'
     faq:
       meta:
         og_title: 'Risebox: Comment ça marche ?'
@@ -57,3 +59,11 @@ fr:
         og_description: "Nous voulons donner à chacun les outils et les savoir faire pour produire sa nourriture chez lui, même en appartement. Nous concevons un potager aquaponique d'intérieur"
         description: "Nous voulons donner à chacun les outils et les savoir faire pour produire sa nourriture chez lui, même en appartement. Nous concevons un potager aquaponique d'intérieur"
         keywords: "agriculture individuelle, durable, potager, révolution, nourriture saine, technologie"
+      title: Notre mission
+      statement:
+        why: "Chez Risebox nous croyons que la nourriture de demain doit être savoureuse, saine et produite localement."
+        how: "Nous voulons donner à chacun les outils et les savoir faire pour produire sa nourriture chez lui, même en appartement."
+        what: "Pour cela, nous concevons une microferme aquaponique d'intérieur : un écosystème vivant et connecté qui produit toute l'année des fruits et légumes naturels et savoureux."
+      quote: "Nous sommes à l'aube d'une révolution : celle de l'agriculture individuelle et durable."
+      who: "Nous sommes Nicolas et Adrien, deux passionnés de technologie et de nature. Nous travaillons ensemble depuis plusieurs années et nous avons pris conscience des enjeux que pose l'agriculture actuelle."
+      why_risebox: "En créant Risebox, nous concentrons toute notre énergie à proposer une autre voie."
