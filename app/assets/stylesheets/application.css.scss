@@ -30,7 +30,14 @@
 }
 
 .vcenter {
-  display: inline-block;
   vertical-align: middle;
-  float: none;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .vcenter {
+      display: inline-block;
+      vertical-align: middle;
+      float: none;
+    }
 }
