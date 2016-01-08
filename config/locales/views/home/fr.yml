@@ -41,6 +41,8 @@ fr:
           short: Ishmael
       press:
         title: 'Ils parlent de Risebox:'
+      video:
+        title: 'Risebox expliqué par ses co-fondateurs'
     faq:
       meta:
         og_title: 'Risebox: Comment ça marche ?'
