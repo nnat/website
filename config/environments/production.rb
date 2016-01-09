@@ -1,4 +1,5 @@
 Rails.application.configure do
+
   # Settings specified here will take precedence over those in config/application.rb.
   IP_FILTERING = ENV['IP_FILTERING'] == 'true'
   IP_WHITELIST = {  '176.190.161.244' => 'ATH IP',
@@ -27,6 +28,8 @@ Rails.application.configure do
   MAILS_INTERCEPTED = ENV['MAILS_INTERCEPTED'] == 'true'
 
   PROGRAM_OPENED = (ENV['PROGRAM_OPENED'] == 'true')
+
+  SUMOME_TOKEN = ENV['SUMOME_TOKEN']
 
   # Code is not reloaded between requests.
   config.cache_classes = true

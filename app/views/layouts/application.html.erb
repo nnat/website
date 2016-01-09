@@ -29,7 +29,9 @@
       ga('create', 'UA-61146670-1', 'auto');
       ga('send', 'pageview');
     </script>
-    <script src="//load.sumome.com/" data-sumo-site-id="ad66bb1bd780c6129e083eb9b799b99c9a31a87839db5dd1ebff8ddcf7d9c00e" async="async"></script>
+    <% if SUMOME_TOKEN.present? %>
+      <script src="//load.sumome.com/" data-sumo-site-id="<%= SUMOME_TOKEN %>" async="async"></script>
+    <% END %>
 </body>
 
 </html>
