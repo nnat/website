@@ -10,6 +10,13 @@ Rails.application.routes.draw do
 
 # mount protected_app in Rails
 
+  # Concours 
+  competition_url = "https://lafabrique-france.aviva.com/voting/projet/details/851"
+  constraints subdomain: "concours" do   
+    get "/" => redirect { |params| competition_url }
+  end
+  get '/concours_lafabrique' => redirect(competition_url)
+
   namespace :admin, path: '/pastouch', constraints: https_constraint do
     get '/'        => 'monitoring#index', as: :root
     get '/metrics' => 'metrics#index'
@@ -34,8 +41,6 @@ Rails.application.routes.draw do
 
     root 'home#index'
   end
-
-  get '/concours_lafabrique' => redirect("https://lafabrique-france.aviva.com/voting/projet/details/851")
 
   # catch all /app and /pastouch without https and redirect to same url using https
   match "early-adopter(/*path)", constraints: http_catchall, via: [:get], to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
