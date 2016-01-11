@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 # mount protected_app in Rails
 
   # Concours 
-  competition_url = "https://lafabrique-france.aviva.com/voting/projet/details/851"
+  competition_url = "https://lafabrique-france.aviva.com/voting/projet/vue/851"
   constraints subdomain: "concours" do   
     get "/" => redirect { |params| competition_url }
   end
