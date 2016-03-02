@@ -17,6 +17,10 @@ Rails.application.routes.draw do
   end
   get '/concours_lafabrique' => redirect(competition_url)
 
+  #Sondage
+  sondage_url = "https://risebox.typeform.com/to/w7wFmm"
+  get '/sondage'             => redirect(sondage_url)
+
   namespace :admin, path: '/pastouch', constraints: https_constraint do
     get '/'        => 'monitoring#index', as: :root
     get '/metrics' => 'metrics#index'
