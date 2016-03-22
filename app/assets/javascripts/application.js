@@ -12,6 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.backstretch.min.js
+//= require parallax.min.js
+//= require modernizr.custom.js
+//= require smoothscroll.js
+//= require risebox/custom.js
 //= require risebox/rb-base.js
 //= require bootstrap-sprockets
 //= require risebox/floating-forms.js

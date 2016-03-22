@@ -14,7 +14,7 @@
     <link rel="alternate" href="<%=url_for(only_path: false, locale: :fr) %>" />
 </head>
 
-<body>
+<body data-spy="scroll">
     <%= yield %>
     <script>
         $('.dropdown-toggle').dropdown();

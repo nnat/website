@@ -7,111 +7,196 @@
     <meta name="google-site-verification" content="UxAqiqnXBoKPdN20kGn6-ZRCDsP0d9BVnSeBC35Gzho" />
 <% end %>
 
-<div class="container">
+<!-- <div class="container"> -->
 
     <%= render 'nav' %>
 
-    <div class="jumbotron kitchen-img" style="background-color: white;">
-    </div>
+    <section id="home" class="banner-intro banner-slider">
+        <div class="banner-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 text-center">
+                        <h1><%= t('home.nav.tagline') %></h1>
+                        <p class="lead">
+                            <%= t('.headline') %>
+                        </p>
+                        <div class="scroll-to banner-buttons">
+                            <a href="#features" class="btn btn-lg btn-skin btn-radius">Learn more<i class="fa fa-angle-down"></i></a>
+                            <a  data-toggle="modal" data-target="#video-popup" class="btn btn-lg btn-radius btn-white">Watch video<i class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <h1 class="headline lead text-center"><%= t('.headline') %></h1>
+    <!-- <h1 class="headline lead text-center"><%# t('.headline') %></h1> -->
 
-    <%= render 'subscribe', focus: true %>
+    <section id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="feature-box">
+                        <i class="icon-heart violet"></i>
+                        <h3><%= t('.features.n1.title') %></h3>
+                        <p>
+                            <%= t('.features.n1.text') %>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="feature-box">
+                        <i class="icon-recycle violet"></i>
+                        <h3><%= t('.features.n2.title') %></h3>
+                        <p>
+                            <%= t('.features.n2.text') %>
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-    <div class="row">
-        <div class="col-sm-6 mbm">
-            <h4><span class="glyphicon glyphicon-tint"></span>&nbsp;&nbsp;<%= t('.features.n1.title') %></h4>
-            <p class="text-justify"><%= t('.features.n1.text') %></p>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="feature-box">
+                        <i class="icon-happy violet"></i>
+                        <h3><%= t('.features.n3.title') %></h3>
+                        <p>
+                            <%= t('.features.n3.text') %>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="feature-box">
+                        <i class="icon-global violet"></i>
+                        <h3><%= t('.features.n4.title') %></h3>
+                        <p>
+                            <%= t('.features.n4.text') %>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-6 mbm">
-            <h4><span class="glyphicon glyphicon-leaf"></span>&nbsp;&nbsp;<%= t('.features.n2.title') %></h4>
-            <p class="text-justify"><%= t('.features.n2.text') %></p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-6 mbm">
-            <h4><span class="glyphicon glyphicon-dashboard"></span>&nbsp;&nbsp;<%= t('.features.n3.title') %></h4>
-            <p class="text-justify"><%= t('.features.n3.text') %></p>
-        </div>
-        <div class="col-sm-6 mbm">
-            <h4><span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;<%= t('.features.n4.title') %></h4>
-            <p class="text-justify"><%= t('.features.n4.text') %></p>
-        </div>
-    </div>
+    </section>
+    
     <blockquote class="mbl text-center">
       <p><%= t('.quote.text')%></p>
       <footer><%= t('.quote.author')%>, <cite title="<%= t('.quote.ref.long')%>"><%= t('.quote.ref.short')%></cite></footer>
     </blockquote>
-    <br />
-    <div class="jumbotron program-img">
-        <p class="lead text-center" style="text-shadow: 0px 0px 9px #777; color: white; margin-top: 30px;">
-            Envie d'une Risebox avant tout le monde ?
-        </p>
-        <div class="text-center">
-            <%= link_to "Découvrez notre programme early adopter", program_path(locale: :fr), class: 'btn btn-warning btn-lg', style: "white-space: normal;" %>
+    
+    <div class="banner-cta cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3 text-center">
+                    <h2>Envie d'une Risebox avant tout le monde ?</h2>
+                    <p class="lead">
+                        &nbsp;
+                    </p>
+                    <%= link_to "Découvrez notre programme early adopter", program_path(locale: :fr), class: 'btn btn-white btn-radius btn-lg'%>
+                </div>
+            </div>
         </div>
     </div>
 
-    <h2 class="headline lead text-center" style="font-size: 24px"><%= t('.press.title') %></h2>
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 center-title">
+                    <h2><%= t('.press.title') %></h2>
+                </div>
+            </div>
 
-    <div class="row">
-        <div class="col-sm-4 mbm vcenter">
-            <a href="http://lci.tf1.fr/jt-we/videos/2015/les-fablab-veritables-cavernes-d-ali-baba-pour-bricoleurs-8634315.html" target="_blank" class="text-center">
-                <img src="<%= image_url('home/press/tf1.png') %>" alt="TF1" class="img-responsive center-block">
-            </a>
-        </div><!--
-    --><div class="col-sm-4 mbm vcenter">
-            <a href="http://www.bpifrance.fr/Vivez-Bpifrance/Actualites/Alimentation-un-futur-indigeste-16776" target="_blank" class="text-center">
-                <img src="<%= image_url('home/press/bpi.png') %>" alt="BpiFrance" class="img-responsive center-block">
-            </a>
-        </div><!--
-    --><div class="col-sm-4 mbm vcenter">
-            <a href="http://fr.metrotime.be/2015/04/25/must-read/laquaponie-le-potager-interieur/" target="_blank" class="text-center">
-                <img src="<%= image_url('home/press/metro.gif') %>" alt="Metro Belgique" class="img-responsive center-block">
-            </a>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="text-center">
+                        <a href="http://lci.tf1.fr/jt-we/videos/2015/les-fablab-veritables-cavernes-d-ali-baba-pour-bricoleurs-8634315.html" target="_blank" class="text-center">
+                            <img src="<%= image_url('home/press/tf1.png') %>" alt="TF1" class="img-responsive center-block">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="text-center">
+                        <a href="http://www.bpifrance.fr/Vivez-Bpifrance/Actualites/Alimentation-un-futur-indigeste-16776" target="_blank" class="text-center">
+                            <img src="<%= image_url('home/press/bpi.png') %>" alt="BpiFrance" class="img-responsive center-block">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="text-center">
+                        <a href="http://fr.metrotime.be/2015/04/25/must-read/laquaponie-le-potager-interieur/" target="_blank" class="text-center">
+                            <img src="<%= image_url('home/press/metro.gif') %>" alt="Metro Belgique" class="img-responsive center-block">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="text-center">
+                        <a href="http://www.nanterredigital.fr/blog/2015/12/08/risebox-la-startup-qui-transforme-votre-cuisine-en-potager/" target="_blank" class="text-center">
+                            <img src="<%= image_url('home/press/nanterre_digital.png') %>" alt="TF1" class="img-responsive center-block">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="text-center">
+                        <a href="http://www.franceinter.fr/depeche-faites-pousser-des-fruits-et-legumes-bio-dans-votre-appartement" target="_blank" class="text-center">
+                            <img src="<%= image_url('home/press/franceinter.png') %>" alt="France Inter" class="img-responsive center-block">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="text-center">
+                        <a href="http://www.objetconnecte.com/risebox-pousser-fruits-et-legumes-appartement/" target="_blank" class="text-center">
+                            <img src="<%= image_url('home/press/objet_connecte.png') %>" alt="Objet Connecté" class="img-responsive center-block">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="text-center">
+                        <a href="http://www.mescoursespourlaplanete.com/Actualites/RiseBox_initie_les_particuliers_aa_l_auaquaponie_2164.html" target="_blank">
+                            <img src="<%= image_url('home/press/courses_planete.jpeg') %>" alt="Mes courses pour la planète" class="img-responsive center-block">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="text-center">
+                        <a href="http://green.wiwo.de/startup-risebox-jetzt-kommt-die-stadtfarm-fuer-zu-hause/" target="_blank">
+                            <img src="<%= image_url('home/press/wiwo_de.jpg') %>" alt="Wiwo.de" class="img-responsive center-block">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="text-center">
+                        <a href="http://www.meretdemeures.com/fr/news/ecolo-risebox-la-nature-sinvite-chez-vous" target="_blank">
+                            <img src="<%= image_url('home/press/mer_et_demeures.png') %>" alt="Mer et demeures" class="img-responsive center-block">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-sm-offset-2 center-title">
+                <h2><%= t('.video.title') %></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" width="770" height="432" src="https://www.youtube.com/embed/eC7LntMRlbM" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-sm-4 mbm vcenter">
-            <a href="http://www.nanterredigital.fr/blog/2015/12/08/risebox-la-startup-qui-transforme-votre-cuisine-en-potager/" target="_blank" class="text-center">
-                <img src="<%= image_url('home/press/nanterre_digital.png') %>" alt="TF1" class="img-responsive center-block">
-            </a>
-        </div><!--
-    --><div class="col-sm-4 mbm vcenter">
-            <a href="http://www.franceinter.fr/depeche-faites-pousser-des-fruits-et-legumes-bio-dans-votre-appartement" target="_blank" class="text-center">
-                <img src="<%= image_url('home/press/franceinter.png') %>" alt="France Inter" class="img-responsive center-block">
-            </a>
-        </div><!--
-    --><div class="col-sm-4 mbm vcenter">
-            <a href="http://www.objetconnecte.com/risebox-pousser-fruits-et-legumes-appartement/" target="_blank" class="text-center">
-                <img src="<%= image_url('home/press/objet_connecte.png') %>" alt="Objet Connecté" class="img-responsive center-block">
-            </a>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-sm-4 mbm vcenter">
-            <a href="http://www.mescoursespourlaplanete.com/Actualites/RiseBox_initie_les_particuliers_aa_l_auaquaponie_2164.html" target="_blank">
-                <img src="<%= image_url('home/press/courses_planete.jpeg') %>" alt="Mes courses pour la planète" class="img-responsive center-block">
-            </a>
-        </div><!--
-    --><div class="col-sm-4 mbm vcenter">
-            <a href="http://green.wiwo.de/startup-risebox-jetzt-kommt-die-stadtfarm-fuer-zu-hause/" target="_blank">
-                <img src="<%= image_url('home/press/wiwo_de.jpg') %>" alt="Wiwo.de" class="img-responsive center-block">
-            </a>
-        </div><!--
-    --><div class="col-sm-4 mbm vcenter">
-            <a href="http://www.meretdemeures.com/fr/news/ecolo-risebox-la-nature-sinvite-chez-vous" target="_blank">
-                <img src="<%= image_url('home/press/mer_et_demeures.png') %>" alt="Mer et demeures" class="img-responsive center-block">
-            </a>
-        </div>
-    </div>
-
-    <h2 class="headline lead text-center" style="font-size: 24px"><%= t('.video.title') %></h2>
-
-    <iframe width="770" height="432" src="https://www.youtube.com/embed/eC7LntMRlbM" frameborder="0" allowfullscreen></iframe>
+    
+    <%= render 'subscribe' %>
 
     <%= render 'footer' %>
 
-</div>
+<!-- </div> -->

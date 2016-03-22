@@ -1,18 +1,31 @@
-<% focus = false if focus.nil? %>
+<section id="newsletter" class="newsletter-section">
+	<% focus = false if focus.nil? %>
 
-<div id="leadSuccess" class="alert alert-success" role="alert" style="display:none">
-</div>
+    <div class="container">
+         <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 center-title">
+                <i class="icon-envelope"></i>
+                <h2>Suivez l'aventure Risebox</h2>
+                <p>No SPAM, cancel anytime.</p>                                     
+            </div>
+        </div> --><!--center title row end -->
+	    <div id="leadSuccess" class="alert alert-success" role="alert" style="display:none">
+		</div>
 
-<div id="leadError" class="alert alert-danger" role="alert" style="display:none">
-</div>
+		<div id="leadError" class="alert alert-danger" role="alert" style="display:none">
+		</div>
 
-<div class="text-center mbl">
-    <!-- <div class="center-block"> -->
-    <%= form_for @lead, remote: true, html: {class: 'form-inline _leadForm', role: 'form'} do |f| %>
-        <div class="form-group">
-            <%= f.text_field :email, class: 'form-control input-lg', size: '35', placeholder: t('.placeholder'), id: 'lead-email', autofocus: (focus == true) %>
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+            	<%= form_for @lead, remote: true, html: {class: 'subscribe-form  assan-newsletter _leadForm', role: 'form'} do |f| %>
+			        <div class="input-group">
+			            <%= f.text_field :email, class: 'form-control input-lg', size: '35', placeholder: t('.placeholder'), id: 'lead-email', autofocus: (focus == true) %>
+				        <span class="input-group-btn">
+	                        <button class="btn btn-lg btn-skin btn-radius" name="submit" type="submit"><%= t('.button') %></button>
+	                    </span>
+                    </div>
+			    <% end %>
+            </div>
         </div>
-        <button type="submit" class="btn btn-success btn-lg"><%= t('.button') %></button>
-    <% end %>
-    <!-- </div> -->
-</div>
+    </div>
+</section>
