@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <%= link_to image_tag("home/new_logo.png", width: '50'), root_path, class: 'navbar-brand', alt: 'Risebox' %>
+            <%= link_to image_tag("home/new_logo.png", width: '50', style: "margin-top:5px"), root_path, alt: 'Risebox' %>
             <!-- <a class="navbar-brand" href="index.html">Risebox</a> -->
         </div>
         <%# link_to image_tag("home/new_logo.png", width: '50'), root_path %>
@@ -28,7 +28,7 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right"> 
-                <li class="button-nav"><%= link_to t('.program'), program_path(locale: :fr), id: 'program-nav-menu' %></li>
+                <li class="button-nav"><%= link_to t('.program'), program_path(locale: :fr), id: 'program-nav-menu', class: "btn btn-success btn-lg" %></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div><!--/.container-fluid -->

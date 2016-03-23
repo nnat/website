@@ -33,130 +33,158 @@
     </style>
 <% end %>
 
-<div class="container">
-    <%= render 'nav' %>
+<%= render 'nav' %>
 
-    <div style="position:relative;">
-        <%= image_tag 'program/nicolas_install2.jpg', style: "max-width: 100%" %>
-        <div style="top:20px;left:40px;position: absolute;">
-            <span class="h1">Vivez l'expérience Risebox</span>
+    <section id="home" class="banner-intro banner-program">
+        <div class="banner-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 text-center">
+                        <h1>Vivez l'expérience Risebox</h1>
+                        <p>
+                            Participez à notre <strong style="color: orange">programme early adopter</strong> et profitez de votre Risebox dès Octobre 2015
+                        </p>
+                        <div class="scroll-to banner-buttons">
+                            <%= link_to new_program_lead_path, class: "btn btn-lg btn-skin btn-radius" do %>
+                                Je réserve ma Risebox
+                            <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <h1 class="headline lead text-center">
-        Participez à notre <strong style="color: orange">programme early adopter</strong> et profitez de votre Risebox dès Octobre 2015
-    </h1>
-
-    <div class="text-center mbl">
-        <%= link_to 'Je réserve ma Risebox', new_program_lead_path, class: 'btn btn-success btn-lg' %>
-    </div>
+    </section>
 
     <br/>
 
-    <h2 class="text-center">
-        Inclus dans votre Risebox
-    </h2>
+    <section id="gallery-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 center-title">
+                    <i class="icon-gift"></i>
+                    <h2>Inclus dans votre Risebox</h2>
+                    <p>Un concentré de nature et de technologie chez vous</p>
+                </div>
+            </div>
+            <div class="row vertical-align-child aside-feature-row">
+                <div class="col-sm-6">
+                    <h4><span class="fa fa-lightbulb-o"></span>&nbsp;Eclairage LED optimisé</h4>
+                    <p class="text-justify mbl">Il émet uniquement le spectre de lumière utile au plantes pour une pousse optimale et 50% d'économie d'énergie.</p>
+
+                    <h4><span class="glyphicon glyphicon-tint"></span>&nbsp;Circuit d'eau passif</h4>
+                    <p class="text-justify mbl">Fiable, conçu pour réduire la consommation électrique et le bruit tout en apportant circulation et oxygénation.</p>
+
+                    <h4><span class="glyphicon glyphicon-eye-open"></span>&nbsp;Bel aquarium</h4>
+                    <p class="text-justify mbl">200l pour admirer vos poissons, le moteur de la Risebox.</p>
+
+                    <h4><span class="fa fa-pagelines"></span>&nbsp;Bacs de culture universels</h4>
+                    <p class="text-justify mbl">Capables de faire pousser toutes sortes de plantes sur une surface équivalente à un potager de 6m2.</p>
+
+                    <h4><span class="glyphicon glyphicon-hdd"></span>&nbsp;Ordinateur embarqué</h4>
+                    <p class="text-justify mbl">Risebox surveille et optimise votre écosystème pour vous. Il anticipe les incidents et vous donne la marche à suivre.</p>
+
+                    <h4><span class="glyphicon glyphicon-phone"></span>&nbsp;App pratique</h4>
+                    <p class="text-justify mbl">Suivez votre Risebox, bénéficiez de nos conseils et de notre boutique. Vous avez la main verte!</p>
+                </div>
+                <div class="col-sm-6 mbm">
+                    <%= image_tag 'program/risebox4.jpg', size: '342x519', class: 'img-responsive', style: 'margin: 0 auto' %>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <br/>
-    <div class="lead text-center">Un concentré de nature et de technologie chez vous</div>
 
-    <div class="row">
-        <div class="col-sm-6 mbm">
-            <h4><span class="fa fa-lightbulb-o"></span>&nbsp;Eclairage LED optimisé</h4>
-            <p class="text-justify mbl">Il émet uniquement le spectre de lumière utile au plantes pour une pousse optimale et 50% d'économie d'énergie.</p>
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 center-title">
+                    <i class="icon-archive"></i>
+                    <h2 class="text-center" id="offre" name="offre">
+                        Notre offre early adopter
+                    </h2>
+                    <div class="lead text-center">
+                        Risebox représente beaucoup pour nous. Pour que l'expérience de nos premiers clients soit parfaite, nous avons conçu un programme où tout est inclus.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3 mbm">
+                        <h4>Un modèle unique</h4>
+                        <p>
+                            Votre Risebox est fabriquée à la main dans notre atelier. Elle est le fruit de centaines d'heures d'amélioration par rapport à notre dernier prototype.
+                        </p>
+                    </div>
+                    <div class="col-sm-3 mbm">
+                        <h4>Préparé et livré</h4>
+                        <p>Nous faisons grandir l'éco-système de votre Risebox plusieurs semaines à l'avance. L'équipe se déplace, installe, règle le système et vous explique tout.
+                        </p>
+                    </div>
+                    <div class="col-sm-3 mbm">
+                        <h4>Support premium</h4>
+                        <p>Nous sommes à votre écoute 7j/7 et nous intervennons chez vous si besoin. Si quelque chose ne fonctionne plus: on remplace. Vous n'êtes pas satisfait: on rembourse</p>
+                    </div>
+                    <div class="col-sm-3 mbm">
+                        <h4>Fournitures incluses</h4>
+                        <p>Durant toute la durée du programme nous fournissons gratuitement des graines adaptées, des plants pour gagner du temps et la nourriture pour les poissons</p>
+                    </div>
+                </div>
+                <p class="lead text-center">
+                    Prix early adopter: <span style="color: orange">2490€</span> <br /> pour votre Risebox et 6 mois tout inclus
+                </p>
 
-            <h4><span class="glyphicon glyphicon-tint"></span>&nbsp;Circuit d'eau passif</h4>
-            <p class="text-justify mbl">Fiable, conçu pour réduire la consommation électrique et le bruit tout en apportant circulation et oxygénation.</p>
-
-            <h4><span class="glyphicon glyphicon-eye-open"></span>&nbsp;Bel aquarium</h4>
-            <p class="text-justify mbl">200l pour admirer vos poissons, le moteur de la Risebox.</p>
-
-            <h4><span class="fa fa-pagelines"></span>&nbsp;Bacs de culture universels</h4>
-            <p class="text-justify mbl">Capables de faire pousser toutes sortes de plantes sur une surface équivalente à un potager de 6m2.</p>
-
-            <h4><span class="glyphicon glyphicon-hdd"></span>&nbsp;Ordinateur embarqué</h4>
-            <p class="text-justify mbl">Risebox surveille et optimise votre écosystème pour vous. Il anticipe les incidents et vous donne la marche à suivre.</p>
-
-            <h4><span class="glyphicon glyphicon-phone"></span>&nbsp;App pratique</h4>
-            <p class="text-justify mbl">Suivez votre Risebox, bénéficiez de nos conseils et de notre boutique. Vous avez la main verte!</p>
+                <div class="text-center mbl">
+                    <%= link_to "Je réserve ma Risebox", new_program_lead_path, class: 'btn btn-success btn-lg' %>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-6 mbm">
-            <%= image_tag 'program/risebox4.jpg', size: '342x519', class: 'img-responsive', style: 'margin: 0 auto' %>
-        </div>
-    </div>
-
-    <br/><br/>
-
-    <h2 class="text-center" id="offre" name="offre">
-        Notre offre early adopter
-    </h2>
+    </section>
+    
     <br/>
 
-    <div class="lead text-center">
-        Risebox représente beaucoup pour nous. Pour que l'expérience de nos premiers clients soit parfaite, nous avons conçu un programme où tout est inclus.
-    </div>
-
-    <div class="row">
-        <div class="col-sm-3 mbm">
-            <h4>Un modèle unique</h4>
-            <p>
-                Votre Risebox est fabriquée à la main dans notre atelier. Elle est le fruit de centaines d'heures d'amélioration par rapport à notre dernier prototype.
-            </p>
+    <section id="gallery-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 center-title">
+                    <h2>Risebox c'est productif</h2> 
+                    <p>Voici ce que vous pourrez bientôt faire pousser chez vous :)</p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="gallery">
+                            <%= image_tag 'program/salade.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="gallery">
+                            <%= image_tag 'program/radis.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="gallery">
+                            <%= image_tag 'program/oseille.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                        </div>
+                    </div>
+                </div>
+                <div class="row hidden-xs">
+                    <div class="col-sm-4">
+                        <div class="gallery">
+                            <%= image_tag 'program/fraise.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="gallery">
+                            <%= image_tag 'program/poivron.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="gallery">
+                            <%= image_tag 'program/thym.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-3 mbm">
-            <h4>Préparé et livré</h4>
-            <p>Nous faisons grandir l'éco-système de votre Risebox plusieurs semaines à l'avance. L'équipe se déplace, installe, règle le système et vous explique tout.
-            </p>
-        </div>
-        <div class="col-sm-3 mbm">
-            <h4>Support premium</h4>
-            <p>Nous sommes à votre écoute 7j/7 et nous intervennons chez vous si besoin. Si quelque chose ne fonctionne plus: on remplace. Vous n'êtes pas satisfait: on rembourse</p>
-        </div>
-        <div class="col-sm-3 mbm">
-            <h4>Fournitures incluses</h4>
-            <p>Durant toute la durée du programme nous fournissons gratuitement des graines adaptées, des plants pour gagner du temps et la nourriture pour les poissons</p>
-        </div>
-    </div>
-
-    <br />
-
-    <p class="lead text-center">
-        Prix early adopter: <span style="color: orange">2490€</span> <br /> pour votre Risebox et 6 mois tout inclus
-    </p>
-
-    <div class="text-center mbl">
-        <%= link_to "Je réserve ma Risebox", new_program_lead_path, class: 'btn btn-success btn-lg' %>
-    </div>
-
-    <br />
-
-    <br />
-
-    <p class="lead text-center">
-        Risebox est vraiment productif: voici ce que vous pourrez bientôt faire pousser chez vous :)
-    </p>
-
-    <div class="row">
-        <div class="col-sm-4 mbm">
-            <%= image_tag 'program/salade.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
-        </div>
-        <div class="col-sm-4 mbm">
-            <%= image_tag 'program/radis.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
-        </div>
-        <div class="col-sm-4 mbm">
-            <%= image_tag 'program/oseille.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
-        </div>
-    </div>
-    <div class="row hidden-xs">
-        <div class="col-sm-4 mbm">
-            <%= image_tag 'program/fraise.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
-        </div>
-        <div class="col-sm-4 mbm">
-            <%= image_tag 'program/poivron.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
-        </div>
-        <div class="col-sm-4 mbm">
-            <%= image_tag 'program/thym.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
-        </div>
-    </div>
+    </section>
 
     <br /><br />
 
@@ -168,13 +196,18 @@
 
     <br />
 
-    <div class="text-center mbl">
-        <%= link_to 'Je réserve ma Risebox', new_program_lead_path, class: 'btn btn-success btn-lg' %>
-    </div>
-
-    <div class="text-center mbl">
-        Toujours pas convaincu ? Une autre question ?<br />
-        <a href="mailto:hello@risebox.co">Contactez-nous</a> et dites-nous tout.
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 center-title">
+                <%= link_to 'Je réserve ma Risebox', new_program_lead_path, class: 'btn btn-skin btn-radius btn-lg' %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 center-title">
+                Toujours pas convaincu ? Une autre question ?<br />
+                <a href="mailto:hello@risebox.co">Contactez-nous</a> et dites-nous tout.
+            </div>
+        </div>
     </div>
 
     <%= render 'footer' %>

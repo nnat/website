@@ -1,37 +1,46 @@
-<div class="container">
-    <%= render 'home/nav' %>
-	<br /><br />
-	<div class="text-center">
-	    <h2>Merci <%= @lead.try(:first_name) %> !</h2>
-		<br />
-		<p class="lead">
-			<small>
-	    		Nous avons bien enregistré vos coordonnées.
-	    	</small>
-	    </p>
+<%= render 'home/nav' %>
 
-		<p class="lead"><small>
-	    	Nous vous contacterons par mail, en priorité, dès que nous serons en mesure de vous proposer une Risebox. </small>
-	    </p>
-	    <% if @lead %>
-			<div class="alert alert-success lead" id="phoneSuccess" style="display: none"><small>C'est noté, merci.</small></div>
-			<div class="alert alert-danger lead" id="phoneError" style="display: none"><small>Une erreur s'est produite, merci d'essayer de nouveau</small></div>
-			<div id="phoneForm">
-		    	<p class="lead">
-		    		<small>Si vous préférez que nous vous appelions, laissez-nous votre téléphone :</small>
-		    	</p>
-			    <%= form_for @lead, remote: true, html: {class: 'form-inline _leadForm', role: 'form'} do |f| %>
-			        <div class="form-group">
-			            <%= f.text_field :phone, class: 'form-control input-lg', size: '35', placeholder: 'Votre numéro de téléphone en journée', id: 'lead-phone', required: true %>
-			        </div>
-			        <button type="submit" class="btn btn-success btn-lg">Appelez-moi</button>
-			    <% end %> 
-			    <br>
+<br /><br />
+
+<section id="features">
+	<div class="container">
+	    <div class="row">
+			<div class="col-sm-8 col-sm-offset-2 center-title">
+	            <h1 class="lead" style="margin-bottom: 10px; font-size: 30px">
+		    		Merci <%= @lead.try(:first_name) %> !</h1>
+				<br />
+				<p class="lead">
+					Nous avons bien enregistré vos coordonnées.
+			    </p>
+				<p class="lead"><small>
+			    	Nous vous contacterons par mail, en priorité, dès que nous serons en mesure de vous proposer une Risebox. </small>
+			    </p>
 			</div>
-		<% end %>
-	    <p class="lead"><small>A très bientôt,</small></p>
-
-	    <p class="lead"><small>Nicolas & Adrien<br />Risebox</small></p>
+		</div>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2 center-title">
+			    <% if @lead %>
+					<div class="alert alert-success lead" id="phoneSuccess" style="display: none"><small>C'est noté, merci.</small></div>
+					<div class="alert alert-danger lead" id="phoneError" style="display: none"><small>Une erreur s'est produite, merci d'essayer de nouveau</small></div>
+					<div id="phoneForm">
+				    	<p class="lead">
+				    		<small>Si vous préférez que nous vous appelions, laissez-nous votre téléphone :</small>
+				    	</p>
+					    <%= form_for @lead, remote: true, html: {class: 'form-inline _leadForm', role: 'form'} do |f| %>
+					        <div class="input-group">
+					            <%= f.text_field :phone, class: 'form-control input-lg', placeholder: 'Votre numéro de téléphone en journée', size: '35', id: 'lead-phone', required: true %>
+					            <span class="input-group-btn">
+					            	<button type="submit" class="btn btn-success btn-radius btn-lg">Appelez-moi</button>	
+					            </span>
+					        </div>
+					        
+					    <% end %> 
+					    <br>
+					</div>
+				<% end %>
+			    <p class="lead"><small>A très bientôt,</small></p>
+			    <p class="lead"><small>Nicolas & Adrien<br />Risebox</small></p>
+			</div>
+		</div>
 	</div>
-
-</div>
+</section>

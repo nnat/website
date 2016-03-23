@@ -5,203 +5,218 @@
     <meta property="keywords" content="<%= t '.meta.keywords' %>" />
 <% end %>
 
-<div class="container">
+<!-- <div class="container"> -->
     <%= render 'nav' %>
+    
+    <br/><br/>
 
-    <h1 class="text-center">Comment ça marche</h1>
-    <br />
-    <p class="justify-text">
-        Nous avons recensé ici les questions que vous nous posez fréquemment sur Risebox. Si votre question ne figure pas dans cette liste, n'hésitez pas à nous la poser sur <%= mail_to "hello@risebox.co" %>.
-    </p>
-    <br />
-    <ul class="faq-index">
-        <li><a href="#quoi">Qu'est-ce qu'une Risebox ?</a></li>
-        <li><a href="#comment">Comment Risebox fonctionne-t-elle ?</a></li>
-        <li><a href="#avantages">Quels sont les avantages de l'aquaponie ?</a></li>
-        <li><a href="#les-plus">Qu’apporte Risebox, en plus de l’aquaponie ?</a></li>
-        <li><a href="#quantite">Quelle quantité de nourriture produit une Risebox ?</a></li>
-        <li><a href="#place">J'ai peu de place chez moi, où puis-je mettre ma Risebox ?</a></li>
-        <li><a href="#resultat">Je n'ai pas la main verte, comment être sûr du résultat ?</a></li>
-        <li><a href="#manger">Les poissons sont-ils comestibles ?</a></li>
-        <li><a href="#sans-poisson">Je suis végétarien, puis-je avoir une Risebox sans poisson ?</a></li>
-        <li><a href="#deplacement">Je suis souvent en déplacement, comment se comporte Risebox quand je ne suis pas là ?</a></li>
-        <li><a href="#entretien">Un aquarium et un potager, c'est beaucoup d’entretien, non ?</a></li>
-        <li><a href="#pousser">Qu’est-ce que je peux y faire pousser ?</a></li>
-        <li><a href="#achats">Comment se procurer des semences ou les plants et quel nourriture donner aux poissons ?</a></li>
-        <li><a href="#install">Je veux une Risebox ! Mais comment l'installer ?</a></li>
-    </ul>
-    <br /><br />
-    <div class="panel panel-info" id="quoi">
-        <div class="panel-heading">
-            <h3 class="panel-title">Qu'est-ce qu'une Risebox ?</h3>
+    <section id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 center-title">
+                    <i class="icon-telescope violet"></i>
+                    <h1 class="text-center lead">Comment ça marche</h1>
+                    <p>
+                        Nous avons recensé ici les questions que vous nous posez fréquemment sur Risebox. Si votre question ne figure pas dans cette liste, n'hésitez pas à nous la poser sur <%= mail_to "hello@risebox.co" %>.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="panel-body text-justify">
-            Risebox est un potager vertical d’intérieur où pousse toute l'année une nourriture saine et fraiche. Vos légumes poussent sous vos yeux, dans votre cuisine ou votre salon : aucun traitement, aucun transport, vous les cueillez au moment de les déguster.
-            <br /><br />
-            Visuellement, voici à quoi cela ressemble : <br /><br />
-            <%= image_tag("faq/kitchen_small.jpg", class: 'large-image center-block') %>
-            <%# image_tag("faq/risebox_detour.png", class: 'large-image center-block') %>
-        </div>
-    </div>
-    <div class="panel panel-info" id="comment">
-        <div class="panel-heading">
-            <h3 class="panel-title">Comment Risebox fonctionne-t-elle ?</h3>
-        </div>
-        <div class="panel-body">
-            Risebox est un système aquaponique : des poissons et des végétaux se développent en symbiose au sein d’un écosystème en équilibre.<br/><br />
-            Cette technique fonctionne sur un principe tout simple :
-            <%= image_tag("home/aquaponie.jpg", class: 'large-image center-block') %>
-        </div>
-    </div>
-    <div class="panel panel-info" id="avantages">
-        <div class="panel-heading">
-            <h3 class="panel-title">Quels sont les avantages de l'aquaponie ?</h3>
-        </div>
-        <div class="panel-body text-justify">
-            Les avantages de l'aquaponie sont nombreux :
-            <ul>
-                <li><strong>Sobriété en eau :</strong> l’aquaponie consomme 90% d’eau en moins par rapport à l’aquaculture et à la culture en plein champ</li>
-                <li><strong>Garanti biologique :</strong> l’écosystème poissons-légumes se suffit à lui-même et ne supporte aucun intrant chimique</li>
-                <li><strong>Productivité :</strong> les végétaux poussent 3 fois plus vite qu’en culture traditionnelle, et ont besoin de moins d’espace car la nourriture et l’eau sont abondantes</li>
-                <li><strong>Résilience :</strong> les plantes poussant sur un lit de billes d’argile, elles sont insensibles à la pollution des sols et à certains parasites</li>
+
+        <div class="container">
+            <ul class="faq-index">
+                <li><a href="#quoi">Qu'est-ce qu'une Risebox ?</a></li>
+                <li><a href="#comment">Comment Risebox fonctionne-t-elle ?</a></li>
+                <li><a href="#avantages">Quels sont les avantages de l'aquaponie ?</a></li>
+                <li><a href="#les-plus">Qu’apporte Risebox, en plus de l’aquaponie ?</a></li>
+                <li><a href="#quantite">Quelle quantité de nourriture produit une Risebox ?</a></li>
+                <li><a href="#place">J'ai peu de place chez moi, où puis-je mettre ma Risebox ?</a></li>
+                <li><a href="#resultat">Je n'ai pas la main verte, comment être sûr du résultat ?</a></li>
+                <li><a href="#manger">Les poissons sont-ils comestibles ?</a></li>
+                <li><a href="#sans-poisson">Je suis végétarien, puis-je avoir une Risebox sans poisson ?</a></li>
+                <li><a href="#deplacement">Je suis souvent en déplacement, comment se comporte Risebox quand je ne suis pas là ?</a></li>
+                <li><a href="#entretien">Un aquarium et un potager, c'est beaucoup d’entretien, non ?</a></li>
+                <li><a href="#pousser">Qu’est-ce que je peux y faire pousser ?</a></li>
+                <li><a href="#achats">Comment se procurer des semences ou les plants et quel nourriture donner aux poissons ?</a></li>
+                <li><a href="#install">Je veux une Risebox ! Mais comment l'installer ?</a></li>
             </ul>
-        </div>
-    </div>
+            
+            <br />
 
-    <div class="panel panel-info" id="les-plus">
-        <div class="panel-heading">
-            <h3 class="panel-title">Qu’apporte Risebox, en plus de l’aquaponie ?</h3>
-        </div>
-        <div class="panel-body text-justify">
-            Risebox est un système aquaponique d’intérieur conçu pour produire beaucoup en très peu d’espace. Situé en intérieur, il réutilise la chaleur de votre habitat pour chauffer l’eau et les plantes. Risebox utilise les dernières technologies pour produire de la nourriture toute l’année, par exemple :
-            <ul>
-                <li>un éclairage à LED sobre en énergie complète la lumière fournie aux plantes</li>
-                <li>de nombreux capteurs vérifient automatiquement que l’écosystème est en bonne santé</li>
-                <li>notre application vous aide à entretenir votre potager et votre aquarium</li>
-            </ul>
-        </div>
-    </div>
+            <div class="panel panel-info" id="quoi">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Qu'est-ce qu'une Risebox ?</h3>
+                </div>
+                <div class="panel-body text-justify">
+                    Risebox est un potager vertical d’intérieur où pousse toute l'année une nourriture saine et fraiche. Vos légumes poussent sous vos yeux, dans votre cuisine ou votre salon : aucun traitement, aucun transport, vous les cueillez au moment de les déguster.
+                    <br /><br />
+                    Visuellement, voici à quoi cela ressemble : <br /><br />
+                    <%= image_tag("faq/kitchen_small.jpg", class: 'large-image center-block') %>
+                    <%# image_tag("faq/risebox_detour.png", class: 'large-image center-block') %>
+                </div>
+            </div>
+            <div class="panel panel-info" id="comment">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Comment Risebox fonctionne-t-elle ?</h3>
+                </div>
+                <div class="panel-body">
+                    Risebox est un système aquaponique : des poissons et des végétaux se développent en symbiose au sein d’un écosystème en équilibre.<br/><br />
+                    Cette technique fonctionne sur un principe tout simple :
+                    <%= image_tag("home/aquaponie.jpg", class: 'large-image center-block') %>
+                </div>
+            </div>
+            <div class="panel panel-info" id="avantages">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Quels sont les avantages de l'aquaponie ?</h3>
+                </div>
+                <div class="panel-body text-justify">
+                    Les avantages de l'aquaponie sont nombreux :
+                    <ul>
+                        <li><strong>Sobriété en eau :</strong> l’aquaponie consomme 90% d’eau en moins par rapport à l’aquaculture et à la culture en plein champ</li>
+                        <li><strong>Garanti biologique :</strong> l’écosystème poissons-légumes se suffit à lui-même et ne supporte aucun intrant chimique</li>
+                        <li><strong>Productivité :</strong> les végétaux poussent 3 fois plus vite qu’en culture traditionnelle, et ont besoin de moins d’espace car la nourriture et l’eau sont abondantes</li>
+                        <li><strong>Résilience :</strong> les plantes poussant sur un lit de billes d’argile, elles sont insensibles à la pollution des sols et à certains parasites</li>
+                    </ul>
+                </div>
+            </div>
 
-    <div class="panel panel-info" id="quantite">
-        <div class="panel-heading">
-            <h3 class="panel-title">Quelle quantité de nourriture produit une Risebox ?</h3>
-        </div>
-        <div class="panel-body text-justify">
-            Une Risebox équivaut à un potager de 6m2 qui produirait toute l'année comme en plein été. En effet, Risebox n'étant pas dépendante des conditions climatiques, elle peut produire 365 jours par an. La quantité totale de nourriture dépend grandement des types de végétaux et de poissons que vous choisirez, mais elle couvrira une part significative de vos besoins en légumes.
-        </div>
-    </div>
+            <div class="panel panel-info" id="les-plus">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Qu’apporte Risebox, en plus de l’aquaponie ?</h3>
+                </div>
+                <div class="panel-body text-justify">
+                    Risebox est un système aquaponique d’intérieur conçu pour produire beaucoup en très peu d’espace. Situé en intérieur, il réutilise la chaleur de votre habitat pour chauffer l’eau et les plantes. Risebox utilise les dernières technologies pour produire de la nourriture toute l’année, par exemple :
+                    <ul>
+                        <li>un éclairage à LED sobre en énergie complète la lumière fournie aux plantes</li>
+                        <li>de nombreux capteurs vérifient automatiquement que l’écosystème est en bonne santé</li>
+                        <li>notre application vous aide à entretenir votre potager et votre aquarium</li>
+                    </ul>
+                </div>
+            </div>
 
-    <div class="panel panel-info" id="place">
-        <div class="panel-heading">
-            <h3 class="panel-title">J'ai peu de place chez moi, où puis-je mettre ma Risebox ?</h3>
-        </div>
-        <div class="panel-body text-justify">
-            Grâce à sa conception en étage, Risebox occupe seulement 0,5m2 au sol. Vous pouvez la placer n'importe où dans votre espace de vie. Inutile de la placer devant vos fenêtres : son éclairage LED intégré se déclenche lorsque la lumière est insuffisante.
-        </div>
-    </div>
+            <div class="panel panel-info" id="quantite">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Quelle quantité de nourriture produit une Risebox ?</h3>
+                </div>
+                <div class="panel-body text-justify">
+                    Une Risebox équivaut à un potager de 6m2 qui produirait toute l'année comme en plein été. En effet, Risebox n'étant pas dépendante des conditions climatiques, elle peut produire 365 jours par an. La quantité totale de nourriture dépend grandement des types de végétaux et de poissons que vous choisirez, mais elle couvrira une part significative de vos besoins en légumes.
+                </div>
+            </div>
 
-    <div class="panel panel-info" id="resultat">
-        <div class="panel-heading">
-            <h3 class="panel-title">Je n'ai pas la main verte, comment être sûr du résultat ?</h3>
-        </div>
-        <div class="panel-body text-justify">
-            Nous avons conçu Risebox pour les urbains qui ne sont pas des jardiniers... même amateurs.
-            <br /><br />
-            En aquaponie pas besoin d'arroser, de désherber, de rajouter de l'engrais, ou de retourner la terre. Les plantes cultivées en intérieur sont protégées de la plupart des nuisibles et des maladies.
-            <br /><br />
-            Grâce à sa technologie, Risebox va plus loin : de nombreux capteurs (température, composition chimique de l'eau, ensoleillement) surveillent en permanence vos cultures. En cas de besoin, vous êtes immédiatement prévenu et vous avez la marche à suivre .
-            <br /><br />
-            Enfin, notre appplication vous simplifie la culture : vous suivez l’évolution de votre potager, recevez des idées de plantations, des conseils d’entretien et de récolte.
-        </div>
-    </div>
+            <div class="panel panel-info" id="place">
+                <div class="panel-heading">
+                    <h3 class="panel-title">J'ai peu de place chez moi, où puis-je mettre ma Risebox ?</h3>
+                </div>
+                <div class="panel-body text-justify">
+                    Grâce à sa conception en étage, Risebox occupe seulement 0,5m2 au sol. Vous pouvez la placer n'importe où dans votre espace de vie. Inutile de la placer devant vos fenêtres : son éclairage LED intégré se déclenche lorsque la lumière est insuffisante.
+                </div>
+            </div>
 
-    <div class="panel panel-info" id="manger">
-        <div class="panel-heading">
-            <h3 class="panel-title">Les poissons sont-ils comestibles ?</h3>
-        </div>
-        <div class="panel-body text-justify">
-            Oui, vous pouvez élever des poissons dans votre Risebox dans le but de les consommer. Dans ce cas vous devrez choisir une espèce adaptée (comme les tilapias, perches, écrevisses...) et les nourrir exclusivement avec de la nourriture bio et adaptée. Si vous ne souhaitez pas les consommer, des poissons rouges ou des carpes Koi feront tout à fait l'affaire.
-        </div>
-    </div>
+            <div class="panel panel-info" id="resultat">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Je n'ai pas la main verte, comment être sûr du résultat ?</h3>
+                </div>
+                <div class="panel-body text-justify">
+                    Nous avons conçu Risebox pour les urbains qui ne sont pas des jardiniers... même amateurs.
+                    <br /><br />
+                    En aquaponie pas besoin d'arroser, de désherber, de rajouter de l'engrais, ou de retourner la terre. Les plantes cultivées en intérieur sont protégées de la plupart des nuisibles et des maladies.
+                    <br /><br />
+                    Grâce à sa technologie, Risebox va plus loin : de nombreux capteurs (température, composition chimique de l'eau, ensoleillement) surveillent en permanence vos cultures. En cas de besoin, vous êtes immédiatement prévenu et vous avez la marche à suivre .
+                    <br /><br />
+                    Enfin, notre appplication vous simplifie la culture : vous suivez l’évolution de votre potager, recevez des idées de plantations, des conseils d’entretien et de récolte.
+                </div>
+            </div>
 
-    <div class="panel panel-info" id="sans-poisson">
-        <div class="panel-heading">
-            <h3 class="panel-title">Puis-je avoir une Risebox sans poisson ?</h3>
-        </div>
-        <div class="panel-body text-justify">
-            Risebox est un éco-système: sans poisson, plus de nutriments d'origine naturelle pour les plantes. Risebox ne fonctionne donc pas sans poisson ou sans crustacé.
-        </div>
-    </div>
+            <div class="panel panel-info" id="manger">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Les poissons sont-ils comestibles ?</h3>
+                </div>
+                <div class="panel-body text-justify">
+                    Oui, vous pouvez élever des poissons dans votre Risebox dans le but de les consommer. Dans ce cas vous devrez choisir une espèce adaptée (comme les tilapias, perches, écrevisses...) et les nourrir exclusivement avec de la nourriture bio et adaptée. Si vous ne souhaitez pas les consommer, des poissons rouges ou des carpes Koi feront tout à fait l'affaire.
+                </div>
+            </div>
 
-    <div class="panel panel-info" id="deplacement">
-        <div class="panel-heading">
-            <h3 class="panel-title">Je suis souvent en déplacement, comment se comporte Risebox quand je ne suis pas là ?</h3>
-        </div>
-        <div class="panel-body text-justify">
-            Lorsque vous êtes absents, vous pouvez activer un mode "pilotage automatique" qui se charge de veiller sur votre potager et vos poissons durant votre absence. Les poissons sont nourris et votre Risebox peut même ralentir la croissance de vos plantations pour en profiter au mieux à votre retour.
-        </div>
-    </div>
+            <div class="panel panel-info" id="sans-poisson">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Puis-je avoir une Risebox sans poisson ?</h3>
+                </div>
+                <div class="panel-body text-justify">
+                    Risebox est un éco-système: sans poisson, plus de nutriments d'origine naturelle pour les plantes. Risebox ne fonctionne donc pas sans poisson ou sans crustacé.
+                </div>
+            </div>
 
-    <div class="panel panel-info" id="entretien">
-        <div class="panel-heading">
-            <h3 class="panel-title">Un aquarium et un potager, c'est beaucoup d’entretien, non ?</h3>
-        </div>
-        <div class="panel-body text-justify">
-            Pas avec Risebox. Nous l’avons conçue pour qu’elle demande le moins d’entretien possible et qu’elle dure longtemps. Le bio-filtre par exemple se nettoie tout seul. 1 fois par an, nous venons maintenir votre installation et changer ce qui est nécessaire.
-        </div>
-    </div>
+            <div class="panel panel-info" id="deplacement">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Je suis souvent en déplacement, comment se comporte Risebox quand je ne suis pas là ?</h3>
+                </div>
+                <div class="panel-body text-justify">
+                    Lorsque vous êtes absents, vous pouvez activer un mode "pilotage automatique" qui se charge de veiller sur votre potager et vos poissons durant votre absence. Les poissons sont nourris et votre Risebox peut même ralentir la croissance de vos plantations pour en profiter au mieux à votre retour.
+                </div>
+            </div>
 
-    <div class="panel panel-info" id="pousser">
-        <div class="panel-heading">
-            <h3 class="panel-title">Que puis-je faire pousser dans ma Risebox ?</h3>
-        </div>
-        <div class="panel-body text-justify">
-            Risebox est votre potager : vous y faites pousser ce que vous voulez :)
-            <br /><br />
-            Salades, fraises, choux, courgettes, aubergines, tomates, physalis, blettes, poivrons, piments doux sont particulièrement adaptés.
-            <br /><br />
-            Dans l’eau vous pouvez mettre des poissons comestibles ou non (tilapias, perches, carpes, poissons-rouges, ...), ou bien des crustacés comme des écrevisses ou des crevettes d’eau douce.
-        </div>
-    </div>
+            <div class="panel panel-info" id="entretien">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Un aquarium et un potager, c'est beaucoup d’entretien, non ?</h3>
+                </div>
+                <div class="panel-body text-justify">
+                    Pas avec Risebox. Nous l’avons conçue pour qu’elle demande le moins d’entretien possible et qu’elle dure longtemps. Le bio-filtre par exemple se nettoie tout seul. 1 fois par an, nous venons maintenir votre installation et changer ce qui est nécessaire.
+                </div>
+            </div>
 
-    <div class="panel panel-info" id="achats">
-        <div class="panel-heading">
-            <h3 class="panel-title">Comment se procurer des semences ou les plants ? Quelle nourriture donner aux poissons ?</h3>
-        </div>
-        <div class="panel-body text-justify">
-            Vous pouvez utiliser des semences ou des plants ainsi que la nourriture pour poisson provenant de votre jardinerie, animalerie ou boutique spécialisée.
-            <br /><br />
-            <strong>Attention cependant à choisir des espèces compatibles avec l'aquaponie et à utiliser de la nourriture bio pour vos poissons.</strong>
-            <br /><br />
-            Pour vous faire gagner du temps, et vous assurer de faire les bons choix, nous avons sélectionné dans notre boutique des semences, des poissons et de la nourriture adaptée.
-        </div>
-    </div>
+            <div class="panel panel-info" id="pousser">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Que puis-je faire pousser dans ma Risebox ?</h3>
+                </div>
+                <div class="panel-body text-justify">
+                    Risebox est votre potager : vous y faites pousser ce que vous voulez :)
+                    <br /><br />
+                    Salades, fraises, choux, courgettes, aubergines, tomates, physalis, blettes, poivrons, piments doux sont particulièrement adaptés.
+                    <br /><br />
+                    Dans l’eau vous pouvez mettre des poissons comestibles ou non (tilapias, perches, carpes, poissons-rouges, ...), ou bien des crustacés comme des écrevisses ou des crevettes d’eau douce.
+                </div>
+            </div>
 
-    <div class="panel panel-info" id="install">
-        <div class="panel-heading">
-            <h3 class="panel-title">Je veux une Risebox ! Mais comment l'installer ?</h3>
+            <div class="panel panel-info" id="achats">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Comment se procurer des semences ou les plants ? Quelle nourriture donner aux poissons ?</h3>
+                </div>
+                <div class="panel-body text-justify">
+                    Vous pouvez utiliser des semences ou des plants ainsi que la nourriture pour poisson provenant de votre jardinerie, animalerie ou boutique spécialisée.
+                    <br /><br />
+                    <strong>Attention cependant à choisir des espèces compatibles avec l'aquaponie et à utiliser de la nourriture bio pour vos poissons.</strong>
+                    <br /><br />
+                    Pour vous faire gagner du temps, et vous assurer de faire les bons choix, nous avons sélectionné dans notre boutique des semences, des poissons et de la nourriture adaptée.
+                </div>
+            </div>
+
+            <div class="panel panel-info" id="install">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Je veux une Risebox ! Mais comment l'installer ?</h3>
+                </div>
+                <div class="panel-body text-justify">
+                    Pas de panique : nous sommes là pour ça.
+                    <br /><br />
+                    Lorsque vous commandez votre Risebox, vous choisissez vos premières plantations et vos poissons et nous prenons le relai :
+                    <ol>
+                        <li>
+                            Nous la préparons dans nos locaux, et nous démarrons le cycle de l'eau.
+                        </li>
+                        <li>
+                            Nous plantons vos légumes, et veillons à ce que l'équilibre biologique s'installe, puis nous introduisons les poissons.
+                        </li>
+                        <li>
+                            Une fois que tout est prêt et que l'écosystème est stable, nous vous contactons pour prendre rendez-vous.
+                        </li>
+                        <li>
+                            Nous vous livrons à domicile, nous installons votre Risebox devant vous, à l'endroit de votre choix et nous vous expliquons tout de son fonctionnement.
+                        </li>
+                    </ol>
+                    Bien sûr, au moindre problème, nous sommes joignables pour effectuer un diagnostic et vous aider. C'est ça pour nous, une solution clé en main.
+                </div>
+            </div>
         </div>
-        <div class="panel-body text-justify">
-            Pas de panique : nous sommes là pour ça.
-            <br /><br />
-            Lorsque vous commandez votre Risebox, vous choisissez vos premières plantations et vos poissons et nous prenons le relai :
-            <ol>
-                <li>
-                    Nous la préparons dans nos locaux, et nous démarrons le cycle de l'eau.
-                </li>
-                <li>
-                    Nous plantons vos légumes, et veillons à ce que l'équilibre biologique s'installe, puis nous introduisons les poissons.
-                </li>
-                <li>
-                    Une fois que tout est prêt et que l'écosystème est stable, nous vous contactons pour prendre rendez-vous.
-                </li>
-                <li>
-                    Nous vous livrons à domicile, nous installons votre Risebox devant vous, à l'endroit de votre choix et nous vous expliquons tout de son fonctionnement.
-                </li>
-            </ol>
-            Bien sûr, au moindre problème, nous sommes joignables pour effectuer un diagnostic et vous aider. C'est ça pour nous, une solution clé en main.
-        </div>
-    </div>
+
+    </section>
 
     <br /><br />
 
@@ -211,4 +226,4 @@
     <%= render 'subscribe' %>
 
     <%= render 'footer' %>
-</div>
+<!-- </div> -->

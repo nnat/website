@@ -21,8 +21,9 @@
                             <%= t('.headline') %>
                         </p>
                         <div class="scroll-to banner-buttons">
-                            <a href="#features" class="btn btn-lg btn-skin btn-radius">Learn more<i class="fa fa-angle-down"></i></a>
-                            <a  data-toggle="modal" data-target="#video-popup" class="btn btn-lg btn-radius btn-white">Watch video<i class="fa fa-youtube-play"></i></a>
+                            <%= link_to "#features", class: "btn btn-lg btn-skin btn-radius" do %>
+                                En savoir plus <i class="fa fa-angle-down"></i>
+                            <% end %>
                         </div>
                     </div>
                 </div>
@@ -91,7 +92,7 @@
                     <p class="lead">
                         &nbsp;
                     </p>
-                    <%= link_to "Découvrez notre programme early adopter", program_path(locale: :fr), class: 'btn btn-white btn-radius btn-lg'%>
+                    <%= link_to "Découvrez notre programme early adopter", program_path(locale: :fr), class: 'btn btn-skin btn-radius btn-lg'%>
                 </div>
             </div>
         </div>
