@@ -44,7 +44,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2 center-title">
+                    <i class="icon-telescope violet"></i>
                     <h1 class="lead" style="margin-bottom: 10px; font-size: 30px"><%= t '.title' %></h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
                     <p class="lead text-justify">
                         <small><%= t '.statement.why' %></small>
                     </p>
@@ -55,12 +60,16 @@
                 </div>
             </div>
 
-            <blockquote>
-                <p><%= t '.quote' %></p>
-            </blockquote>
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+              <blockquote><p><%= t '.quote' %></p></blockquote>
+              </div>
+            </div>
+
+            <br />
 
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-8 col-sm-offset-2">
                     <img src="<%= image_url('home/team.jpg') %>" alt="" class="img-responsive center-block">
                     <br />
                     <p class="lead text-justify">
@@ -77,7 +86,7 @@
             </div>
 
             <div class="text-center mbl">
-                <%= mail_to "team@risebox.co", raw("Tenté par l'aventure ? Rejoignez l'équipe !"), class: 'btn btn-success btn-lg' %>
+                <%= mail_to "team@risebox.co", raw("Tenté par l'aventure ? Rejoignez l'équipe !"), class: 'btn btn-success btn-lg btn-radius' %>
             </div>
         </div>
       </section>
