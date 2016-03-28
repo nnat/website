@@ -4,7 +4,7 @@ fr:
       faq: "Comment&nbsp;ça&nbsp;marche"
       mission: Notre mission
       program: "Réservez votre Risebox"
-      tagline: Faites pousser du bio chez vous
+      tagline: Du bio pousse chez vous
     subscribe:
       placeholder: Mon email
       button: Tenez-moi informé
@@ -19,7 +19,9 @@ fr:
         og_description: "Risebox c'est un éco-système vivant et connecté qui produit une nourriture savoureuse, saine et soutenable, chez vous."
         description: "Risebox c'est un éco-système vivant et connecté qui produit une nourriture savoureuse, saine et soutenable, chez vous."
         keywords: "agriculture urbaine, fruits, légumes, frais, bio, durable, potager, aquaponie, poissons, écologie, résilience"
+      description: "Qu'est-ce que c'est ?"
       headline: "Risebox c'est un éco-système vivant et connecté qui produit une nourriture savoureuse, saine et soutenable, chez vous."
+      assets: "Avantages"
       features:
         n1:
           title: Fraicheur garantie

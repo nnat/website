@@ -28,7 +28,9 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right"> 
-                <li class="button-nav"><%= link_to t('.program'), program_path(locale: :fr), id: 'program-nav-menu', class: "btn btn-success btn-lg" %></li>
+                <% unless @section == :program %>
+                    <li class="button-nav"><%= link_to t('.program'), program_path(locale: :fr), id: 'program-nav-menu', class: "btn btn-warning btn-lg" %></li>
+                <% end %>
             </ul>
         </div><!--/.nav-collapse -->
     </div><!--/.container-fluid -->
