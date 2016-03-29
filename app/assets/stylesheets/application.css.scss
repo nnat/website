@@ -44,3 +44,30 @@
       float: none;
     }
 }
+
+/* changes to the theme */
+.center-title p{
+    font-size: 19px;
+}
+
+.feature-box p {
+	font-size: 16px;
+}
+
+body {
+	color: #7a7a7a;
+}
+
+.header-v1.sticky .navbar-nav > li > a {
+    color: #7a7a7a;
+    font-weight: 600;
+ }
+
+.navbar-default .navbar-nav > li > a {
+    font-weight: 600;
+}
+.center-title {
+	h1, h2, h3, h4, h5, h6 {
+		text-transform: none;
+	}
+}
