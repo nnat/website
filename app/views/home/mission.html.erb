@@ -3,37 +3,51 @@
     <meta property="og:description" content="<%= t '.meta.og_description' %>" />
     <meta property="description" content="<%= t '.meta.description' %>" />
     <meta property="keywords" content="<%= t '.meta.keywords' %>" />
+    <style>
+      h1 {
+              color: #000;
+              font-size: 36px;
+              font-weight: 500;
+              margin-bottom: 15px;
+          }
+          .header-v1 .navbar-nav > li > a {
+              color: #7a7a7a;
+          }
+
+          .header-v1 .navbar-nav > li.button-nav > a {
+              color: #fff;
+          }
+      blockquote {
+        background: #fff;
+        margin: 1.5em 10px;
+        margin-bottom: 0px;
+        padding: 0.5em 10px;
+        quotes: "\201C""\201D""\2018""\2019";
+      }
+      blockquote:before {
+        color: #ccc;
+        content: open-quote;
+        font-size: 6em;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.4em;
+      }
+      blockquote:after {
+        color: #ccc;
+        content: close-quote;
+        font-size: 6em;
+        line-height: 0.4em;
+        margin-left: 6.6em;
+        vertical-align: -0.4em;
+      }
+      blockquote p {
+        display: inline;
+        font-size: 21px;
+      }
+    </style>
 <% end %>
 
-<style>
-    blockquote {
-      background: #fff;
-      margin: 1.5em 10px;
-      margin-bottom: 0px;
-      padding: 0.5em 10px;
-      quotes: "\201C""\201D""\2018""\2019";
-    }
-    blockquote:before {
-      color: #ccc;
-      content: open-quote;
-      font-size: 6em;
-      line-height: 0.1em;
-      margin-right: 0.25em;
-      vertical-align: -0.4em;
-    }
-    blockquote:after {
-      color: #ccc;
-      content: close-quote;
-      font-size: 6em;
-      line-height: 0.4em;
-      margin-left: 6.6em;
-      vertical-align: -0.4em;
-    }
-    blockquote p {
-      display: inline;
-      font-size: 21px;
-    }
-</style>
+
 
 <!-- <div class="container"> -->
     <%= render 'nav' %>
