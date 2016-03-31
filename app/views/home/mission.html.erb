@@ -6,9 +6,9 @@
     <style>
       h1 {
               color: #000;
-              font-size: 36px;
               font-weight: 500;
-              margin-bottom: 15px;
+              margin-bottom: 10px;
+              font-size: 30px;
           }
           .header-v1 .navbar-nav > li > a {
               color: #7a7a7a;
@@ -23,6 +23,8 @@
         margin-bottom: 0px;
         padding: 0.5em 10px;
         quotes: "\201C""\201D""\2018""\2019";
+        text-align: center;
+        border: none;
       }
       blockquote:before {
         color: #ccc;
@@ -36,9 +38,9 @@
         color: #ccc;
         content: close-quote;
         font-size: 6em;
-        line-height: 0.4em;
-        margin-left: 6.6em;
-        vertical-align: -0.4em;
+        line-height: 0.8em;
+        margin-left: 0.3em;
+        vertical-align: -0.5em;
       }
       blockquote p {
         display: inline;
@@ -59,7 +61,7 @@
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2 center-title">
                     <i class="icon-telescope violet"></i>
-                    <h1 class="lead" style="margin-bottom: 10px; font-size: 30px"><%= t '.title' %></h1>
+                    <h1><%= t '.title' %></h1>
                 </div>
             </div>
             <div class="row">
@@ -80,8 +82,6 @@
               </div>
             </div>
 
-            <br />
-
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2">
                     <img src="<%= image_url('home/team.jpg') %>" alt="" class="img-responsive center-block">
@@ -98,7 +98,7 @@
                     </p>
                 </div>
             </div>
-
+            <br />
             <div class="text-center mbl">
                 <%= mail_to "team@risebox.co", raw("Tenté par l'aventure ? Rejoignez l'équipe !"), class: 'btn btn-success btn-lg btn-radius' %>
             </div>
