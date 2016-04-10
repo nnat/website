@@ -1,0 +1,23 @@
+/*
+ * This are extra configuration for assan so that original files are not changed.
+ * Only _variables.scss should be modified
+ */
+.navbar-right{
+	li.button-nav{
+		a{
+			background-color: #f0ad4e;
+			@include border-radius(3px);
+		}
+	}
+}
+
+//extra colors
+.violet{
+    color:#8c18aa;
+}
+.comp{
+	color:#36AA18;
+}
+.orange{
+    color:#ced3d8;
+}

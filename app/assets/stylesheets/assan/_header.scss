@@ -17,9 +17,6 @@
         @include transition(all 0.4s);
         position: relative;
         font-family: $p-font;
-        &:hover{
-            color:#fff;
-        }
     }
 }
 .header-v1.sticky{
@@ -81,13 +78,13 @@ font-family: $tri-font;
     .navbar-right{
         li.button-nav{
             a{
-                #background-color: #5cb85c;
-                #color:#fff;
+                background-color: $skincolor;
+                color:#fff;
                 padding: 8px 15px;
                 margin-top: 12px;
                 font-size: 12px;
                 font-weight: 400;
-                @include border-radius(3px);
+                @include border-radius(20px);
                 &:hover, &:focus{
                     background-color: #333;
                     color:#fff !important;

@@ -12,10 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.backstretch.min.js
-//= require parallax.min.js
-//= require modernizr.custom.js
-//= require smoothscroll.js
+//= require assan/jquery.backstretch.min.js
+//= require assan/parallax.min.js
+//= require assan/modernizr.custom.js
+//= require assan/smoothscroll.js
 //= require risebox/custom.js
 //= require risebox/rb-base.js
 //= require bootstrap-sprockets
