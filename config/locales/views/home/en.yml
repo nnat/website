@@ -43,9 +43,6 @@ en:
           short: Ishmael
       press:
         title: 'They write about Risebox:'
-      video:
-        title: 'Cofounders explain Risebox (in French):'
-
     faq:
       meta:
         og_title: 'Risebox: Comment ça marche ?'
@@ -72,3 +69,5 @@ en:
       quote: "We are at the dawn of a revolution: individual & sustainable agriculture."
       who: "We are Nicolas et Adrien, from Paris France. We are passionate about nature & technology. These last years, working together as a team, we became concerned about the impacts of our current agriculture model."
       why_risebox: "By creating Risebox, we focus all our energy to offer an alternative."
+      video:
+        title: 'Cofounders explain Risebox (in French):'

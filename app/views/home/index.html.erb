@@ -16,7 +16,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2 text-center">
-                        <h1><%= t('home.nav.tagline') %></h1>
+                        <h1 class="violet"><%= t('home.nav.tagline') %></h1>
                         <div class="scroll-to banner-buttons">
                             <%= link_to "#features", class: "btn btn-lg btn-skin btn-radius" do %>
                                 En savoir plus <i class="fa fa-angle-down"></i>
@@ -28,9 +28,7 @@
         </div>
     </section>
 
-    <!-- <h1 class="headline lead text-center"><%# t('.headline') %></h1> -->
-
-    <section id="features" class="pricing-section">
+    <section id="features" style="padding-top: 30px; padding-bottom: 0px">
         <div class="container">
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2 center-title">
@@ -38,186 +36,163 @@
                     <p class="lead">
                         <%= t('.headline') %>
                     </p>
-                    <img src="<%= image_url('home/kitchen_765.jpg') %>" alt="Concept Risebox" class="img-responsive center-block">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="features2">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-sm-offset-2 center-title">
-                    <h2><%= t('.assets') %></h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6">
-                    <div class="feature-box">
-                        <i class="icon-heart violet"></i>
-                        <h3><%= t('.features.n1.title') %></h3>
-                        <p>
-                            <%= t('.features.n1.text') %>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="feature-box">
-                        <i class="icon-recycle violet"></i>
-                        <h3><%= t('.features.n2.title') %></h3>
-                        <p>
-                            <%= t('.features.n2.text') %>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="feature-box">
-                        <i class="icon-happy violet"></i>
-                        <h3><%= t('.features.n3.title') %></h3>
-                        <p>
-                            <%= t('.features.n3.text') %>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-6">
+                <div class="col-md-4">
                     <div class="feature-box">
                         <i class="icon-global violet"></i>
-                        <h3><%= t('.features.n4.title') %></h3>
+                        <h3>Eclairage LED économe</h3>
                         <p>
-                            <%= t('.features.n4.text') %>
+                            Une lumière optimisée pour la croissance et agréable à regarder
+                        </p>
+                        <br/>
+                        <i class="icon-global violet"></i>
+                        <h3>3 bacs de culture universels</h3>
+                        <p>
+                            Capables de faire pousser toutes sortes de plantes sur une surface équivalente à un potager de 6m2.
+                        </p>
+                        <i class="icon-global violet"></i>
+                        <h3>Un bel aquarium</h3>
+                        <p>
+                            200l pour admirer vos poissons, le moteur de la Risebox.
                         </p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="pricing-section">
-        <div class="banner-cta cta">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-sm-offset-3 text-center">
-                        <h2>Envie d'une Risebox avant tout le monde ?</h2>
-                        <p class="lead">
-                            &nbsp;
+                <div class="col-md-4 center-title">
+                    <img src="<%= image_url('home/risebox_close2.jpg') %>" alt="Concept Risebox" class="img-responsive center-block">
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="icon-global violet"></i>
+                        <h3>Ordinateur embarqué</h3>
+                        <p>
+                            Risebox surveille et optimise votre écosystème pour vous. Il anticipe les incidents et vous donne la marche à suivre.
                         </p>
-                        <%= link_to "Découvrez notre programme early adopter", program_path(locale: :fr), class: 'btn btn-skin btn-radius btn-lg'%>
+                        <br/>
+                        <i class="icon-global violet"></i>
+                        <h3>Design unique</h3>
+                        <p>
+                            Un meuble épuré au formes fluides qui s'intègre parfaitement chez vous
+                        </p>
+                        <i class="icon-global violet"></i>
+                        <h3>App pratique</h3>
+                        <p>
+                            Suivez votre Risebox, bénéficiez de nos conseils et de notre boutique. Vous avez la main verte!
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="pricing-section">
+    <div class="clients">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-sm-offset-2 center-title">
-                    <h2><%= t('.press.title') %></h2>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="text-center">
-                        <a href="http://lci.tf1.fr/jt-we/videos/2015/les-fablab-veritables-cavernes-d-ali-baba-pour-bricoleurs-8634315.html" target="_blank" class="text-center">
-                            <img src="<%= image_url('home/press/tf1.png') %>" alt="TF1" class="img-responsive center-block">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="text-center">
-                        <a href="http://www.bpifrance.fr/Vivez-Bpifrance/Actualites/Alimentation-un-futur-indigeste-16776" target="_blank" class="text-center">
-                            <img src="<%= image_url('home/press/bpi.png') %>" alt="BpiFrance" class="img-responsive center-block">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="text-center">
-                        <a href="http://fr.metrotime.be/2015/04/25/must-read/laquaponie-le-potager-interieur/" target="_blank" class="text-center">
-                            <img src="<%= image_url('home/press/metro.gif') %>" alt="Metro Belgique" class="img-responsive center-block">
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="text-center">
-                        <a href="http://www.nanterredigital.fr/blog/2015/12/08/risebox-la-startup-qui-transforme-votre-cuisine-en-potager/" target="_blank" class="text-center">
-                            <img src="<%= image_url('home/press/nanterre_digital.png') %>" alt="TF1" class="img-responsive center-block">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="text-center">
-                        <a href="http://www.franceinter.fr/depeche-faites-pousser-des-fruits-et-legumes-bio-dans-votre-appartement" target="_blank" class="text-center">
-                            <img src="<%= image_url('home/press/franceinter.png') %>" alt="France Inter" class="img-responsive center-block">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="text-center">
-                        <a href="http://www.objetconnecte.com/risebox-pousser-fruits-et-legumes-appartement/" target="_blank" class="text-center">
-                            <img src="<%= image_url('home/press/objet_connecte.png') %>" alt="Objet Connecté" class="img-responsive center-block">
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="text-center">
-                        <a href="http://www.mescoursespourlaplanete.com/Actualites/RiseBox_initie_les_particuliers_aa_l_auaquaponie_2164.html" target="_blank">
-                            <img src="<%= image_url('home/press/courses_planete.jpeg') %>" alt="Mes courses pour la planète" class="img-responsive center-block">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="text-center">
-                        <a href="http://green.wiwo.de/startup-risebox-jetzt-kommt-die-stadtfarm-fuer-zu-hause/" target="_blank">
-                            <img src="<%= image_url('home/press/wiwo_de.jpg') %>" alt="Wiwo.de" class="img-responsive center-block">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="text-center">
-                        <a href="http://www.meretdemeures.com/fr/news/ecolo-risebox-la-nature-sinvite-chez-vous" target="_blank">
-                            <img src="<%= image_url('home/press/mer_et_demeures.png') %>" alt="Mer et demeures" class="img-responsive center-block">
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-9 col-sm-offset-2 center-title">
-                <h2><%= t('.video.title') %></h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-9 col-sm-offset-2">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" width="770" height="432" src="https://www.youtube.com/embed/eC7LntMRlbM" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
+            <ul class="list-inline text-center">
+                <li><img src="<%= image_url('home/press/tf1.png') %>" alt="TF1"></li>
+                <li><img src="<%= image_url('home/press/metro.gif') %>" alt="Metro News"></li>
+                <li><img src="<%= image_url('home/press/franceinter.png') %>" alt="France Inter"></li>
+                <li><img src="<%= image_url('home/press/bpi.png') %>" alt="BPI"></li>
+                <li><img src="<%= image_url('home/press/france3_new.png') %>" alt="France3"></li>
+            </ul>
         </div>
     </div>
 
-
-    <section class="pricing-section">
+    <section id="gallery-container">
         <div class="container">
             <div class="row">
-                <div class="col-sm-9 col-sm-offset-2 center-title">
-                    <blockquote class="mbl text-center">
-                      <p><%= t('.quote.text')%></p>
-                      <footer><%= t('.quote.author')%>, <cite title="<%= t('.quote.ref.long')%>"><%= t('.quote.ref.short')%></cite></footer>
-                    </blockquote>
+                <div class="col-sm-8 col-sm-offset-2 center-title">
+                    <h2>Risebox c'est productif</h2> 
+                    <p>Voici ce que vous pourrez bientôt faire pousser chez vous :)</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+                  <ul class="list-inline text-center tabs-navigation" role="tablist">
+                      <li role="presentation" class="active">
+                            <a href="#aromates" aria-controls="aromates" role="tab" data-toggle="tab" aria-expanded="true"><span><i class="icon-chat"></i></span>Aromates</a>
+                        </li>
+                        <li role="presentation" class="">
+                            <a href="#verdure" aria-controls="verdure" role="tab" data-toggle="tab" aria-expanded="false"><span><i class="icon-basket"></i></span>Verdure</a>
+                        </li>
+                        <li role="presentation" class="">
+                            <a href="#fruits" aria-controls="fruits" role="tab" data-toggle="tab" aria-expanded="false"><span><i class="icon-lifesaver"></i></span>Fruits</a>
+                        </li>
+                  </ul>
+              </div>  
+            </div>
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="tab-content service-tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="aromates">
+                            <div class="row vertical-align-child">
+                                <div class="col-sm-4">
+                                    <div class="gallery">
+                                        <%= image_tag 'program/basilic.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                                    </div>
+                                    <p class="lead text-center">Basilic</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="gallery">
+                                        <%= image_tag 'program/thym.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                                    </div>
+                                    <p class="lead text-center">Thym</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="gallery">
+                                        <%= image_tag 'program/oseille.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                                    </div>
+                                    <p class="lead text-center">Oseille</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="verdure">
+                            <div class="row vertical-align-child">
+                                <div class="col-sm-4">
+                                    <div class="gallery">
+                                        <%= image_tag 'program/salade.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                                    </div>
+                                    <p class="lead text-center">Salade</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="gallery">
+                                        <%= image_tag 'program/poirée.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                                    </div>
+                                    <p class="lead text-center">Poirée</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="gallery">
+                                        <%= image_tag 'program/celeri.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                                    </div>
+                                    <p class="lead text-center">Celeri</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="fruits">
+                            <div class="row vertical-align-child">
+                                <div class="col-sm-4">
+                                    <div class="gallery">
+                                        <%= image_tag 'program/fraise.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                                    </div>
+                                    <p class="lead text-center">Fraise</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="gallery">
+                                        <%= image_tag 'program/poivron_main.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                                    </div>
+                                    <p class="lead text-center">Poivron</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="gallery">
+                                        <%= image_tag 'program/tomates.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                                    </div>
+                                    <p class="lead text-center">Tomates</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

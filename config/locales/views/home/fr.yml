@@ -19,8 +19,8 @@ fr:
         og_description: "Risebox c'est un éco-système vivant et connecté qui produit une nourriture savoureuse, saine et soutenable, chez vous."
         description: "Risebox c'est un éco-système vivant et connecté qui produit une nourriture savoureuse, saine et soutenable, chez vous."
         keywords: "agriculture urbaine, fruits, légumes, frais, bio, durable, potager, aquaponie, poissons, écologie, résilience"
-      description: "Qu'est-ce que c'est ?"
-      headline: "Risebox c'est un éco-système vivant et connecté qui produit une nourriture savoureuse, saine et soutenable, chez vous."
+      description: "Un éco-système nourricier"
+      headline: "Profitez de fruits et légumes frais, sains et savoureux 365 jours par an."
       assets: "Avantages"
       features:
         n1:
@@ -43,8 +43,6 @@ fr:
           short: Ishmael
       press:
         title: 'Ils parlent de Risebox:'
-      video:
-        title: 'Risebox expliqué par ses co-fondateurs'
     faq:
       meta:
         og_title: 'Risebox: Comment ça marche ?'
@@ -71,3 +69,5 @@ fr:
       quote: "Nous sommes à l'aube d'une révolution : celle de l'agriculture individuelle et durable."
       who: "Nous sommes Nicolas et Adrien, deux passionnés de technologie et de nature. Nous travaillons ensemble depuis plusieurs années et nous avons pris conscience des enjeux que pose l'agriculture actuelle."
       why_risebox: "En créant Risebox, nous concentrons toute notre énergie à proposer une autre voie."
+      video:
+        title: 'Risebox expliqué par ses co-fondateurs'
