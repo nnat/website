@@ -54,10 +54,13 @@ $(document).ready(function () {
     function cycleScreens(){
         var currentScreen  = 2;
         var previousScreen = 1;
-        var screensCount = 3
+        var screensCount = $('._app-screen').length;
         setInterval (function(){
-          $( "._app-screen:nth-child(" + currentScreen + ")" ).addClass('active');
           $( "._app-screen:nth-child(" + previousScreen + ")" ).removeClass('active');
+          $( "._app-screen:nth-child(" + currentScreen + ")" ).addClass('active');
+
+          $( "._featureText[data-feat-number='" + previousScreen + "']").children().removeClass('active');
+          $( "._featureText[data-feat-number='" + currentScreen + "']").children().addClass('active');
 
           previousScreen = currentScreen;
 
