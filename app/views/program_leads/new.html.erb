@@ -3,10 +3,24 @@
     <meta property="og:description" content="<%= t '.meta.og_description' %>" />
     <meta property="description" content="<%= t '.meta.description' %>" />
     <meta property="keywords" content="<%= t '.meta.keywords' %>" />
+    <style>
+        h1 {
+            color: #000;
+            font-weight: 500;
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+        .header-v1 .navbar-nav > li > a {
+            color: #7a7a7a;
+        }
+
+        .header-v1 .navbar-nav > li.button-nav > a {
+            color: #fff;
+        }
+    </style>
 <% end %>
 
 <style>
-
 ._floatingForm.affix {
     position: relative;
 }
@@ -18,29 +32,63 @@
     }
 }
 </style>
-<div class="container">
-    <%= render 'home/nav' %>
 
-    <h1 class="lead text-center" style="margin-bottom: 10px; font-size: 30px">
-        Réservez votre Risebox dès maintenant.
-    </h1>
-    <p class="lead text-center">
-        Nombre de place limitées : premier arrivé, premier servi !
-    </p>
+<br/>
 
-<!--     <div class="text-center">
-        Vous habitez un autre département ? <br />
-        <%= link_to 'Laissez-nous vos coodonnées', '#' %>, nous vous recontactons dés que Risebox est disponible près de chez vous
-    </div> -->
+<section id="features">
+    <div class="container">
+        <%= render 'home/nav' %>
 
+        <h1 class="lead text-center" style="margin-bottom: 10px; font-size: 30px">
+            Réservez votre Risebox dès maintenant.
+        </h1>
+        <p class="lead text-center">
+            Prix early-fish: <span class="violet">2990€</span> valable jusqu'au 30 Juin
+        </p>
 
-    <div class="row">
-        <div class="col-sm-6 hidden-xs" style="margin-bottom: 10px">
-            <%= image_tag "home/program4.jpg", class: "img-responsive" %>
+        <div class="row">
+            <div class="col-sm-4 hidden-xs hidden-sm" style="margin-bottom: 10px">
+                <%= image_tag "home/risebox_close2.jpg", class: "img-responsive" %>
+            </div>
+            <div class="col-sm-4" style="margin-bottom: 10px">
+                <div class="price-box">
+                    <h2 class="text-center">Notre Offre</h2>
+                     <div class="row" style="margin-top: 40px">
+                        <div class="col-sm-8"><h3 style="margin-bottom: 3px">1 Risebox</h3><span>Version commerciale</span></div>
+                        <div class="col-sm-4"><h3 style="text-align: right">2990€</h3></div>
+                     </div>
+                     <div class="row" style="margin-top: 15px">
+                        <div class="col-sm-8"><h3>Application mobile</span></div>
+                        <div class="col-sm-4"><h3 style="text-align: right">Gratuite</h3></div>
+                     </div>
+                     <div class="row" style="margin-top: 15px">
+                        <div class="col-sm-8"><h3 style="margin-bottom: 3px">3 packs "Reload"</h3><span>Plants, graines et nourriture pour poissons pour 1 mois</span></div>
+                        <div class="col-sm-4" style="text-align: right"><span style="text-decoration: line-through">90€</span><h3>Offert</h3></div>
+                     </div>
+                     <div class="row" style="margin-top: 15px">
+                        <div class="col-sm-8"><h3 style="margin-bottom: 20px">Livraison</h3></div>
+                        <div class="col-sm-4" style="text-align: right"><span style="text-decoration: line-through">300€</span><h3>Offerte</h3></div>
+                     </div>
+                     <div class="row">
+                        <div class="col-sm-12">
+                            <div class="sep">&nbsp;</div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-sm-8"><h3 style="margin-bottom: 3px">Réservation</h3><span>100% remboursable</span></div>
+                        <div class="col-sm-4"><h3 style="text-align: right">300€</h3></div>
+                     </div>
+                     <div class="row" style="margin-top: 15px">
+                        <div class="col-sm-8"><h3 style="margin-bottom: 3px">Reste à payer</h3><span>avant expédition</span></div>
+                        <div class="col-sm-4"><h3 style="text-align: right">2690€</h3></div>
+                     </div>
+                </div>
+
+            </div>
+            <div class="col-sm-4" style="margin-bottom: 10px;">
+                <%= render 'form' %>
+            </div>
         </div>
-        <div class="col-sm-6" style="margin-bottom: 10px;">
-            <%= render 'form' %>
-        </div>
+
     </div>
-
-</div>
+</section>

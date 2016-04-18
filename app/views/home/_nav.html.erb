@@ -30,7 +30,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right"> 
                 <% unless @section == :program %>
-                    <li class="button-nav"><%= link_to t('.program'), program_path(locale: :fr), id: 'program-nav-menu', class: "btn btn-warning btn-lg" %></li>
+                    <li class="button-nav"><%= link_to t('.program'), new_program_lead_path(locale: :fr), id: 'program-nav-menu', class: "btn btn-warning btn-lg" %></li>
                 <% end %>
             </ul>
         </div><!--/.nav-collapse -->

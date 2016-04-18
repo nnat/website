@@ -23,6 +23,19 @@
     padding: 20px 0;
 }
 
+.price-box h3 {
+	margin-top: 0px
+}
+
+.price-box:hover {
+	background-color: white;
+	color: #7a7a7a;
+	h3 {
+		color: #666;
+	}
+	
+}
+
 //extra colors
 .violet{
     color:#8c18aa;

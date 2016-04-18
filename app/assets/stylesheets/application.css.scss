@@ -36,6 +36,10 @@
   vertical-align: middle;
 }
 
+.sep {
+  border-top: 1px solid #aeaeae;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .vcenter {

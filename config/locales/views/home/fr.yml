@@ -56,6 +56,12 @@ fr:
         og_description: "Participez à notre programme early adopter et profitez de votre potager aquaponique Risebox dès Octobre 2015. Retrouvez le plaisir des légumes du jardin chez vous, en intérieur."
         description: "Participez à notre programme early adopter et profitez de votre potager aquaponique Risebox dès Octobre 2015. Retrouvez le plaisir des légumes du jardin chez vous, en intérieur."
         keywords: "agriculture urbaine, fruits, légumes, frais, bio, durable, potager, aquaponie, poissons, écologie, résilience"
+    specs:
+      meta:
+        og_title: 'Les spécifications techniques de la Risebox'
+        og_description: ""
+        description: ""
+        keywords: ""
     mission:
       meta:
         og_title: "La mission de Risebox: faire de l'agriculture urbaine une réalité pour tous"

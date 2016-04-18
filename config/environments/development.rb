@@ -24,7 +24,7 @@ Rails.application.configure do
 
   FAVICON_PATH     = "favicon.ico"
 
-  PROGRAM_OPENED = false
+  PROGRAM_OPENED = true
 
   SUMOME_TOKEN = nil
 
