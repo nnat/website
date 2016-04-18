@@ -36,6 +36,30 @@
 	
 }
 
+.wide-image-wrapper{
+    background-color: #f6f8fa;
+    padding: 0;
+    .img-right{
+	    background: image-url("home/fish.jpg") 50% 0 no-repeat;
+	    -webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    background-size: cover;
+	    height:500px;
+    }
+    h3{
+        color:#333;
+        font-size: 30px;
+        font-weight: 300;
+        padding-top: 30px;
+    }
+    p{
+        padding-bottom: 30px;
+    }
+    .btn{
+        margin-bottom: 30px;
+    }
+}
+
 //extra colors
 .violet{
     color:#8c18aa;
