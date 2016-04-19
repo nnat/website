@@ -1,37 +1,58 @@
-<div class="container">
-    <%= render 'home/nav' %>
-	<br /><br />
-	<div class="text-center">
-	    <h2>Merci <%= @lead.try(:first_name) %> !</h2>
-		<br />
-		<p class="lead">
-			<small>
-	    		Nous avons bien enregistré votre réservation.
-	    	</small>
-	    </p>
+<% content_for :head do %>
+	<style>
+        h1 {
+            color: #000;
+            font-weight: 500;
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+        .header-v1 .navbar-nav > li > a {
+            color: #7a7a7a;
+        }
 
-		<p class="lead"><small>
-	    	A partir d'ici, nous prenons le relai : Nous allons vous contacter par mail pour fixer un rendez-vous à notre atelier, vous montrer la Risebox de près, et répondre à toutes vos questions.</small>
-	    </p>
-	    <% if @lead %>
-			<div class="alert alert-success lead" id="phoneSuccess" style="display: none"><small>C'est noté, merci.</small></div>
-			<div class="alert alert-danger lead" id="phoneError" style="display: none"><small>Une erreur s'est produite, merci d'essayer de nouveau</small></div>
-			<div id="phoneForm">
-		    	<p class="lead">
-		    		<small>Si vous préférez que nous vous appelions, laissez-nous votre téléphone :</small>
-		    	</p>
-			    <%= form_for @lead, remote: true, html: {class: 'form-inline _leadForm', role: 'form'} do |f| %>
-			        <div class="form-group">
-			            <%= f.text_field :phone, class: 'form-control input-lg', size: '35', placeholder: 'Votre numéro de téléphone en journée', id: 'lead-phone', required: true %>
-			        </div>
-			        <button type="submit" class="btn btn-success btn-lg">Appelez-moi</button>
-			    <% end %> 
-			    <br>
-			</div>
-		<% end %>
-	    <p class="lead"><small>Bienvenue chez Risebox,</small></p>
+        .header-v1 .navbar-nav > li.button-nav > a {
+            color: #fff;
+        }
+    </style>
+<% end %>
+<%= render 'home/nav' %>
 
-	    <p class="lead"><small>Nicolas & Adrien.</small></p>
+<br/><br/>
+
+<section id="features">
+	<div class="container">
+		<div class="text-center">
+	    	<h1>Merci <%= @lead.try(:first_name) %> !</h1>
+			<br />
+			<p class="lead">
+				<small>
+		    		Nous avons bien enregistré votre réservation.
+		    	</small>
+		    </p>
+
+			<p class="lead"><small>
+		    	Nous vous tiendrons régulièrement informé de l'avancée de la fabrication et nous vous contacterons pour connaitre votre choix d'essence de bois. En attendant, n'hésitez pas à nous écrire pour toute question : <%= mail_to 'team@risebox.co', 'team@risebox.co' %></small>
+		    </p>
+		    <% if @lead %>
+				<div class="alert alert-success lead" id="phoneSuccess" style="display: none"><small>C'est noté, merci.</small></div>
+				<div class="alert alert-danger lead" id="phoneError" style="display: none"><small>Une erreur s'est produite, merci d'essayer de nouveau</small></div>
+				<div id="phoneForm">
+			    	<p class="lead">
+			    		<small>Si vous préférez que nous vous appelions, laissez-nous votre téléphone :</small>
+			    	</p>
+				    <%= form_for @lead, remote: true, html: {class: 'form-inline _leadForm', role: 'form'} do |f| %>
+				        <div class="form-group">
+				            <%= f.text_field :phone, class: 'form-control input-lg', size: '35', placeholder: 'Votre numéro de téléphone en journée', id: 'lead-phone', required: true %>
+				        </div>
+				        <button type="submit" class="btn btn-success btn-lg">Appelez-moi</button>
+				    <% end %> 
+				    <br>
+				</div>
+			<% end %>
+	    	<p class="lead"><small>Bienvenue chez Risebox,</small></p>
+
+	    	<p class="lead"><small>Nicolas & Adrien.</small></p>
+		</div>
 	</div>
-
+</section>
 </div>
