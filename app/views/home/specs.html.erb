@@ -27,15 +27,19 @@
 
     <section id="features">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-sm-offset-2 center-title" style="margin-bottom: 0">
-                    <h1 class="text-center">L'éco-système Risebox</h1>
+            <div class="row vertical-align-child">
+                <div class="col-sm-5 col-sm-offset-1 center-title" style="margin-bottom: 0">
+                    <h1 class="text-center">La Risebox</h1>
+                    <br/>
                     <p>
-                        Risebox est le système aquaponique personnel le plus avancé du monde. Nous n’avons fait aucun compromis entre productivité et confort. Voici comment.
-
+                        C'est le système aquaponique personnel le plus avancé du monde. Nous n’avons fait aucun compromis entre productivité et confort. <br/> Voici comment.
                     </p>
                 </div>
+                <div class="col-sm-6" style="margin-bottom: 0">
+                    <%= image_tag 'specs/risebox.jpg', class: 'img-responsive' %>
+                </div>
             </div>
+
             <div class="row vertical-align-child aside-feature-row">
                 <div class="col-sm-6 margin-b-30">
                     <%= image_tag 'home/bg5.jpg', class: 'img-responsive' %>
@@ -49,11 +53,6 @@
                     <p>
                         Le bac du haut est optimisé pour les plantes volumineuses (tomates, poivrons, céleri, poirée…), alors que les 2 autres niveaux le sont pour les légumes plus bas (salades, choux, aromates, fraises…) et pour vos semis.
                     </p>
-                    <!--
-                    <a class="btn btn-icon-only" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                        Plus
-                    </a>
-                    -->
                 </div>
             </div>
             <div class="row vertical-align-child aside-feature-row">
@@ -67,17 +66,65 @@
                     </p>
                 </div>
                 <div class="col-sm-6 col-sm-offset-1">
-                    <img src="images/wide_shot_1.png" class="img-responsive" alt="">
+                    <%= image_tag 'specs/design.jpg', class: 'img-responsive' %>
                 </div>
             </div>
+        </div>
+
+        <section class="pricing-section">
+            <div class="banner-cta cta">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 text-center">
+                            <h2>Un concentré de technologie</h2>
+                            <p class="lead">Risebox est un meuble intelligent doté de nombreux capteurs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
             <div class="row">
                 <div class="col-sm-12 margin-b-30">
-                    <h3 class="center-title">La technologie</h3>
-                    <p>
-                        Risebox est un meuble intelligent. Outre le pilotage de la lumière et de l’eau, l’éco-système se s'auto-surveille grâce à de nombreux capteurs. La température et l’humidité de l’air sont constamment suivies et Risebox les régule au moyen d’un système de ventilation intégré et silencieux. La qualité de l’eau et l’équilibre de votre écosystème sont également suivis : température, PH, taux de nutriments, vitalité des micro-organismes qui filtrent l’eau. En cas de problème, votre Risebox vous alerte sur votre smartphone et vous recommande la marche à suivre.
-                    </p>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="feature-box">
+                                <i class="riseicon riseicon-climate violet"></i>
+                                <h3>Climat</h3>
+                                <p>
+                                    Risebox ajuste la température et l’humidité de l’air grâce à un système de ventilation intégré et silencieux.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="feature-box">
+                                <i class="riseicon riseicon-analysis violet"></i>
+                                <h3>Analyse de l'eau</h3>
+                                <p>
+                                    L’équilibre de votre écosystème est suivi : PH, taux de nutriments, présence des micro-organismes qui filtrent l’eau. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="feature-box">
+                                <i class="riseicon riseicon-notification violet"></i>
+                                <h3>Notification</h3>
+                                <p>
+                                    En cas de besoin, votre Risebox vous alerte sur votre smartphone et vous recommande la marche à suivre.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="cols-sm-12 center-title">
+                    <%= link_to  "Je réserve maintenant", new_program_lead_path, class: 'btn btn-lg btn-warning btn-radius' %>
+                </div>
+            </div>
+
             <div class="row vertical-align-child aside-feature-row">
                 <div class="col-sm-6 margin-b-30">
                     <%= image_tag 'specs/water-circuit.jpg', class: 'img-responsive' %>
@@ -105,234 +152,140 @@
                     </p>
                 </div>
                 <div class="col-sm-6 col-sm-offset-1">
-                    <img src="images/wide_shot_1.png" class="img-responsive" alt="">
+                    <%= image_tag 'specs/light.jpg', class: 'img-responsive' %>
+                </div>
+            </div>
+            <div class="col-sm-8 col-sm-offset-2 center-title">
+                <h2>Spécifications</h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <%= image_tag 'specs/wire.png', class: "img-responsive", alt: "Dimensions de la Risebox" %>
+                </div>
+                <div class="col-sm-4">
+                    <table class="table">
+                        <h3>Matériel</h3>
+                        <tr>
+                            <td>Dimensions</td>
+                            <td><p>214cm H x 100cm L 50cm P</p></td>
+                        </tr>
+                        <tr>
+                            <td>Poids</td>
+                            <td><p>75kg à vide<br/>300kg plein</p></td>
+                        </tr>
+                        <tr>
+                            <td>Façades</td>
+                            <td><p>En bois naturel, traité anti-humidité <br/>plusieurs coloris au choix</p></td>
+                        </tr>
+                        <tr>
+                            <td>Aquarium</td>
+                            <td>
+                                <p>
+                                    En PMMA 1 cm d'épaisseur <br/>
+                                    160 lites de contenance<br/>
+                                    Arrondi sur les 2 faces avant<br/>
+                                    Livré avec couvercle transparent
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Circuit eau</td>
+                            <td>
+                                <p>
+                                    Débit réglable<br/>
+                                    Totalement invisible et silencieux<br/>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Eclairage</td>
+                            <td>
+                                <p>
+                                    200 LEDs monochromes<br/>
+                                    Spectre lumineux ajusté en continu<br/>
+                                    Mode lumière blanche<br/>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Capteurs</td>
+                            <td>
+                                <p>
+                                    Niveau d'eau<br/>
+                                    PH de l'eau<br/>
+                                    Température de l'eau<br/>
+                                    Température & Humidité de l'air<br/>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Divers</td>
+                            <td>Structure sur roulettes</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Logiciel</h3>
+                    <table class="table">
+                        <tr>
+                            <td>Contrôle à distance</td>
+                            <td>
+                                <p>
+                                    Eclairage (cycles jours/nuit, intensité, couleur)<br/>
+                                    Ventilation<br/>
+                                    Circulation de l'eau<br/>
+                                    Suivi de la qualité de l'eau
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                    <h3>Cultures</h3>
+                    <table class="table">
+                        <tr>
+                            <td>Substrat</td>
+                            <td>
+                                <p>
+                                   Billes d'argiles, pas de terre<br/>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Productivité</td>
+                            <td>
+                                <p>Jusqu'à 1 salade par jour</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <h3>Electricité</h3>
+                    <table class="table">
+                        <tr>
+                            <td>Puissance éclairage</td>
+                            <td><p>170W mode éco, jusqu'à 320W en lumière blanche</p></td>
+                        </tr>
+                        <tr>
+                            <td>Consommation totale</td>
+                            <td><p>environ 8€ par mois pour 14h d'ensolleilement par jour</p></td>
+                        </tr>
+                    </table>
+                    <h3>Made In France</h3>
+                    <table class="table">
+                        <tr>
+                            <td colspan="2">100% conçu et assemblé chez Risebox.<br/>
+                            L'intégralité de la structure est fabriqué en France</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             <div class="row">
                 <div class="cols-sm-12 center-title">
-                    <%= image_tag 'specs/wire.png', width:"300px", class: "", alt: "Dimensions de la Risebox" %>
-                </div>
-            </div>
-            <div class="row">
-                <div class="cols-sm-12 center-title">
-                    <%= link_to  "Réservez", new_program_lead_path, class: 'btn btn-warning btn-radius' %>
+                    <br/>
+                    <%= link_to  "Je réserve maintenant", new_program_lead_path, class: 'btn btn-lg btn-warning btn-radius' %>
                 </div>
             </div>
         </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 center-title">
-                    <h2>Matériel</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2">
-                    <h3>Dimensions</h3>
-                </div>
-                <div class="col-sm-6">
-                    214cm H x 100cm L 50cm P
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2">
-                    <h3>Poids</h3>
-                </div>
-                <div class="col-sm-6">
-                    <p>
-                        70kg à vide<br/>
-                        300kg plein
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2">
-                    <h3>Façades</h3>
-                </div>
-                <div class="col-sm-6">
-                    <p>
-                        En bois naturel, traité anti-humidité <br/>
-                        3 coloris au choix: Bouleau, Wengé, Bambou
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2">
-                    <h3>Aquarium</h3>
-                </div>
-                <div class="col-sm-6">
-                    <p>
-                        En PMMA 1 cm d'épaisseur <br/>
-                        120 lites de contenance<br/>
-                        Arrondi sur les 2 faces avant<br/>
-                        Livré avec couvercle transparent & anti-bruit
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2">
-                    <h3>Circuit d'eau</h3>
-                </div>
-                <div class="col-sm-6">
-                    <p>
-                        Débit réglable 1000l/h<br/>
-                        Totalement invisible et silencieux<br/>
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2">
-                    <h3>Eclairage</h3>
-                </div>
-                <div class="col-sm-6">
-                    <p>
-                        200 LEDs monochromes<br/>
-                        Spectre lumineux ajusté en continu<br/>
-                        Mode lumière blanche >85 CRI<br/>
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2">
-                    <h3>Capteurs</h3>
-                </div>
-                <div class="col-sm-6">
-                    <p>
-                        Niveau d'eau<br/>
-                        PH de l'eau<br/>
-                        Température & Humidité de l'eau<br/>
-                        Température & Humidité de l'air<br/>
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2">
-                    <h3>Divers</h3>
-                </div>
-                <div class="col-sm-6">
-                    <p>
-                        Structure sur roulettes
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 center-title">
-                    <h2>Logiciel</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2">
-                    <h3>Contrôle à distance</h3>
-                </div>
-                <div class="col-sm-6">
-                    <p>
-                        Eclairage (cycles jours/nuit, intensité, couleur)<br/>
-                        Ventilation<br/>
-                        Circulation de l'eau<br/>
-                        Qualité de l'eau<br/>
-                        <br/>
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 center-title">
-                    <h2>Cultures</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2">
-                    <h3>Substrat</h3>
-                </div>
-                <div class="col-sm-6">
-                    <p>
-                        Billes d'argiles<br/>
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2">
-                    <h3>Diversité</h3>
-                </div>
-                <div class="col-sm-6">
-                    <p>
-                        <strong>Aromates:</strong> Basilic, Ciboulette, Menthe <br/>
-                        <strong>Verdure:</strong> Salades, Choux, Poirée<br/>
-                        <strong>Légumes Racines:</strong> Radis, Navets <br/>
-                        <strong>Légumes Fruits:</strong> Tomates, Poivrons, Aubergines<br/>
-                        <strong>Fruits:</strong> Fraises <br/>
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2">
-                    <h3>Productivité</h3>
-                </div>
-                <div class="col-sm-6">
-                    <p>
-                        xx grammes ou 1 salade par jour<br/>
-                        <br/>
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 center-title">
-                    <h2>Consommmation énergétique</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2"><h3>Pompe</h3></div>
-                <div class="col-sm-6"><p>14W</p></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2"><h3>Oxygénateur</h3></div>
-                <div class="col-sm-6"><p>5W</p></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2"><h3>Ordinateur embarqué</h3></div>
-                <div class="col-sm-6"><p>15W</p></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2"><h3>Eclairage aquarium</h3></div>
-                <div class="col-sm-6"><p>35W</p></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2"><h3>Eclairage plantes</h3></div>
-                <div class="col-sm-6"><p>300W</p></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2"><h3>Ventilation</h3></div>
-                <div class="col-sm-6"><p>5W</p></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2"><h3>Total</h3></div>
-                <div class="col-sm-6"><p>xx kWh / mois</p></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2"><h3>Estimation coût</h3></div>
-                <div class="col-sm-6"><p>8€ par mois</p></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 center-title">
-                    <h2>Accessoires</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2"><h3>Inclus avec votre Risebox</h3></div>
-                <div class="col-sm-6">
-                    <p>
-                        Jerry can<br/>
-                        Ajusteur PH<br/>
-                        Bandelettes tests
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        
+    </div>
 
     </section>
-
-    <%= render 'subscribe' %>
 
     <%= render 'footer' %>
 <!-- </div> -->

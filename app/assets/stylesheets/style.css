@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'risebox';
     src:
-        font-url('risebox.ttf?pzqic6') format('truetype'),
-        font-url('risebox.woff?pzqic6') format('woff'),
-        font-url('risebox.svg?pzqic6#risebox') format('svg');
+        url('fonts/risebox.ttf?pzqic6') format('truetype'),
+        url('fonts/risebox.woff?pzqic6') format('woff'),
+        url('fonts/risebox.svg?pzqic6#risebox') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
-[class^="riseicon-"], [class*="riseicon-"] {
+[class^="riseicon-"], [class*=" riseicon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'risebox' !important;
     speak: none;
