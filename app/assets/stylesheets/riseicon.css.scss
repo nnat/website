@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'risebox';
+    src:
+        font-url('risebox.ttf?s4uljd') format('truetype'),
+        font-url('risebox.woff?s4uljd') format('woff'),
+        font-url('risebox.svg?s4uljd#risebox') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="riseicon-"], [class*="riseicon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'risebox' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.riseicon-basil:before {
+    content: "\e900";
+}
+.riseicon-aragula:before {
+    content: "\e901";
+}
+.riseicon-pepper:before {
+    content: "\e902";
+}
+.riseicon-tomatoe:before {
+    content: "\e903";
+}
+.riseicon-spinach:before {
+    content: "\e904";
+}
+.riseicon-strawberry:before {
+    content: "\e905";
+}
+.riseicon-users:before {
+    content: "\e906";
+}
+
