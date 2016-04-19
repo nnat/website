@@ -10,7 +10,8 @@ private
 
   def set_locale
     unless Rails.env.test?
-      I18n.locale = params[:locale] || locale_from_accept_language_header || I18n.default_locale
+      I18n.locale = I18n.default_locale
+      #I18n.locale = params[:locale] || locale_from_accept_language_header || I18n.default_locale
     end
   end
 

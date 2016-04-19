@@ -16,9 +16,9 @@
             <ul class="nav scroll-to navbar-nav"> 
                 <li class="active"><%= link_to raw(t('.home')), root_path, id: 'home-nav-menu' %></li>
                 <li class="<%= 'active' if (@section == :specs)%>" ><%= link_to raw(t('.specs')), specs_path, id: 'specs-nav-menu' %></li>
-                <li class="<%= 'active' if (@section == :faq)%>" ><%= link_to raw(t('.faq')), faq_path, id: 'faq-nav-menu' %></li>
                 <li class="<%= 'active' if (@section == :mission)%>" ><%= link_to raw(t('.mission')), mission_path, id: 'mission-nav-menu' %></li>
-
+                <li class="<%= 'active' if (@section == :faq)%>" ><%= link_to raw(t('.faq')), faq_path, id: 'faq-nav-menu' %></li>
+                <!--
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-target="#" data-toggle="dropdown">
                       <%= I18n.locale == :fr ? 'FR' : 'EN' %> <span class="caret"></span>
@@ -26,7 +26,7 @@
                     <ul class="dropdown-menu" role="menu">
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= url_for(locale: (I18n.locale == :fr ? :en : :fr)) %>"><%= I18n.locale == :fr ? 'EN' : 'FR' %></a></li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
             <ul class="nav navbar-nav navbar-right"> 
                 <% unless @section == :program %>
