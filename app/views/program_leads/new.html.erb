@@ -38,57 +38,59 @@
 <section id="features">
     <div class="container">
         <%= render 'home/nav' %>
+        <section id="features">
+            
+            <h1 class="lead text-center" style="margin-bottom: 10px; font-size: 30px">
+                Réservez votre Risebox dès maintenant.
+            </h1>
+            <p class="lead text-center">
+                Prix early-fish: <span class="violet">2990€</span> valable jusqu'au 30 Juin
+            </p>
 
-        <h1 class="lead text-center" style="margin-bottom: 10px; font-size: 30px">
-            Réservez votre Risebox dès maintenant.
-        </h1>
-        <p class="lead text-center">
-            Prix early-fish: <span class="violet">2990€</span> valable jusqu'au 30 Juin
-        </p>
-
-        <div class="row">
-            <div class="col-sm-4 hidden-xs hidden-sm" style="margin-bottom: 10px">
-                <%= image_tag "home/risebox_close2.jpg", class: "img-responsive" %>
-            </div>
-            <div class="col-sm-4" style="margin-bottom: 10px">
-                <div class="price-box">
-                    <h3 class="text-center" style="color: orange; font-size: 16px;">Livré chez vous en janvier 2017</h3>
-                     <div class="row" style="margin-top: 40px">
-                        <div class="col-sm-8"><h3 style="margin-bottom: 3px">1 Risebox</h3><span>Version commerciale</span></div>
-                        <div class="col-sm-4"><h3 style="text-align: right">2990€</h3></div>
-                     </div>
-                     <div class="row" style="margin-top: 15px">
-                        <div class="col-sm-8"><h3>Application mobile</span></div>
-                        <div class="col-sm-4"><h3 style="text-align: right">Gratuite</h3></div>
-                     </div>
-                     <div class="row" style="margin-top: 15px">
-                        <div class="col-sm-8"><h3 style="margin-bottom: 3px">Starter kit</h3><span>Tout inclus pour lancer votre écosystème et vos 1ères plantations</span></div>
-                        <div class="col-sm-4" style="text-align: right"><span style="text-decoration: line-through">90€</span><h3>Offert</h3></div>
-                     </div>
-                     <div class="row" style="margin-top: 15px">
-                        <div class="col-sm-8"><h3 style="margin-bottom: 20px">Livraison</h3></div>
-                        <div class="col-sm-4" style="text-align: right"><span style="text-decoration: line-through">300€</span><h3>Offerte</h3></div>
-                     </div>
-                     <div class="row">
-                        <div class="col-sm-12">
-                            <div class="sep">&nbsp;</div>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="col-sm-8"><h3 style="margin-bottom: 3px">Réservation</h3><span>100% remboursable</span></div>
-                        <div class="col-sm-4"><h3 style="text-align: right">300€</h3></div>
-                     </div>
-                     <div class="row" style="margin-top: 15px">
-                        <div class="col-sm-8"><h3 style="margin-bottom: 3px">Reste à payer</h3><span>avant expédition</span></div>
-                        <div class="col-sm-4"><h3 style="text-align: right">2690€</h3></div>
-                     </div>
+            <div class="row" style="padding-top: 20px">
+                <div class="col-sm-4 hidden-xs hidden-sm" style="margin-bottom: 10px">
+                    <%= image_tag "home/risebox_close2.jpg", class: "img-responsive" %>
                 </div>
+                <div class="col-sm-4" style="margin-bottom: 10px">
+                    <div class="price-box">
+                        <h3 class="text-center" style="color: #ff8f12; font-size: 16px;">Livré chez vous en janvier 2017</h3>
+                         <div class="row" style="margin-top: 40px">
+                            <div class="col-sm-8"><h3 style="margin-bottom: 3px">1 Risebox</h3><span>Version commerciale</span></div>
+                            <div class="col-sm-4"><h3 style="text-align: right">2990€</h3></div>
+                         </div>
+                         <div class="row" style="margin-top: 15px">
+                            <div class="col-sm-8"><h3>Application mobile</span></div>
+                            <div class="col-sm-4"><h3 style="text-align: right">Gratuite</h3></div>
+                         </div>
+                         <div class="row" style="margin-top: 15px">
+                            <div class="col-sm-8"><h3 style="margin-bottom: 3px">Starter kit</h3><span>Tout inclus pour démarrer votre écosystème et vos plantations</span></div>
+                            <div class="col-sm-4" style="text-align: right"><span style="text-decoration: line-through">90€</span><h3>Offert</h3></div>
+                         </div>
+                         <div class="row" style="margin-top: 15px">
+                            <div class="col-sm-8"><h3 style="margin-bottom: 20px">Livraison</h3></div>
+                            <div class="col-sm-4" style="text-align: right"><span style="text-decoration: line-through">300€</span><h3>Offerte</h3></div>
+                         </div>
+                         <div class="row">
+                            <div class="col-sm-12">
+                                <div class="sep">&nbsp;</div>
+                            </div>
+                         </div>
+                         <div class="row">
+                            <div class="col-sm-8"><h3 style="margin-bottom: 3px">Réservation</h3><span>100% remboursable</span></div>
+                            <div class="col-sm-4"><h3 style="text-align: right">300€</h3></div>
+                         </div>
+                         <div class="row" style="margin-top: 15px">
+                            <div class="col-sm-8"><h3 style="margin-bottom: 3px">Reste à payer</h3><span>avant expédition</span></div>
+                            <div class="col-sm-4"><h3 style="text-align: right">2690€</h3></div>
+                         </div>
+                    </div>
 
+                </div>
+                <div class="col-sm-4" style="margin-bottom: 10px;">
+                    <%= render 'form' %>
+                </div>
             </div>
-            <div class="col-sm-4" style="margin-bottom: 10px;">
-                <%= render 'form' %>
-            </div>
-        </div>
+        </section>
 
     </div>
 </section>
