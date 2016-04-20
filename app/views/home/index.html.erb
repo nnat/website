@@ -11,7 +11,7 @@
 
     <%= render 'nav' %>
 
-    <section id="home" class="banner-intro banner-slider">
+    <section id="home" class="banner-intro banner-slider hidden-xs">
         <div class="banner-inner">
             <div class="container">
                 <div class="row">
@@ -83,14 +83,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="cols-sm-12 center-title">
-                    <%= link_to  "Découvrez la Risebox en détail", specs_path, class: 'btn btn-lg btn-warning btn-radius' %>
-                </div>
-            </div>
         </div>
     </section>
-
 
     <div class="clients">
         <div class="container">
@@ -117,15 +111,15 @@
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2 feature-box">
                   <ul class="list-inline text-center tabs-navigation" role="tablist">
-                        <li role="presentation" class="active">
+                      <li role="presentation" class="active">
+                            <a href="#aromates" aria-controls="aromates" role="tab" data-toggle="tab" aria-expanded="true">
+                            fr.png<i class="riseicon riseicon-basil"></i></span>Aromates</a>
+                        </li>
+                        <li role="presentation" class="">
                             <a href="#legumes" aria-controls="legumes" role="tab" data-toggle="tab" aria-expanded="false"><span><i class="riseicon riseicon-spinach"></i></span>Légumes</a>
                         </li>
                         <li role="presentation" class="">
                             <a href="#fruits" aria-controls="fruits" role="tab" data-toggle="tab" aria-expanded="false"><span><i class="riseicon riseicon-strawberry"></i></span>Fruits</a>
-                        </li>
-                        <li role="presentation" class="">
-                            <a href="#aromates" aria-controls="aromates" role="tab" data-toggle="tab" aria-expanded="true">
-                            <span><i class="riseicon riseicon-basil"></i></span>Aromates</a>
                         </li>
                   </ul>
               </div>  
@@ -133,8 +127,29 @@
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2">
                     <div class="tab-content service-tab-content">
-
-                        <div role="tabpanel" class="tab-pane active" id="legumes">
+                        <div role="tabpanel" class="tab-pane active" id="aromates">
+                            <div class="row vertical-align-child">
+                                <div class="col-sm-4">
+                                    <div class="gallery">
+                                        <%= image_tag 'program/basilic.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                                    </div>
+                                    <p class="lead text-center">Basilic</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="gallery">
+                                        <%= image_tag 'program/thym.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                                    </div>
+                                    <p class="lead text-center">Thym</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="gallery">
+                                        <%= image_tag 'program/oseille.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                                    </div>
+                                    <p class="lead text-center">Oseille</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="legumes">
                             <div class="row vertical-align-child">
                                 <div class="col-sm-4">
                                     <div class="gallery">
@@ -178,35 +193,7 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div role="tabpanel" class="tab-pane" id="aromates">
-                            <div class="row vertical-align-child">
-                                <div class="col-sm-4">
-                                    <div class="gallery">
-                                        <%= image_tag 'program/basilic.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
-                                    </div>
-                                    <p class="lead text-center">Basilic</p>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="gallery">
-                                        <%= image_tag 'program/thym.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
-                                    </div>
-                                    <p class="lead text-center">Thym</p>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="gallery">
-                                        <%= image_tag 'program/oseille.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
-                                    </div>
-                                    <p class="lead text-center">Oseille</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="cols-sm-12 center-title">
-                    <%= link_to  "Découvrez la Risebox en détail", specs_path, class: 'btn btn-lg btn-warning btn-radius' %>
                 </div>
             </div>
         </div>
@@ -250,7 +237,7 @@
                             <br/><br/>
                             <a href="#" class="_featureText" data-feat-number="2">
                                 <h3>Lumière adaptable</h3>
-                                <p>Donnez à chaque variété de plante le type de lumière dont elle à besoin</p>
+                                <p>Donnez à chaque variété de plante le type de lumière de lumière dont elle à besoin</p>
                             </a>
                             <br/><br/>
                             <a href="#" class="_featureText" data-feat-number="3">
@@ -289,11 +276,6 @@
                             </a>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="cols-sm-12 center-title">
-                    <%= link_to  "Découvrez la Risebox en détail", specs_path, class: 'btn btn-lg btn-warning btn-radius' %>
                 </div>
             </div>
         </div>
