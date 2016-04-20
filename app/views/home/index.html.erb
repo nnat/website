@@ -28,23 +28,6 @@
         </div>
     </section>
 
-    <section id="homexs" class="banner-intro banner-xs visible-xs-*">
-        <div class="banner-inner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2 text-center">
-                        <h1 class="violet"><%= t('home.nav.tagline') %></h1>
-                        <div class="scroll-to banner-buttons">
-                            <%= link_to "#features", class: "btn btn-lg btn-skin btn-radius" do %>
-                                En savoir plus <i class="fa fa-angle-down"></i>
-                            <% end %>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="features" style="padding-top: 30px; padding-bottom: 0px">
         <div class="container">
             <div class="row">
@@ -149,29 +132,7 @@
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2">
                     <div class="tab-content service-tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="aromates">
-                            <div class="row vertical-align-child">
-                                <div class="col-sm-4">
-                                    <div class="gallery">
-                                        <%= image_tag 'program/basilic.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
-                                    </div>
-                                    <p class="lead text-center">Basilic</p>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="gallery">
-                                        <%= image_tag 'program/thym.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
-                                    </div>
-                                    <p class="lead text-center">Thym</p>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="gallery">
-                                        <%= image_tag 'program/oseille.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
-                                    </div>
-                                    <p class="lead text-center">Oseille</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="legumes">
+                        <div role="tabpanel" class="tab-pane active" id="legumes">
                             <div class="row vertical-align-child">
                                 <div class="col-sm-4">
                                     <div class="gallery">
@@ -190,6 +151,28 @@
                                         <%= image_tag 'program/celeri.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
                                     </div>
                                     <p class="lead text-center">Celeri</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="aromates">
+                            <div class="row vertical-align-child">
+                                <div class="col-sm-4">
+                                    <div class="gallery">
+                                        <%= image_tag 'program/basilic.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                                    </div>
+                                    <p class="lead text-center">Basilic</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="gallery">
+                                        <%= image_tag 'program/thym.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                                    </div>
+                                    <p class="lead text-center">Thym</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="gallery">
+                                        <%= image_tag 'program/oseille.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                                    </div>
+                                    <p class="lead text-center">Oseille</p>
                                 </div>
                             </div>
                         </div>
