@@ -111,15 +111,15 @@
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2 feature-box">
                   <ul class="list-inline text-center tabs-navigation" role="tablist">
-                      <li role="presentation" class="active">
-                            <a href="#aromates" aria-controls="aromates" role="tab" data-toggle="tab" aria-expanded="true">
-                            <span><i class="riseicon riseicon-basil"></i></span>Aromates</a>
-                        </li>
-                        <li role="presentation" class="">
+                        <li role="presentation" class="active">
                             <a href="#legumes" aria-controls="legumes" role="tab" data-toggle="tab" aria-expanded="false"><span><i class="riseicon riseicon-spinach"></i></span>Légumes</a>
                         </li>
                         <li role="presentation" class="">
                             <a href="#fruits" aria-controls="fruits" role="tab" data-toggle="tab" aria-expanded="false"><span><i class="riseicon riseicon-strawberry"></i></span>Fruits</a>
+                        </li>
+                        <li role="presentation" class="">
+                            <a href="#aromates" aria-controls="aromates" role="tab" data-toggle="tab" aria-expanded="true">
+                            <span><i class="riseicon riseicon-basil"></i></span>Aromates</a>
                         </li>
                   </ul>
               </div>  
@@ -127,29 +127,8 @@
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2">
                     <div class="tab-content service-tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="aromates">
-                            <div class="row vertical-align-child">
-                                <div class="col-sm-4">
-                                    <div class="gallery">
-                                        <%= image_tag 'program/basilic.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
-                                    </div>
-                                    <p class="lead text-center">Basilic</p>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="gallery">
-                                        <%= image_tag 'program/thym.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
-                                    </div>
-                                    <p class="lead text-center">Thym</p>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="gallery">
-                                        <%= image_tag 'program/oseille.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
-                                    </div>
-                                    <p class="lead text-center">Oseille</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="legumes">
+
+                        <div role="tabpanel" class="tab-pane active" id="legumes">
                             <div class="row vertical-align-child">
                                 <div class="col-sm-4">
                                     <div class="gallery">
@@ -190,6 +169,29 @@
                                         <%= image_tag 'program/tomates.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
                                     </div>
                                     <p class="lead text-center">Tomates</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane" id="aromates">
+                            <div class="row vertical-align-child">
+                                <div class="col-sm-4">
+                                    <div class="gallery">
+                                        <%= image_tag 'program/basilic.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                                    </div>
+                                    <p class="lead text-center">Basilic</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="gallery">
+                                        <%= image_tag 'program/thym.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                                    </div>
+                                    <p class="lead text-center">Thym</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="gallery">
+                                        <%= image_tag 'program/oseille.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                                    </div>
+                                    <p class="lead text-center">Oseille</p>
                                 </div>
                             </div>
                         </div>
