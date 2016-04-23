@@ -20,7 +20,7 @@ class ProgramLeadsController < ApplicationController
         @lead.save!
 
         charge = Stripe::Charge.create(
-          :amount => 10000, # amount in cents, again
+          :amount => 30000, # amount in cents, again
           :currency => "eur",
           :source => token,
           :description => @lead.email

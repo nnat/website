@@ -16,7 +16,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2 text-center">
-                        <h1 class="violet"><%= t('home.nav.tagline') %></h1>
+                        <h1><%= t('home.nav.tagline') %></h1>
                         <div class="scroll-to banner-buttons">
                             <%= link_to "#features", class: "btn btn-lg btn-skin btn-radius" do %>
                                 En savoir plus <i class="fa fa-angle-down"></i>
@@ -83,6 +83,11 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="cols-sm-12 center-title">
+                    <%= link_to  "Découvrez la Risebox en détail", specs_path, class: 'btn btn-lg btn-skin btn-radius' %>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -111,15 +116,15 @@
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2 feature-box">
                   <ul class="list-inline text-center tabs-navigation" role="tablist">
-                      <li role="presentation" class="active">
-                            <a href="#aromates" aria-controls="aromates" role="tab" data-toggle="tab" aria-expanded="true">
-                            <span><i class="riseicon riseicon-basil"></i></span>Aromates</a>
-                        </li>
-                        <li role="presentation" class="">
+                        <li role="presentation" class="active">
                             <a href="#legumes" aria-controls="legumes" role="tab" data-toggle="tab" aria-expanded="false"><span><i class="riseicon riseicon-spinach"></i></span>Légumes</a>
                         </li>
                         <li role="presentation" class="">
                             <a href="#fruits" aria-controls="fruits" role="tab" data-toggle="tab" aria-expanded="false"><span><i class="riseicon riseicon-strawberry"></i></span>Fruits</a>
+                        </li>
+                        <li role="presentation" class="">
+                            <a href="#aromates" aria-controls="aromates" role="tab" data-toggle="tab" aria-expanded="false"><span>
+                            <i class="riseicon riseicon-basil"></i></span>Aromates</a>
                         </li>
                   </ul>
               </div>  
@@ -127,29 +132,7 @@
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2">
                     <div class="tab-content service-tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="aromates">
-                            <div class="row vertical-align-child">
-                                <div class="col-sm-4">
-                                    <div class="gallery">
-                                        <%= image_tag 'program/basilic.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
-                                    </div>
-                                    <p class="lead text-center">Basilic</p>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="gallery">
-                                        <%= image_tag 'program/thym.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
-                                    </div>
-                                    <p class="lead text-center">Thym</p>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="gallery">
-                                        <%= image_tag 'program/oseille.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
-                                    </div>
-                                    <p class="lead text-center">Oseille</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="legumes">
+                        <div role="tabpanel" class="tab-pane active" id="legumes">
                             <div class="row vertical-align-child">
                                 <div class="col-sm-4">
                                     <div class="gallery">
@@ -168,6 +151,28 @@
                                         <%= image_tag 'program/celeri.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
                                     </div>
                                     <p class="lead text-center">Celeri</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="aromates">
+                            <div class="row vertical-align-child">
+                                <div class="col-sm-4">
+                                    <div class="gallery">
+                                        <%= image_tag 'program/basilic.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                                    </div>
+                                    <p class="lead text-center">Basilic</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="gallery">
+                                        <%= image_tag 'program/thym.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                                    </div>
+                                    <p class="lead text-center">Thym</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="gallery">
+                                        <%= image_tag 'program/oseille.jpg', class: "img-responsive img-rounded", style: "margin: 0 auto" %>
+                                    </div>
+                                    <p class="lead text-center">Oseille</p>
                                 </div>
                             </div>
                         </div>
@@ -230,20 +235,20 @@
                 <div class="col-sm-4">
                     <div class="row aside-feature-row">
                         <div class="col-sm-12 feature-box">
-                            <a href="#" class="_featureText" data-feat-number="1">
+                            <div class="_featureText" data-feat-number="1">
                                 <h3 class="active">Contrôle total</h3>
                                 <p class="active">A tout moment, vous pouvez suspendre l'éclairage, la ventilation et la circulation de l'eau</p>
-                            </a>
+                            </div>
                             <br/><br/>
-                            <a href="#" class="_featureText" data-feat-number="2">
+                            <div class="_featureText" data-feat-number="2">
                                 <h3>Lumière adaptable</h3>
                                 <p>Donnez à chaque variété de plante le type de lumière dont elle à besoin</p>
-                            </a>
+                            </div>
                             <br/><br/>
-                            <a href="#" class="_featureText" data-feat-number="3">
+                            <div class="_featureText" data-feat-number="3">
                                 <h3>Suivi automatique</h3>
                                 <p>Retrouvez tous les paramètres de l'environnement et suivez le fonctionnement de l'écosystème</p>
-                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -260,22 +265,27 @@
                 <div class="col-sm-4">
                     <div class="row aside-feature-row">
                         <div class="col-sm-12 feature-box">
-                            <a href="#" class="_featureText" data-feat-number="4">
+                            <div class="_featureText" data-feat-number="4">
                                 <h3>Qualité de l'eau</h3>
                                 <p>Fini les tests à gouttes. Mesurez la qualité avec votre smartphone en moins d'une minute</p>
-                            </a>
+                            </div>
                             <br/><br/>
-                            <a href="#" class="_featureText" data-feat-number="5">
+                            <div class="_featureText" data-feat-number="5">
                                 <h3>Boutique spécialisée</h3>
                                 <p>Tout ce dont vous avez besoin: plants et semences adaptés, compléments organiques, nourriture pour poissons, accessoires</p>
-                            </a>
+                            </div>
                             <br/><br/>
-                            <a href="#" class="_featureText" data-feat-number="6">
+                            <div class="_featureText" data-feat-number="6">
                                 <h3>Communauté</h3>
                                 <p>Echangez de bons conseils avec nos experts et les autres possesseurs de Risebox</p>
-                            </a>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cols-sm-12 center-title">
+                    <%= link_to  "Découvrez la Risebox en détail", specs_path, class: 'btn btn-lg btn-skin btn-radius' %>
                 </div>
             </div>
         </div>
