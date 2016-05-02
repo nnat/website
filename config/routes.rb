@@ -34,13 +34,12 @@ Rails.application.routes.draw do
     get 'produit'         => 'home#specs',   as: 'specs'
     get 'notre-mission'     => 'home#mission', as: 'mission'
 
-    scope 'early-adopter', constraints: https_constraint do
-      get '/' => 'home#program', as: 'program'
+    scope 'offre', constraints: https_constraint do
       get 'reservez-votre-risebox' => 'program_leads#new', as: :new_program_lead
       resources :program_leads, only: :create
       get 'felicitations' => 'program_leads#congrats', as: :congratulations
     end
-    match "early-adopter(/*path)", constraints: http_catchall, via: [:get], to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
+    match "offre(/*path)", constraints: http_catchall, via: [:get], to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
 
     resources :leads
 
@@ -48,6 +47,6 @@ Rails.application.routes.draw do
   end
 
   # catch all /app and /pastouch without https and redirect to same url using https
-  match "early-adopter(/*path)", constraints: http_catchall, via: [:get], to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
+  match "offre(/*path)", constraints: http_catchall, via: [:get], to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
   match "pastouch(/*path)", constraints: http_catchall, via: [:get], to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
 end
