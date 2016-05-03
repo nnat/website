@@ -23,11 +23,20 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.riseicon-check:before {
+    content: "\e90c";
+}
 .riseicon-analysis:before {
     content: "\e907";
 }
 .riseicon-notification:before {
     content: "\e908";
+}
+.riseicon-heart:before {
+    content: "\e90a";
+}
+.riseicon-box:before {
+    content: "\e90b";
 }
 .riseicon-climate:before {
     content: "\e909";
@@ -53,4 +62,3 @@
 .riseicon-users:before {
     content: "\e906";
 }
-

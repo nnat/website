@@ -2,6 +2,9 @@
  * This are extra configuration for assan so that original files are not changed.
  * Only _variables.scss should be modified
  */
+ 
+ $darkgreen:#36AA18;
+
 .navbar-right{
 	li.button-nav{
 		a{
@@ -76,12 +79,23 @@
 .violet{
     color:#8c18aa;
 }
-.comp{
-	color:#36AA18;
+.darkgreen{
+	color: $darkgreen;
 }
 .orange{
     color:#ced3d8;
 }
 .darkorange{
 	color:#ff8f12;
+}
+
+.tabs-navigation li.active {
+	a {
+		color: $darkgreen;
+		span {
+			color: $darkgreen
+		}
+	}
+
+	
 }
