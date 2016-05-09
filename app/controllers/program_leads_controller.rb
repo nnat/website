@@ -12,6 +12,7 @@ class ProgramLeadsController < ApplicationController
     @lead.email = lead_params[:email]
     @lead.first_name = lead_params[:first_name]
     @lead.last_name = lead_params[:last_name]
+    @lead.country = lead_params[:country]
 
     if program_opened?
       token = params[:stripeToken]
@@ -60,7 +61,7 @@ private
 
 
   def lead_params
-    params.require(:lead).permit(:email, :first_name, :last_name, :phone, :post_code)
+    params.require(:lead).permit(:email, :first_name, :last_name, :phone, :post_code, :country)
   end
 
   def program_opened?
