@@ -30,7 +30,7 @@
      <div class="form-group">
         <%= f.label :country, class: 'sr-only' %>
         <%= f.select(:country, nil, {}, {class: "form-control input-lg"}) do %>
-          <% ['France', 'Belgique', 'Canada', 'Luxembourg', 'Suisse'].each do |c| -%>
+          <% ['France', 'Belgique', 'Luxembourg', 'Québec', 'Suisse'].each do |c| -%>
             <%= content_tag(:option, c, value: c) %>
           <% end %>
         <% end %>
