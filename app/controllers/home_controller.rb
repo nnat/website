@@ -13,6 +13,10 @@ class HomeController < ApplicationController
     @lead = Lead.new
   end
 
+  def service
+    @section = :service
+  end
+
   def program
     @section = :program
   end

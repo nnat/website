@@ -342,13 +342,26 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <div class="cols-sm-12 center-title">
                 <%= link_to  "Découvrez la Risebox en détail", specs_path, class: 'btn btn-lg btn-skin btn-radius' %>
             </div>
-        </div>
+        </div> -->
     </div>
     
+    <section class="pricing-section" style="padding: 50px 0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 center-title">
+                    <i class="riseicon riseicon-truck" style="font-size: 100px"></i>
+                    <h2>Vous déménagez bientôt ?</h2>
+                    <p class="lead" style="font-size: 20px">Aucun souci, nous déplaçons votre Risebox pour vous.</p>
+                    <%= link_to  "Découvrez nos services", service_path, class: 'btn btn-lg btn-skin btn-radius' %>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <%= render 'subscribe' %>
 
     <%= render 'footer' %>

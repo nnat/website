@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'risebox';
     src:
-        font-url('risebox.ttf?pzqic6') format('truetype'),
-        font-url('risebox.woff?pzqic6') format('woff'),
-        font-url('risebox.svg?pzqic6#risebox') format('svg');
+        font-url('risebox.ttf?igrevn') format('truetype'),
+        font-url('risebox.woff?igrevn') format('woff'),
+        font-url('risebox.svg?igrevn#risebox') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -23,6 +23,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+
+.riseicon-truck:before {
+    content: "\e90d";
+}
 .riseicon-check:before {
     content: "\e90c";
 }
