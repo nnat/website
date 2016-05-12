@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160509132156) do
+ActiveRecord::Schema.define(version: 20160512134345) do
 
   create_table "app_settings", force: true do |t|
     t.string   "key",        limit: 50
@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 20160509132156) do
     t.string   "phone"
     t.string   "transaction_number"
     t.string   "country"
+    t.string   "version"
+    t.string   "offer"
   end
 
 end

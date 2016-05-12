@@ -1,5 +1,5 @@
 class ProgramLeadsController < ApplicationController
-  before_action :section
+  before_action :section, :offer_params
 
   def new
     @lead = Lead.new
@@ -13,6 +13,8 @@ class ProgramLeadsController < ApplicationController
     @lead.first_name = lead_params[:first_name]
     @lead.last_name = lead_params[:last_name]
     @lead.country = lead_params[:country]
+    @lead.version = params[:version]
+    @lead.offer = params[:offer]
 
     if program_opened?
       token = params[:stripeToken]
@@ -45,7 +47,7 @@ class ProgramLeadsController < ApplicationController
       end
     end
     flash[:lead] = @lead.id
-    redirect_to congratulations_path
+    redirect_to congratulations_path(version: @chosen_version, offer: @chosen_offer)
   end
 
   def congrats
@@ -57,6 +59,11 @@ private
 
   def section
     @section = :program
+  end
+
+  def offer_params
+    @chosen_version = params[:version]
+    @chosen_offer = params[:offer]
   end
 
 
