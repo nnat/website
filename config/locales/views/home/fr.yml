@@ -62,6 +62,12 @@ fr:
         og_description: ""
         description: ""
         keywords: ""
+    service:
+      meta:
+        og_title: 'La Risebox'
+        og_description: ""
+        description: ""
+        keywords: ""
     mission:
       meta:
         og_title: "La mission de Risebox: faire de l'agriculture urbaine une réalité pour tous"
