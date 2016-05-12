@@ -35,12 +35,38 @@ Rails.application.routes.draw do
     get 'services'           => 'home#services', as: 'services'
     get 'notre-mission'     => 'home#mission', as: 'mission'
 
+class ConstraintsChain
+  def initialize constraints_array
+    @constraints_array = constraints_array
+  end
+
+  def matches? request
+    matches = true
+    @constraints_array.each do |c|
+      matches = matches && c.matches?(request)
+    end
+    return matches
+  end
+end
+
+class ValidVersion
+  def matches? request
+    request.params[:version].present? && ['ultimate', 'medium'].include?(request.params[:version])
+  end
+end
+
+class ValidOffer
+  def matches? request
+    request.params[:offer].present? && ['location', 'achat'].include?(request.params[:offer])
+  end
+end
+
     scope 'reserver', constraints: https_constraint do
       get '/' => 'versions#index', as: :versions
-      get '/(:version)' => 'offers#index', as: :offers
-      get '/(:version)/(:offer)' => 'program_leads#new', as: :new_program_lead
-      resources :program_leads, only: :create
-      get 'felicitations' => 'program_leads#congrats', as: :congratulations
+      get '/(:version)' => 'offers#index', as: :offers, constraints: ValidVersion.new
+      get '/(:version)/(:offer)' => 'program_leads#new', as: :new_program_lead, constraints: ConstraintsChain.new([ValidVersion.new, ValidOffer.new])
+      #post '/(:version)/(:offer)' => 'program_leads#create', as: :create_program_lead, constraints: {version: /(ultimate|medium)+/, offer: /(achat|location)+/}
+      #get '/(:version)/(:offer)/felicitations' => 'program_leads#congrats', as: :congratulations, constraints: {version: /(ultimate|medium)+/, offer: /(achat|location)+/}
     end
     match "reserver(/*path)", constraints: http_catchall, via: [:get], to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
 
@@ -53,3 +79,5 @@ Rails.application.routes.draw do
   match "offre(/*path)", constraints: http_catchall, via: [:get], to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
   match "pastouch(/*path)", constraints: http_catchall, via: [:get], to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
 end
+
+
