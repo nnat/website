@@ -30,6 +30,7 @@ Rails.application.configure do
   PROGRAM_OPENED = (ENV['PROGRAM_OPENED'] == 'true')
 
   SUMOME_TOKEN = ENV['SUMOME_TOKEN']
+  CRAZY_EGG_ACTIVE = ENV['CRAZY_EGG'] == 'true'
 
   # Code is not reloaded between requests.
   config.cache_classes = true

@@ -27,6 +27,7 @@ Rails.application.configure do
   PROGRAM_OPENED = true
 
   SUMOME_TOKEN = nil
+  CRAZY_EGG_ACTIVE = false
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
