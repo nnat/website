@@ -32,7 +32,7 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /en|fr/ do
     get 'comment-ca-marche' => 'home#faq',     as: 'faq'
     get 'produit'         => 'product#show',   as: 'product'
-    get 'service'           => 'home#service', as: 'service'
+    get 'services'           => 'home#services', as: 'services'
     get 'notre-mission'     => 'home#mission', as: 'mission'
 
     scope 'reserver', constraints: https_constraint do
