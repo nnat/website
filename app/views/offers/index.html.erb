@@ -43,11 +43,93 @@
             <h1 class="lead text-center" style="margin-bottom: 10px; font-size: 30px">
                 Choisissez la formule qui vous correspond
             </h1>
+            <div class="row" style="padding-top: 20px">
+                <div class="col-sm-4 hidden-xs hidden-sm" style="margin-bottom: 10px">
+                    <%= image_tag "home/risebox_close2.jpg", class: "img-responsive" %>
+                    <%= @chosen_version %>
+                </div>
+                <div class="col-sm-4" style="margin-bottom: 10px">
+                    <div class="price-box">
+                        <h3 class="text-center" style="color: #ff8f12; font-size: 16px;">Livré chez vous en janvier 2017</h3>
+                         <div class="row" style="margin-top: 40px">
+                            <div class="col-sm-8"><h3 style="margin-bottom: 3px">1 Risebox</h3><span>Version commerciale</span></div>
+                            <div class="col-sm-4"><h3 style="text-align: right">2590€</h3></div>
+                         </div>
+                         <div class="row" style="margin-top: 15px">
+                            <div class="col-sm-8"><h3>Application mobile</h3></div>
+                            <div class="col-sm-4"><h3 style="text-align: right">Gratuite</h3></div>
+                         </div>
+                         <div class="row" style="margin-top: 15px">
+                            <div class="col-sm-8"><h3 style="margin-bottom: 3px">Starter kit</h3><span>Tout inclus pour démarrer votre écosystème</span></div>
+                            <div class="col-sm-4" style="text-align: right"><span style="text-decoration: line-through">50€</span><h3>Offert</h3></div>
+                         </div>
+                         <div class="row" style="margin-top: 15px">
+                            <div class="col-sm-8"><h3>Support à vie</h3><span>Nos experts sont toujours là pour vous aider</span></div>
+                            <div class="col-sm-4"><h3 style="text-align: right">Inclus</h3></div>
+                         </div>
+                         <div class="row">
+                            <div class="col-sm-12">
+                                <div class="sep">&nbsp;</div>
+                            </div>
+                         </div>
+                         <div class="row">
+                            <div class="col-sm-8"><h3 style="margin-bottom: 3px">Réservation</h3><span>100% remboursable</span></div>
+                            <div class="col-sm-4"><h3 style="text-align: right">100€</h3></div>
+                         </div>
+                         <div class="row" style="margin-top: 15px">
+                            <div class="col-sm-8"><span style="margin-bottom: 3px">Solde à régler avant expédition</span></div>
+                            <div class="col-sm-4" style="text-align: right"><span>2490€</span></div>
+                         </div>
+                         <div class="row" style="margin-top: 15px">
+                            <div class="col-sm-8">
+                                <%= link_to 'Je souhaite acheter ma Risebox', new_program_lead_path(version: @chosen_version, offer: 'achat'), class: 'btn btn-lg btn-warning btn-radius' %>
+                            </div>
+                        </div>
+                    </div>
 
-            version choisie : <%= @chosen_version %> <br/>
-            <%= link_to 'achat', new_program_lead_path(version: @chosen_version, offer: 'achat') %>
-            <%= link_to 'location', new_program_lead_path(version: @chosen_version, offer: 'location') %>
-            
+                </div>
+                <div class="col-sm-4" style="margin-bottom: 10px">
+                    <div class="price-box">
+                        <h3 class="text-center" style="color: #ff8f12; font-size: 16px;">Livré chez vous en janvier 2017</h3>
+                         <div class="row" style="margin-top: 40px">
+                            <div class="col-sm-8"><h3 style="margin-bottom: 3px">1 Risebox</h3><span>Version commerciale</span></div>
+                            <div class="col-sm-4"><h3 style="text-align: right">2590€</h3></div>
+                         </div>
+                         <div class="row" style="margin-top: 15px">
+                            <div class="col-sm-8"><h3>Application mobile</h3></div>
+                            <div class="col-sm-4"><h3 style="text-align: right">Gratuite</h3></div>
+                         </div>
+                         <div class="row" style="margin-top: 15px">
+                            <div class="col-sm-8"><h3 style="margin-bottom: 3px">Starter kit</h3><span>Tout inclus pour démarrer votre écosystème</span></div>
+                            <div class="col-sm-4" style="text-align: right"><span style="text-decoration: line-through">50€</span><h3>Offert</h3></div>
+                         </div>
+                         <div class="row" style="margin-top: 15px">
+                            <div class="col-sm-8"><h3>Support à vie</h3><span>Nos experts sont toujours là pour vous aider</span></div>
+                            <div class="col-sm-4"><h3 style="text-align: right">Inclus</h3></div>
+                         </div>
+                         <div class="row">
+                            <div class="col-sm-12">
+                                <div class="sep">&nbsp;</div>
+                            </div>
+                         </div>
+                         <div class="row">
+                            <div class="col-sm-8"><h3 style="margin-bottom: 3px">Réservation</h3><span>100% remboursable</span></div>
+                            <div class="col-sm-4"><h3 style="text-align: right">100€</h3></div>
+                         </div>
+                         <div class="row" style="margin-top: 15px">
+                            <div class="col-sm-8"><span style="margin-bottom: 3px">Solde à régler avant expédition</span></div>
+                            <div class="col-sm-4" style="text-align: right"><span>2490€</span></div>
+                         </div>
+                         <div class="row" style="margin-top: 15px">
+                            <div class="col-sm-8">
+                                <%= link_to 'Je choisis la formule location', new_program_lead_path(version: @chosen_version, offer: 'location'), class: 'btn btn-lg btn-warning btn-radius' %>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </section>
 
     </div>

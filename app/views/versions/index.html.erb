@@ -43,8 +43,8 @@
             <h1 class="lead text-center" style="margin-bottom: 10px; font-size: 30px">
                 Choisissez la Risebox qui vous correspond
             </h1>
-            <%= link_to 'ultimate', offers_path(version: 'ultimate') %>
-            <%= link_to 'medium', offers_path(version: 'medium') %>
+
+            <%= render '/shared/comparator' %>
             
         </section>
 
