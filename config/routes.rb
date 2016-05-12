@@ -65,8 +65,8 @@ end
       get '/' => 'versions#index', as: :versions
       get '/(:version)' => 'offers#index', as: :offers, constraints: ValidVersion.new
       get '/(:version)/(:offer)' => 'program_leads#new', as: :new_program_lead, constraints: ConstraintsChain.new([ValidVersion.new, ValidOffer.new])
-      #post '/(:version)/(:offer)' => 'program_leads#create', as: :create_program_lead, constraints: {version: /(ultimate|medium)+/, offer: /(achat|location)+/}
-      #get '/(:version)/(:offer)/felicitations' => 'program_leads#congrats', as: :congratulations, constraints: {version: /(ultimate|medium)+/, offer: /(achat|location)+/}
+      post '/(:version)/(:offer)' => 'program_leads#create', as: :create_program_lead, constraints: ConstraintsChain.new([ValidVersion.new, ValidOffer.new])
+      get '/(:version)/(:offer)/felicitations' => 'program_leads#congrats', as: :congratulations, constraints: ConstraintsChain.new([ValidVersion.new, ValidOffer.new])
     end
     match "reserver(/*path)", constraints: http_catchall, via: [:get], to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
 
