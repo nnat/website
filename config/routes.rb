@@ -31,16 +31,18 @@ Rails.application.routes.draw do
 
   scope "(:locale)", locale: /en|fr/ do
     get 'comment-ca-marche' => 'home#faq',     as: 'faq'
-    get 'produit'           => 'home#specs',   as: 'specs'
-    get 'notre-mission'     => 'home#mission', as: 'mission'
+    get 'produit'         => 'product#show',   as: 'product'
     get 'service'           => 'home#service', as: 'service'
+    get 'notre-mission'     => 'home#mission', as: 'mission'
 
-    scope 'offre', constraints: https_constraint do
-      get 'reservez-votre-risebox' => 'program_leads#new', as: :new_program_lead
+    scope 'reserver', constraints: https_constraint do
+      get '/' => 'versions#index', as: :versions
+      get '/(:version)' => 'offers#index', as: :offers
+      get '/(:version)/(:offer)' => 'program_leads#new', as: :new_program_lead
       resources :program_leads, only: :create
       get 'felicitations' => 'program_leads#congrats', as: :congratulations
     end
-    match "offre(/*path)", constraints: http_catchall, via: [:get], to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
+    match "reserver(/*path)", constraints: http_catchall, via: [:get], to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
 
     resources :leads
 

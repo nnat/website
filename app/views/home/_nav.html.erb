@@ -15,7 +15,7 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav scroll-to navbar-nav"> 
                 <li class="active"><%= link_to raw(t('.home')), root_path, id: 'home-nav-menu' %></li>
-                <li class="<%= 'active' if (@section == :specs)%>" ><%= link_to raw(t('.specs')), specs_path, id: 'specs-nav-menu' %></li>
+                <li class="<%= 'active' if (@section == :specs)%>" ><%= link_to raw(t('.specs')), product_path, id: 'specs-nav-menu' %></li>
                 <li class="<%= 'active' if (@section == :service)%>" ><%= link_to raw(t('.service')), service_path, id: 'service-nav-menu' %></li>
                 <li class="<%= 'active' if (@section == :mission)%>" ><%= link_to raw(t('.mission')), mission_path, id: 'mission-nav-menu' %></li>
                 <li class="<%= 'active' if (@section == :faq)%>" ><%= link_to raw(t('.faq')), faq_path, id: 'faq-nav-menu' %></li>
@@ -31,7 +31,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right"> 
                 <% unless @section == :program %>
-                    <li class="button-nav"><%= link_to t('.program'), new_program_lead_path(locale: :fr), id: 'program-nav-menu', class: "btn btn-warning btn-lg" %></li>
+                    <li class="button-nav"><%= link_to t('.program'), versions_path, id: 'program-nav-menu', class: "btn btn-warning btn-lg" %></li>
                 <% end %>
             </ul>
         </div><!--/.nav-collapse -->

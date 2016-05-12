@@ -10,7 +10,6 @@ class HomeController < ApplicationController
 
   def specs
     @section = :specs
-    @lead = Lead.new
   end
 
   def service

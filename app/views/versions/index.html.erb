@@ -1,0 +1,52 @@
+<% content_for :head do %>
+    <meta property="og:title" content="<%= t '.meta.og_title' %>" />
+    <meta property="og:description" content="<%= t '.meta.og_description' %>" />
+    <meta property="description" content="<%= t '.meta.description' %>" />
+    <meta property="keywords" content="<%= t '.meta.keywords' %>" />
+    <style>
+        h1 {
+            color: #000;
+            font-weight: 500;
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+        .header-v1 .navbar-nav > li > a {
+            color: #7a7a7a;
+        }
+
+        .header-v1 .navbar-nav > li.button-nav > a {
+            color: #fff;
+        }
+    </style>
+<% end %>
+
+<style>
+._floatingForm.affix {
+    position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+    ._floatingForm.affix {
+        position: fixed;
+        width: 22.5%;
+    }
+}
+</style>
+
+<br/>
+
+<section id="features">
+    <div class="container">
+        <%= render 'home/nav' %>
+        <section id="features">
+            
+            <h1 class="lead text-center" style="margin-bottom: 10px; font-size: 30px">
+                Choisissez la Risebox qui vous correspond
+            </h1>
+            <%= link_to 'ultimate', offers_path(version: 'ultimate') %>
+            <%= link_to 'medium', offers_path(version: 'medium') %>
+            
+        </section>
+
+    </div>
+</section>
