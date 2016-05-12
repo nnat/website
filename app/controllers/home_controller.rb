@@ -14,7 +14,7 @@ class HomeController < ApplicationController
   end
 
   def services
-    @section = :service
+    @section = :services
   end
 
   def program
