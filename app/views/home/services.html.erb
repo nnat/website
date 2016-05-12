@@ -4,285 +4,51 @@
     <meta property="og:image" content="<%= image_url('specs/risebox.jpg') %>" />
     <meta property="description" content="<%= t '.meta.description' %>" />
     <meta property="keywords" content="<%= t '.meta.keywords' %>" />
-    <style>
-        h1 {
-            color: #000;
-            font-weight: 500;
-            margin-bottom: 10px;
-            font-size: 30px;
-        }
-        .header-v1 .navbar-nav > li > a {
-            color: #7a7a7a;
-        }
+<style>
+    h1 {
+        color: #000;
+        font-weight: 500;
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+    .header-v1 .navbar-nav > li > a {
+        color: #7a7a7a;
+    }
 
-        .header-v1 .navbar-nav > li.button-nav > a {
-            color: #fff;
-        }
-    </style>
+    .header-v1 .navbar-nav > li.button-nav > a {
+        color: #fff;
+    }
+</style>
 <% end %>
 
-<!-- <div class="container"> -->
     <%= render 'nav' %>
     
-    <br/><br/>
-
-    <section id="features">
-        <div class="container">
-            <div class="row vertical-align-child">
-                <div class="col-sm-5 col-sm-offset-1 center-title" style="margin-bottom: 0">
-                    <h1 class="text-center">La Risebox</h1>
-                    <br/>
-                    <p>
-                        C'est le système aquaponique personnel le plus avancé du monde. Nous n’avons fait aucun compromis entre productivité et confort. <br/> Voici comment.
-                    </p>
-                </div>
-                <div class="col-sm-6" style="margin-bottom: 0">
-                    <%= image_tag 'specs/risebox.jpg', class: 'img-responsive' %>
-                </div>
-            </div>
-
-            <div class="row vertical-align-child aside-feature-row">
-                <div class="col-sm-6 margin-b-30">
-                    <%= image_tag 'specs/greens.jpg', class: 'img-responsive' %>
-                </div>
-                <div class="col-sm-5 col-sm-offset-1">
-                    <h3>L’espace</h3>
-                    <p>
-                        Risebox offre 3 niveaux de cultures, pour seulement ½ m2 au sol. <br/><br/>
-                        Cela représente 30 emplacements de plantation, et jusqu’à <strong>une salade par jour</strong>, si vous optimisez votre Risebox pour produire des légumes feuille.
-                    </p>
-                    <p>
-                        Le bac du haut est optimisé pour les plantes volumineuses (tomates, poivrons, céleri, poirée…), alors que les 2 autres niveaux le sont pour les légumes plus bas (salades, choux, aromates, fraises…) et pour vos semis.
-                    </p>
-                </div>
-            </div>
-            <div class="row vertical-align-child aside-feature-row">
-                <div class="col-sm-5  margin-b-30">
-                    <h3>L’élégance</h3>
-                    <p>
-                        Le design de la Risebox est le fruit d'une collaboration étroite avec l’Ecole Boulle. <br/><br/>
-                        Sa conception sans montants est aérienne et épurée : le circuit d’eau et la technologie s’effacent pour mettre en valeur l’abondance de vos cultures et la vie que vous créez chez vous. <br/><br/>
-                        Aucun angle saillant qui puisse être un danger pour vous ou vos enfants. <br/><br/>
-                        Les parements sont en bois véritable et plusieurs essences sont proposées pour assortir votre Risebox à votre intérieur.
-                    </p>
-                </div>
-                <div class="col-sm-6 col-sm-offset-1">
-                    <%= image_tag 'specs/design.jpg', class: 'img-responsive' %>
-                </div>
-            </div>
-        </div>
-
-        <section class="pricing-section">
-            <div class="banner-cta cta">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6 col-sm-offset-3 text-center">
-                            <h2>La technologie vous simplifie la vie</h2>
-                            <p class="lead">Risebox est un meuble intelligent doté de nombreux capteurs.</p>
+    <section id="home" class="banner-intro banner-moving">
+        <div class="banner-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 text-center">
+                        <h1 style="color: black">Déménager votre Risebox c'est facile</h1>
+                        <div class="scroll-to banner-buttons">
+                            <%= link_to "#gallery-container", class: "btn btn-lg btn-skin btn-radius" do %>
+                                En savoir plus <i class="fa fa-angle-down"></i>
+                            <% end %>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 margin-b-30">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="feature-box">
-                                <i class="riseicon riseicon-climate violet"></i>
-                                <h3>Climat</h3>
-                                <p>
-                                    Risebox ajuste la température et l’humidité de l’air grâce à un système de ventilation intégré et silencieux.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="feature-box">
-                                <i class="riseicon riseicon-analysis violet"></i>
-                                <h3>Analyse de l'eau</h3>
-                                <p>
-                                    L’équilibre de votre écosystème est suivi : PH, taux de nutriments, présence des micro-organismes qui filtrent l’eau. 
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="feature-box">
-                                <i class="riseicon riseicon-notification violet"></i>
-                                <h3>Notification</h3>
-                                <p>
-                                    En cas de besoin, votre Risebox vous alerte sur votre smartphone et vous recommande la marche à suivre.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="cols-sm-12 center-title">
-                    <%= link_to  "Je réserve maintenant", new_program_lead_path, class: 'btn btn-lg btn-warning btn-radius' %>
-                </div>
-            </div>
-
-            <div class="row vertical-align-child aside-feature-row">
-                <div class="col-sm-6 margin-b-30">
-                    <%= image_tag 'specs/water-circuit.jpg', class: 'img-responsive' %>
-                </div>
-                <div class="col-sm-5 col-sm-offset-1">
-                    <h3>L’eau</h3>
-                    <p>
-                        L’aquarium est le moteur de votre Risebox, mais il est plus que cela : bien éclairé et réalisé en PMMA, une matière plus transparente que le verre, vous profitez pleinement du spectacle de la vie aquatique.<br/><br />
-                        Le circuit d’eau est fiable et silencieux : pompe, aérateur, système anti-débordement, suivi du niveau de l’eau, tout est géré automatiquement et pilotable avec votre smartphone.<br/><br />
-                        Enfin, la circulation d’eau dans la Risebox filtre et oxygène l’aquarium : vous ne remplacez jamais l’eau, elle reste toujours propre.
-                    </p>
-                </div>
-            </div>
-            <div class="row vertical-align-child aside-feature-row">
-                <div class="col-sm-5  margin-b-30">
-                    <h3>La lumière</h3>
-                    <p>
-                        Chaque plante a des besoins spécifiques tout au long de sa croissance : notre système d'éclairage s'adapte à ces besoins pour une pousse optimale.<br/><br/>
-                        Depuis votre smartphone, vous ajustez séparément l’éclairage de chaque demi-niveau de culture en fonction de vos plantations : un éclairage pour les salades, un autre pour les tomates, un troisième pour les semis. Pas besoin d’être un expert : votre Risebox vous guide. <br/><br/>
-                        Lorsque vous êtes absents, Risebox émet uniquement les fréquences utiles à vos plantes, économisant l’énergie. <br/><br/>
-                        Lorsque vous êtes chez vous ou que vous jardinez, elle enrichit cette lumière pour mettre vos plantes en valeur.
-                    </p>
-                </div>
-                <div class="col-sm-6 col-sm-offset-1">
-                    <%= image_tag 'specs/light.jpg', class: 'img-responsive' %>
-                </div>
-            </div>
-            <div class="col-sm-8 col-sm-offset-2 center-title">
-                <h2>Spécifications</h2>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <%= image_tag 'specs/wire.png', class: "img-responsive", alt: "Dimensions de la Risebox" %>
-                </div>
-                <div class="col-sm-4">
-                    <table class="table">
-                        <h3>Matériel</h3>
-                        <tr>
-                            <td>Dimensions</td>
-                            <td><p>214cm H x 100cm L 50cm P</p></td>
-                        </tr>
-                        <tr>
-                            <td>Poids</td>
-                            <td><p>75kg à vide<br/>300kg plein</p></td>
-                        </tr>
-                        <tr>
-                            <td>Façades</td>
-                            <td><p>En bois naturel, traité anti-humidité <br/>plusieurs coloris au choix</p></td>
-                        </tr>
-                        <tr>
-                            <td>Aquarium</td>
-                            <td>
-                                <p>
-                                    En PMMA 1 cm d'épaisseur <br/>
-                                    160 litres de contenance<br/>
-                                    Livré avec couvercle transparent
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Circuit eau</td>
-                            <td>
-                                <p>
-                                    Débit réglable<br/>
-                                    Totalement invisible et silencieux<br/>
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Eclairage</td>
-                            <td>
-                                <p>
-                                    200 LEDs monochromes<br/>
-                                    Spectre lumineux ajusté en continu<br/>
-                                    Mode lumière blanche<br/>
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Capteurs</td>
-                            <td>
-                                <p>
-                                    Niveau d'eau<br/>
-                                    PH de l'eau<br/>
-                                    Température de l'eau<br/>
-                                    Température et humidité de l'air<br/>
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Divers</td>
-                            <td>Structure sur roulettes</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="col-sm-4">
-                    <h3>Logiciel</h3>
-                    <table class="table">
-                        <tr>
-                            <td>Contrôle à distance</td>
-                            <td>
-                                <p>
-                                    Eclairage (cycles jour/nuit, intensité, couleur)<br/>
-                                    Ventilation<br/>
-                                    Circulation de l'eau<br/>
-                                    Suivi de la qualité de l'eau
-                                </p>
-                            </td>
-                        </tr>
-                    </table>
-                    <h3>Cultures</h3>
-                    <table class="table">
-                        <tr>
-                            <td>Substrat</td>
-                            <td>
-                                <p>
-                                   Billes d'argiles, pas de terre<br/>
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Productivité</td>
-                            <td>
-                                <p>Jusqu'à 1 salade par jour</p>
-                            </td>
-                        </tr>
-                    </table>
-                    <h3>Electricité</h3>
-                    <table class="table">
-                        <tr>
-                            <td>Puissance éclairage</td>
-                            <td><p>170W mode éco, jusqu'à 320W en lumière blanche</p></td>
-                        </tr>
-                        <tr>
-                            <td>Consommation totale</td>
-                            <td><p>environ 8€ par mois pour 14h d'ensoleillement par jour</p></td>
-                        </tr>
-                    </table>
-                    <h3><span style="color: navy">Made</span> In <span style="color: firebrick">France</span></h3>
-                    <table class="table">
-                        <tr>
-                            <td colspan="2">100% conçu et assemblé chez Risebox.<br/>
-                            L'intégralité de la structure est fabriquée en France</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <div class="row">
-                <div class="cols-sm-12 center-title">
-                    <br/>
-                    <%= link_to  "Je réserve maintenant", new_program_lead_path, class: 'btn btn-lg btn-warning btn-radius' %>
-                </div>
-            </div>
         </div>
+    </section>
+
+    <br /><br />  
+    <%= render "moving_timeline" %>
+
+    <br /><br />  
+    <div class="text-center mbl">
+        <%= mail_to "team@risebox.co", raw("Vous avez une question ? <br/> Ecrivez-nous !"), class: 'btn btn-success btn-lg btn-radius' %>
     </div>
 
-    </section>
+    <br /><br />  
 
     <%= render 'footer' %>
 <!-- </div> -->
