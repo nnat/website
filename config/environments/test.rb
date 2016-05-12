@@ -13,6 +13,7 @@ Rails.application.configure do
   PROGRAM_OPENED = false
 
   SUMOME_TOKEN = nil
+  GA_ACTIVE        = false
   CRAZY_EGG_ACTIVE = false
   # Settings specified here will take precedence over those in config/application.rb.
 

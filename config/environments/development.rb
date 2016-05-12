@@ -27,6 +27,7 @@ Rails.application.configure do
   PROGRAM_OPENED = true
 
   SUMOME_TOKEN = nil
+  GA_ACTIVE        = false
   CRAZY_EGG_ACTIVE = false
 
   # In the development environment your application's code is reloaded on
