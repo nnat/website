@@ -62,7 +62,7 @@ fr:
         og_description: ""
         description: ""
         keywords: ""
-    service:
+    services:
       meta:
         og_title: 'La Risebox'
         og_description: ""

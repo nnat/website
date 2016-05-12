@@ -33,7 +33,7 @@ Rails.application.routes.draw do
     get 'comment-ca-marche' => 'home#faq',     as: 'faq'
     get 'produit'           => 'home#specs',   as: 'specs'
     get 'notre-mission'     => 'home#mission', as: 'mission'
-    get 'service'           => 'home#service', as: 'service'
+    get 'services'           => 'home#services', as: 'services'
 
     scope 'offre', constraints: https_constraint do
       get 'reservez-votre-risebox' => 'program_leads#new', as: :new_program_lead
