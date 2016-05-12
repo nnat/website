@@ -1,18 +1,37 @@
+<% wire_img = false if wire_img.nil? %>
+
 <div class="row">
   <div class="col-sm-5 col-sm-offset-1">
-      <h2>Risebox ultimate</h2>
-      <h4>3 étages de culture pour une production maximale.</h4>
-      <%= image_tag 'specs/wire.png', class: "img-responsive", alt: "Dimensions de la Risebox" %>
-      <%= link_to 'Choisir la Risebox ultimate', offers_path(version: 'ultimate'), class: 'btn btn-lg btn-warning btn-radius' %>
+      
+      <div class="text-center margin-b-30">
+        <h2 >Risebox Sublime</h2>
+        <!-- <h4 class="text-center">Tout notre savoir-faire au meilleur prix</h4> -->
+        <%= image_tag (wire_img ? 'specs/wire_small.png' : 'home/risebox_front_small.jpg'), style: "max-width: 20em;", class: "img-responsive center-block", alt: "Dimensions de la Risebox" %>
+        <br/>
+        <h4 class="text-center">
+          <span class="violet">1990€</span> TTC <br/>
+          ou<br/>
+          99€ par mois
+        </h4>
+        <br/>
+        <!-- <p class="lead">
+          1990€ TTC <br/>
+          ou<br/>
+          99€ TTC par mois
+        </p> -->
+
+        <%= link_to 'Choisir la Risebox sublime', offers_path(version: 'medium'), class: 'btn btn-lg btn-warning btn-radius' %>
+      </div>
+
       <table class="table">
           <h3>Matériel</h3>
           <tr>
               <td>Dimensions</td>
-              <td><p>214cm H x 100cm L 50cm P</p></td>
+              <td><p>184cm H x 100cm L 50cm P</p></td>
           </tr>
           <tr>
               <td>Poids</td>
-              <td><p>75kg à vide<br/>300kg plein</p></td>
+              <td><p>65kg à vide<br/>280kg plein</p></td>
           </tr>
           <tr>
               <td>Façades</td>
@@ -41,7 +60,7 @@
               <td>Eclairage</td>
               <td>
                   <p>
-                      200 LEDs monochromes<br/>
+                      128 LEDs monochromes<br/>
                       Spectre lumineux ajusté en continu<br/>
                       Mode lumière blanche<br/>
                   </p>
@@ -52,9 +71,9 @@
               <td>
                   <p>
                       Niveau d'eau<br/>
-                      PH de l'eau<br/>
                       Température de l'eau<br/>
                       Température et humidité de l'air<br/>
+                      &nbsp;<br/>
                   </p>
               </td>
           </tr>
@@ -92,7 +111,7 @@
           <tr>
               <td>Productivité</td>
               <td>
-                  <p>Jusqu'à 1 salade par jour</p>
+                  <p>Jusqu'à 3 salades par semaine</p>
               </td>
           </tr>
       </table>
@@ -101,11 +120,11 @@
       <table class="table">
           <tr>
               <td>Puissance éclairage</td>
-              <td><p>170W mode éco, jusqu'à 320W en lumière blanche</p></td>
+              <td><p>115W mode éco, jusqu'à 210W en lumière blanche</p></td>
           </tr>
           <tr>
               <td>Consommation totale</td>
-              <td><p>environ 8€ par mois pour 14h d'ensoleillement par jour</p></td>
+              <td><p>environ 6€ par mois pour 14h d'ensoleillement par jour</p></td>
           </tr>
       </table>
 
@@ -116,14 +135,32 @@
               L'intégralité de la structure est fabriquée en France</td>
           </tr>
       </table>
-      <%= link_to 'Choisir la Risebox ultimate', offers_path(version: 'ultimate'), class: 'btn btn-lg btn-warning btn-radius' %>
+      <br/><br/>
+      <div class="text-center">
+          <%= link_to 'Choisir la Risebox sublime', offers_path(version: 'medium'), class: 'btn btn-lg btn-warning btn-radius' %>
+      </div>
   </div>
 
   <div class="col-sm-5 col-sm-offset-1">
-      <h2>Risebox Medium</h2>
-      <h4>2 étages de culture, blabla bla bla blabla</h4>
-      <%= image_tag 'specs/wire.png', class: "img-responsive", alt: "Dimensions de la Risebox" %>
-      <%= link_to 'Choisir la Risebox medium', offers_path(version: 'medium'), class: 'btn btn-lg btn-warning btn-radius' %>
+      <div class="text-center margin-b-30">
+        <h2>Risebox Ultime</h2>
+        <!-- <h4 class="text-center">Productivité maximale</h4> -->
+        <%= image_tag (wire_img ? 'specs/wire.png' : 'home/risebox_front.jpg'), style: "max-width: 20em;", class: "img-responsive center-block", alt: "Dimensions de la Risebox" %>
+        <br/>
+        <h4 class="text-center">
+          <span class="violet">2590€</span> TTC <br/>
+          ou<br/>
+          149€ par mois
+        </h4>
+        <br/>
+        <!-- <p class="lead">
+          1990€ TTC <br/>
+          ou<br/>
+          99€ TTC par mois
+        </p> -->
+        <%= link_to 'Choisir la Risebox ultime', offers_path(version: 'ultimate'), class: 'btn btn-lg btn-warning btn-radius' %>
+      </div>
+
       <table class="table">
           <h3>Matériel</h3>
           <tr>
@@ -172,9 +209,9 @@
               <td>
                   <p>
                       Niveau d'eau<br/>
-                      PH de l'eau<br/>
                       Température de l'eau<br/>
                       Température et humidité de l'air<br/>
+                      PH de l'eau<br/>
                   </p>
               </td>
           </tr>
@@ -236,6 +273,9 @@
               L'intégralité de la structure est fabriquée en France</td>
           </tr>
       </table>
-      <%= link_to 'Choisir la Risebox medium', offers_path(version: 'medium'), class: 'btn btn-lg btn-warning btn-radius' %>
+      <br/><br/>
+      <div class="text-center">
+        <%= link_to 'Choisir la Risebox Ultime', offers_path(version: 'ultimate'), class: 'btn btn-lg btn-warning btn-radius' %>
+      </div>
   </div>
 </div>
