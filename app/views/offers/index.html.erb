@@ -44,85 +44,87 @@
                 Choisissez votre formule
             </h1>
             <div class="row" style="padding-top: 20px">
-                <div class="col-sm-4 hidden-xs hidden-sm" style="margin-bottom: 10px">
-                    <%= image_tag "home/risebox_front.jpg", class: "img-responsive" %>
-                    <%= @chosen_version %>
-                </div>
                 <div class="col-sm-4" style="margin-bottom: 10px">
                     <div class="price-box">
-                        <h3 class="text-center" style="color: #ff8f12; font-size: 16px;">Livré chez vous en janvier 2017</h3>
-                         <div class="row" style="margin-top: 40px">
-                            <div class="col-sm-8"><h3 style="margin-bottom: 3px">1 Risebox</h3><span>Version commerciale</span></div>
-                            <div class="col-sm-4"><h3 style="text-align: right">2590€</h3></div>
-                         </div>
-                         <div class="row" style="margin-top: 15px">
-                            <div class="col-sm-8"><h3>Application mobile</h3></div>
-                            <div class="col-sm-4"><h3 style="text-align: right">Gratuite</h3></div>
-                         </div>
-                         <div class="row" style="margin-top: 15px">
-                            <div class="col-sm-8"><h3 style="margin-bottom: 3px">Starter kit</h3><span>Tout inclus pour démarrer votre écosystème</span></div>
-                            <div class="col-sm-4" style="text-align: right"><span style="text-decoration: line-through">50€</span><h3>Offert</h3></div>
-                         </div>
-                         <div class="row" style="margin-top: 15px">
-                            <div class="col-sm-8"><h3>Support à vie</h3><span>Nos experts sont toujours là pour vous aider</span></div>
-                            <div class="col-sm-4"><h3 style="text-align: right">Inclus</h3></div>
-                         </div>
-                         <div class="row">
+                        <h3 class="text-center" style="color: #ff8f12; font-size: 16px;">Formule Location</h3>
+                        <table class="table noborder">
+                            <tbody>
+                                <tr>
+                                    <td style="border-top: none;"><i class="riseicon riseicon-check darkgreen"></i></td>
+                                    <td style="border-top: none;"><h3 style="margin-top: 20px; ">Location Risebox</h3><span>Version commerciale</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="border-top: none;"><i class="riseicon riseicon-check darkgreen"></i></td>
+                                    <td style="border-top: none;"><h3 style="margin-top: 20px; ">Kit de démarrage</h3><span>Tout inclus pour démarrer votre écosystème</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="border-top: none;"><i class="riseicon riseicon-check darkgreen"></i></td>
+                                    <td style="border-top: none;"><h3 style="margin-top: 20px; ">Pack Recharge</h3><span>Chaque trimestre, vous recevez graines et nourriture pour poissons</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="border-top: none;"><i class="riseicon riseicon-check darkgreen"></i></td>
+                                    <td style="border-top: none;"><h3 style="margin-top: 20px; ">Support continu</h3>Nos experts sont toujours là pour vous aider</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="row">
                             <div class="col-sm-12">
                                 <div class="sep">&nbsp;</div>
                             </div>
-                         </div>
-                         <div class="row">
-                            <div class="col-sm-8"><h3 style="margin-bottom: 3px">Réservation</h3><span>100% remboursable</span></div>
-                            <div class="col-sm-4"><h3 style="text-align: right">100€</h3></div>
-                         </div>
-                         <div class="row" style="margin-top: 15px">
-                            <div class="col-sm-8"><span style="margin-bottom: 3px">Solde à régler avant expédition</span></div>
-                            <div class="col-sm-4" style="text-align: right"><span>2490€</span></div>
-                         </div>
-                         <div class="row" style="margin-top: 15px">
+                        </div>
+                        <div class="row" style="margin-top: 5px">
+                            <div class="col-sm-12">
+                                <h3 style="text-align: center"><%= @offer[@chosen_version]['location'][:price] %></h3>
+                                <p class="lead text-center"><%= @offer[@chosen_version]['location'][:duration] %></p>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 5px">
                             <div class="col-sm-8">
-                                <%= link_to 'Je souhaite acheter ma Risebox', new_program_lead_path(version: @chosen_version, offer: 'achat'), class: 'btn btn-lg btn-warning btn-radius' %>
+                                <%= link_to 'Je souhaite louer ma Risebox', new_program_lead_path(version: @chosen_version, offer: 'location'), class: 'btn btn-lg btn-warning btn-radius' %>
                             </div>
                         </div>
                     </div>
-
+                </div>
+                <div class="col-sm-4 hidden-xs hidden-sm" style="margin-bottom: 10px">
+                    <%= image_tag @chosen_version == "ultimate" ? "home/risebox_front.jpg" : "home/risebox_front_small.jpg", class: "img-responsive" %>
                 </div>
                 <div class="col-sm-4" style="margin-bottom: 10px">
                     <div class="price-box">
-                        <h3 class="text-center" style="color: #ff8f12; font-size: 16px;">Livré chez vous en janvier 2017</h3>
-                         <div class="row" style="margin-top: 40px">
-                            <div class="col-sm-8"><h3 style="margin-bottom: 3px">1 Risebox</h3><span>Version commerciale</span></div>
-                            <div class="col-sm-4"><h3 style="text-align: right">2590€</h3></div>
-                         </div>
-                         <div class="row" style="margin-top: 15px">
-                            <div class="col-sm-8"><h3>Application mobile</h3></div>
-                            <div class="col-sm-4"><h3 style="text-align: right">Gratuite</h3></div>
-                         </div>
-                         <div class="row" style="margin-top: 15px">
-                            <div class="col-sm-8"><h3 style="margin-bottom: 3px">Starter kit</h3><span>Tout inclus pour démarrer votre écosystème</span></div>
-                            <div class="col-sm-4" style="text-align: right"><span style="text-decoration: line-through">50€</span><h3>Offert</h3></div>
-                         </div>
-                         <div class="row" style="margin-top: 15px">
-                            <div class="col-sm-8"><h3>Support à vie</h3><span>Nos experts sont toujours là pour vous aider</span></div>
-                            <div class="col-sm-4"><h3 style="text-align: right">Inclus</h3></div>
-                         </div>
-                         <div class="row">
+                        <h3 class="text-center" style="color: #ff8f12; font-size: 16px;">Formule Achat</h3>
+                        <table class="table noborder">
+                            <tbody>
+                                <tr>
+                                    <td style="border-top: none;"><i class="riseicon riseicon-check darkgreen"></i></td>
+                                    <td style="border-top: none;"><h3 style="margin-top: 20px; ">Achat Risebox</h3><span>Version commerciale</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="border-top: none;"><i class="riseicon riseicon-check darkgreen"></i></td>
+                                    <td style="border-top: none;"><h3 style="margin-top: 20px; ">Kit de démarrage</h3><span>Tout inclus pour démarrer votre écosystème</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="border-top: none;"><i class="riseicon riseicon-check darkgreen"></i></td>
+                                    <td style="border-top: none;"><h3 style="margin-top: 20px; ">Support à vie</h3>Nos experts sont toujours là pour vous aider</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-top: none;"><i class="riseicon riseicon-check darkgreen"></i></td>
+                                    <td style="border-top: none;"><h3 style="margin-top: 20px; ">Garantie 1 an</h3>Pièce et main d'oeuvre</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="row">
                             <div class="col-sm-12">
                                 <div class="sep">&nbsp;</div>
                             </div>
-                         </div>
-                         <div class="row">
-                            <div class="col-sm-8"><h3 style="margin-bottom: 3px">Réservation</h3><span>100% remboursable</span></div>
-                            <div class="col-sm-4"><h3 style="text-align: right">100€</h3></div>
-                         </div>
-                         <div class="row" style="margin-top: 15px">
-                            <div class="col-sm-8"><span style="margin-bottom: 3px">Solde à régler avant expédition</span></div>
-                            <div class="col-sm-4" style="text-align: right"><span>2490€</span></div>
-                         </div>
-                         <div class="row" style="margin-top: 15px">
+                        </div>
+                        <div class="row" style="margin-top: 5px">
+                            <div class="col-sm-12">
+                                <h3 style="text-align: center"><%= @offer[@chosen_version]['achat'][:price] %></h3>
+                                <p class="lead text-center"><%= @offer[@chosen_version]['achat'][:duration] %></p>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 5px">
                             <div class="col-sm-8">
-                                <%= link_to 'Je choisis la formule location', new_program_lead_path(version: @chosen_version, offer: 'location'), class: 'btn btn-lg btn-warning btn-radius' %>
+                                <%= link_to 'Je souhaite acheter ma Risebox', new_program_lead_path(version: @chosen_version, offer: 'achat'), class: 'btn btn-lg btn-warning btn-radius' %>
                             </div>
                         </div>
                     </div>

@@ -96,6 +96,19 @@
 			color: $darkgreen
 		}
 	}
-
-	
 }
+
+.price-box i {
+	color: $darkgreen;
+	&:hover{
+		color: $darkgreen;
+		background-color: white;
+	}
+}
+
+.noborder {
+	td {
+		border-top: none;
+	}
+}
+
