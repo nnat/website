@@ -51,7 +51,7 @@ end
 
 class ValidVersion
   def matches? request
-    request.params[:version].present? && ['ultimate', 'medium'].include?(request.params[:version])
+    request.params[:version].present? && ['ultime', 'minime'].include?(request.params[:version])
   end
 end
 

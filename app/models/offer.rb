@@ -1,7 +1,7 @@
 class Offer
   def self.data
   	{
-    	'ultimate' => {
+    	'ultime' => {
     		'location' => {
     			price: '149€ par mois',
     			condition: 'Engagement 12 mois, reprise gratuite',
@@ -13,7 +13,7 @@ class Offer
                 pay: "Le solde de 2490€ sera demandé au mois d'Octobre"
     		}
     	},
-    	'medium' => {
+    	'minime' => {
     		'location' => {
     			price: '99€ par mois',
                 condition: 'Engagement 12 mois, reprise gratuite',

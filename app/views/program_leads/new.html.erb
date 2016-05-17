@@ -48,10 +48,10 @@
             </p>
 
             <div class="row" style="padding-top: 20px">
-                <div class="col-sm-4 hidden-xs hidden-sm" style="margin-bottom: 10px">
-                    <%= image_tag @chosen_version == "ultimate" ? "home/risebox_front.jpg" : "home/risebox_front_small.jpg", class: "img-responsive" %>
+                <div class="col-md-4 hidden-xs hidden-sm" style="margin-bottom: 10px">
+                    <%= image_tag @chosen_version == "ultime" ? "home/risebox_front.jpg" : "home/risebox_front_small_nospace.jpg", class: "img-responsive" %>
                 </div>
-                <div class="col-sm-4" style="margin-bottom: 10px">
+                <div class="col-sm-6 col-md-4" style="margin-bottom: 10px">
                     <div class="price-box">
                         <h3 class="text-center" style="color: #ff8f12; font-size: 16px;">Offre spéciale "Early Fish"</h3>
                         <p class="text-center">Valable jusqu'au 31/05</p>
@@ -60,7 +60,7 @@
                            <div class="col-sm-4"><h3 style="text-align: right"></h3></div>
                         </div>
                         <div class="row" style="margin-top: 15px">
-                           <div class="col-sm-8"><h3>Formule Location</h3></div>
+                           <div class="col-sm-8"><h3>Formule <%= @lead.offer %></h3></div>
                            <div class="col-sm-4"><h3 style="text-align: right"><%= @offer[@chosen_version][@lead.offer][:price] %></h3></div>
                         </div>
 
@@ -86,7 +86,7 @@
                     </div>
 
                 </div>
-                <div class="col-sm-4" style="margin-bottom: 10px;">
+                <div class="col-sm-6 col-md-4" style="margin-bottom: 10px;">
                     <%= render 'form' %>
                 </div>
             </div>
