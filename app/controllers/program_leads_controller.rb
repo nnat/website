@@ -6,6 +6,7 @@ class ProgramLeadsController < ApplicationController
     @lead = Lead.new
     @lead.offer = params[:offer]
     @lead.version = params[:version]
+    @lead.reservation_amount = @offer[@lead.version][@lead.offer][:reservation]
     render(program_opened? ? 'new' : 'new_closed')
   end
 
@@ -18,6 +19,9 @@ class ProgramLeadsController < ApplicationController
     @lead.country = lead_params[:country]
     @lead.version = params[:version]
     @lead.offer = params[:offer]
+    @offer = Offer.data
+    @lead.price              = @offer[@lead.version][@lead.offer][:price]
+    @lead.reservation_amount = @offer[@lead.version][@lead.offer][:reservation]
 
     if program_opened?
       token = params[:stripeToken]
@@ -26,7 +30,7 @@ class ProgramLeadsController < ApplicationController
         @lead.save!
 
         charge = Stripe::Charge.create(
-          :amount => 10000, # amount in cents, again
+          :amount => @lead.reservation_amount * 100, # amount in cents, again
           :currency => "eur",
           :source => token,
           :description => @lead.email

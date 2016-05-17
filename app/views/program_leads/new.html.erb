@@ -44,7 +44,7 @@
                 Vous avez choisi votre Risebox.
             </h1>
             <p class="lead text-center">
-                Déposez 100€ aujourd'hui pour être parmi les premiers livrés en Janvier 2017
+                Déposez <%= @offer[@chosen_version][@lead.offer][:reservation] %>€ aujourd'hui pour être parmi les premiers livrés en Janvier 2017
             </p>
 
             <div class="row" style="padding-top: 20px">
@@ -61,7 +61,7 @@
                         </div>
                         <div class="row" style="margin-top: 15px">
                            <div class="col-sm-8"><h3>Formule <%= @lead.offer %></h3></div>
-                           <div class="col-sm-4"><h3 style="text-align: right"><%= @offer[@chosen_version][@lead.offer][:price] %></h3></div>
+                           <div class="col-sm-4"><h3 style="text-align: right"><%= @offer[@chosen_version][@lead.offer][:price_tag]%></h3></div>
                         </div>
 
                          <!-- <div class="row" style="margin-top: 15px">
@@ -76,9 +76,9 @@
                          </div>
                          <div class="row">
                             <div class="col-sm-8"><h3 style="margin-bottom: 3px">Réservation</h3><span>100% remboursable</span></div>
-                            <div class="col-sm-4"><h3 style="text-align: right">100€</h3></div>
+                            <div class="col-sm-4"><h3 style="text-align: right"><%= @offer[@chosen_version][@lead.offer][:reservation] %>€</h3></div>
                          </div>
-                         <p class="text-center" style="margin-top: 15px"><%= @offer[@chosen_version][@lead.offer][:pay] %></p>
+                         <p class="text-center" style="margin-top: 15px"><%= @offer[@chosen_version][@lead.offer][:small_line] %></p>
                          <!-- <div class="row" style="margin-top: 15px">
                             <div class="col-sm-8"><span style="margin-bottom: 3px">Solde à régler avant expédition</span></div>
                             <div class="col-sm-4" style="text-align: right"><span>2490€</span></div>
