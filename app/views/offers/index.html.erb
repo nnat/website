@@ -43,42 +43,38 @@
             <h1 class="lead text-center" style="margin-bottom: 10px; font-size: 30px">
                 Choisissez votre formule
             </h1>
-            <div class="row" style="padding-top: 20px">
-                <div class="col-sm-4" style="margin-bottom: 10px">
-                    <div class="price-box">
+            <div class="row" style="padding-top: 5px">
+                <div class="col-sm-4" style="margin-bottom: 5px">
+                    <div class="offer-box">
                         <h3 class="text-center" style="color: #ff8f12; font-size: 16px;">Formule Location</h3>
-                        <table class="table noborder">
+                        <table class="table noborder" style="margin-bottom: 0px;margin-top: 20px">
                             <tbody>
                                 <tr>
                                     <td style="border-top: none;"><i class="riseicon riseicon-check darkgreen"></i></td>
-                                    <td style="border-top: none;"><h3 style="margin-top: 20px; ">Location Risebox</h3><span>Version commerciale</span></td>
+                                    <td style="border-top: none;"><h3 style="margin-top: 0px; ">Location Risebox</h3><span>Version commerciale</span></td>
                                 </tr>
                                 <tr>
                                     <td style="border-top: none;"><i class="riseicon riseicon-check darkgreen"></i></td>
-                                    <td style="border-top: none;"><h3 style="margin-top: 20px; ">Kit de démarrage</h3><span>Tout inclus pour démarrer votre écosystème</span></td>
+                                    <td style="border-top: none;"><h3 style="margin-top: 0px; ">Kit de démarrage</h3><span>Tout inclus pour démarrer votre écosystème</span></td>
                                 </tr>
                                 <tr>
                                     <td style="border-top: none;"><i class="riseicon riseicon-check darkgreen"></i></td>
-                                    <td style="border-top: none;"><h3 style="margin-top: 20px; ">Pack Recharge</h3><span>Chaque trimestre, vous recevez graines et nourriture pour poissons</span></td>
+                                    <td style="border-top: none;"><h3 style="margin-top: 0px; ">Pack Recharge</h3><span>Chaque trimestre, vous recevez graines et nourriture pour poissons</span></td>
                                 </tr>
                                 <tr>
                                     <td style="border-top: none;"><i class="riseicon riseicon-check darkgreen"></i></td>
-                                    <td style="border-top: none;"><h3 style="margin-top: 20px; ">Support continu</h3>Nos experts sont toujours là pour vous aider</td>
+                                    <td style="border-top: none;"><h3 style="margin-top: 0px; ">Support continu</h3>Nos experts sont là pour vous aider</td>
                                 </tr>
                             </tbody>
                         </table>
                         <div class="row">
                             <div class="col-sm-12">
-                                <div class="sep">&nbsp;</div>
+                                <div class="sep"></div>
+                                <h3 style="text-align: center"><span class="violet"><%= @offer[@chosen_version]['location'][:price] %></span></h3>
+                                <p class="lead text-center"><%= @offer[@chosen_version]['location'][:condition] %></p>
                             </div>
                         </div>
-                        <div class="row" style="margin-top: 5px">
-                            <div class="col-sm-12">
-                                <h3 style="text-align: center"><%= @offer[@chosen_version]['location'][:price] %></h3>
-                                <p class="lead text-center"><%= @offer[@chosen_version]['location'][:duration] %></p>
-                            </div>
-                        </div>
-                        <div class="row" style="margin-top: 5px">
+                        <div class="row" style="margin-bottom: 15px">
                             <div class="col-sm-8">
                                 <%= link_to 'Je souhaite louer ma Risebox', new_program_lead_path(version: @chosen_version, offer: 'location'), class: 'btn btn-lg btn-warning btn-radius' %>
                             </div>
@@ -88,41 +84,37 @@
                 <div class="col-sm-4 hidden-xs hidden-sm" style="margin-bottom: 10px">
                     <%= image_tag @chosen_version == "ultimate" ? "home/risebox_front.jpg" : "home/risebox_front_small.jpg", class: "img-responsive" %>
                 </div>
-                <div class="col-sm-4" style="margin-bottom: 10px">
-                    <div class="price-box">
+                <div class="col-sm-4" style="margin-bottom: 5px">
+                    <div class="offer-box">
                         <h3 class="text-center" style="color: #ff8f12; font-size: 16px;">Formule Achat</h3>
-                        <table class="table noborder">
+                        <table class="table noborder" style="margin-bottom: 0px;margin-top: 20px">
                             <tbody>
                                 <tr>
                                     <td style="border-top: none;"><i class="riseicon riseicon-check darkgreen"></i></td>
-                                    <td style="border-top: none;"><h3 style="margin-top: 20px; ">Achat Risebox</h3><span>Version commerciale</span></td>
+                                    <td style="border-top: none;"><h3 style="margin-top: 0px; ">Achat Risebox</h3><span>Version commerciale</span></td>
                                 </tr>
                                 <tr>
                                     <td style="border-top: none;"><i class="riseicon riseicon-check darkgreen"></i></td>
-                                    <td style="border-top: none;"><h3 style="margin-top: 20px; ">Kit de démarrage</h3><span>Tout inclus pour démarrer votre écosystème</span></td>
+                                    <td style="border-top: none;"><h3 style="margin-top: 0px; ">Kit de démarrage</h3><span>Tout inclus pour démarrer votre écosystème</span></td>
                                 </tr>
                                 <tr>
                                     <td style="border-top: none;"><i class="riseicon riseicon-check darkgreen"></i></td>
-                                    <td style="border-top: none;"><h3 style="margin-top: 20px; ">Support à vie</h3>Nos experts sont toujours là pour vous aider</td>
+                                    <td style="border-top: none;"><h3 style="margin-top: 0px; ">Support à vie</h3>Nos experts sont toujours là pour vous aider</td>
                                 </tr>
                                 <tr>
                                     <td style="border-top: none;"><i class="riseicon riseicon-check darkgreen"></i></td>
-                                    <td style="border-top: none;"><h3 style="margin-top: 20px; ">Garantie 1 an</h3>Pièce et main d'oeuvre</td>
+                                    <td style="border-top: none;"><h3 style="margin-top: 0px; ">Garantie 1 an</h3>Pièces et main d'oeuvre</td>
                                 </tr>
                             </tbody>
                         </table>
                         <div class="row">
                             <div class="col-sm-12">
-                                <div class="sep">&nbsp;</div>
+                                <div class="sep"></div>
+                                <h3 style="text-align: center"><span class="violet"><%= @offer[@chosen_version]['achat'][:price] %></span></h3>
+                                <p class="lead text-center"><%= @offer[@chosen_version]['achat'][:condition] %></p>
                             </div>
                         </div>
-                        <div class="row" style="margin-top: 5px">
-                            <div class="col-sm-12">
-                                <h3 style="text-align: center"><%= @offer[@chosen_version]['achat'][:price] %></h3>
-                                <p class="lead text-center"><%= @offer[@chosen_version]['achat'][:duration] %></p>
-                            </div>
-                        </div>
-                        <div class="row" style="margin-top: 5px">
+                        <div class="row" style="margin-bottom: 15px">
                             <div class="col-sm-8">
                                 <%= link_to 'Je souhaite acheter ma Risebox', new_program_lead_path(version: @chosen_version, offer: 'achat'), class: 'btn btn-lg btn-warning btn-radius' %>
                             </div>

@@ -2,7 +2,10 @@ class ProgramLeadsController < ApplicationController
   before_action :section, :offer_params
 
   def new
+    @offer = Offer.data
     @lead = Lead.new
+    @lead.offer = params[:offer]
+    @lead.version = params[:version]
     render(program_opened? ? 'new' : 'new_closed')
   end
 

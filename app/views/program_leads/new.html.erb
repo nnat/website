@@ -41,37 +41,36 @@
         <section id="features">
             
             <h1 class="lead text-center" style="margin-bottom: 10px; font-size: 30px">
-                Réservez votre Risebox dès maintenant.
+                Vous avez choisi votre Risebox.
             </h1>
             <p class="lead text-center">
-                Prix early-fish: <span class="violet">2590€</span> valable jusqu'au 31 Mai
+                Déposez 100€ aujourd'hui pour être parmi les premiers livrés en Janvier 2017
             </p>
 
             <div class="row" style="padding-top: 20px">
                 <div class="col-sm-4 hidden-xs hidden-sm" style="margin-bottom: 10px">
-                    <%= image_tag "home/risebox_front.jpg", class: "img-responsive" %>
+                    <%= image_tag @chosen_version == "ultimate" ? "home/risebox_front.jpg" : "home/risebox_front_small.jpg", class: "img-responsive" %>
                 </div>
                 <div class="col-sm-4" style="margin-bottom: 10px">
                     <div class="price-box">
-                        <h3 class="text-center" style="color: #ff8f12; font-size: 16px;">Livré chez vous en janvier 2017</h3>
-                         <div class="row" style="margin-top: 40px">
-                            <div class="col-sm-8"><h3 style="margin-bottom: 3px">1 Risebox</h3><span>Version commerciale</span></div>
-                            <div class="col-sm-4"><h3 style="text-align: right">2590€</h3></div>
-                         </div>
-                         <div class="row" style="margin-top: 15px">
-                            <div class="col-sm-8"><h3>Application mobile</h3></div>
-                            <div class="col-sm-4"><h3 style="text-align: right">Gratuite</h3></div>
-                         </div>
-                         <div class="row" style="margin-top: 15px">
-                            <div class="col-sm-8"><h3 style="margin-bottom: 3px">Starter kit</h3><span>Tout inclus pour démarrer votre écosystème</span></div>
-                            <div class="col-sm-4" style="text-align: right"><span style="text-decoration: line-through">50€</span><h3>Offert</h3></div>
-                         </div>
-                         <div class="row" style="margin-top: 15px">
-                            <div class="col-sm-8"><h3>Support à vie</h3><span>Nos experts sont toujours là pour vous aider</span></div>
-                            <div class="col-sm-4"><h3 style="text-align: right">Inclus</h3></div>
-                         </div>
+                        <h3 class="text-center" style="color: #ff8f12; font-size: 16px;">Offre spéciale "Early Fish"</h3>
+                        <p class="text-center">Valable jusqu'au 31/05</p>
+                        <div class="row" style="margin-top: 30px">
+                           <div class="col-sm-8"><h3 style="margin-bottom: 3px">1 Risebox</h3><span>Version <%= @lead.version %></span></div>
+                           <div class="col-sm-4"><h3 style="text-align: right"></h3></div>
+                        </div>
+                        <div class="row" style="margin-top: 15px">
+                           <div class="col-sm-8"><h3>Formule Location</h3></div>
+                           <div class="col-sm-4"><h3 style="text-align: right"><%= @offer[@chosen_version][@lead.offer][:price] %></h3></div>
+                        </div>
+
+                         <!-- <div class="row" style="margin-top: 15px">
+                            <div class="col-sm-8"><h3>Livraison</h3><span>Janvier 2017</span></div>
+                            <div class="col-sm-4"><h3 style="text-align: right">Incluse</h3></div>
+                         </div> -->
+
                          <div class="row">
-                            <div class="col-sm-12">
+                            <div class="col-sm-12" style="margin-top: 20px">
                                 <div class="sep">&nbsp;</div>
                             </div>
                          </div>
@@ -79,10 +78,11 @@
                             <div class="col-sm-8"><h3 style="margin-bottom: 3px">Réservation</h3><span>100% remboursable</span></div>
                             <div class="col-sm-4"><h3 style="text-align: right">100€</h3></div>
                          </div>
-                         <div class="row" style="margin-top: 15px">
+                         <p class="text-center" style="margin-top: 15px"><%= @offer[@chosen_version][@lead.offer][:pay] %></p>
+                         <!-- <div class="row" style="margin-top: 15px">
                             <div class="col-sm-8"><span style="margin-bottom: 3px">Solde à régler avant expédition</span></div>
                             <div class="col-sm-4" style="text-align: right"><span>2490€</span></div>
-                         </div>
+                         </div> -->
                     </div>
 
                 </div>
