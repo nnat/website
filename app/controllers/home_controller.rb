@@ -24,4 +24,8 @@ class HomeController < ApplicationController
     @section = :mission
   end
 
+  def office
+    @section = :office
+  end
+
 end

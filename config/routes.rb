@@ -30,10 +30,11 @@ Rails.application.routes.draw do
   get '/' => 'home#index'
 
   scope "(:locale)", locale: /en|fr/ do
-    get 'comment-ca-marche' => 'home#faq',     as: 'faq'
-    get 'produit'         => 'product#show',   as: 'product'
+    get 'comment-ca-marche'  => 'home#faq',     as: 'faq'
+    get 'produit'            => 'product#show',   as: 'product'
     get 'services'           => 'home#services', as: 'services'
-    get 'notre-mission'     => 'home#mission', as: 'mission'
+    get 'notre-mission'      => 'home#mission', as: 'mission'
+    get 'bureau'             => 'home#office', as: 'office'
 
 class ConstraintsChain
   def initialize constraints_array
