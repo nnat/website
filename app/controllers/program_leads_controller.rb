@@ -17,6 +17,7 @@ class ProgramLeadsController < ApplicationController
     @lead.first_name = lead_params[:first_name]
     @lead.last_name = lead_params[:last_name]
     @lead.country = lead_params[:country]
+    @lead.origin = cookies[:origin_token] if cookies[:origin_token].present?
     @lead.version = params[:version]
     @lead.offer = params[:offer]
     @offer = Offer.data

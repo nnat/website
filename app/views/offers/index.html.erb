@@ -44,7 +44,7 @@
                 Choisissez votre formule
             </h1>
             <div class="row" style="padding-top: 5px">
-                <div class="col-sm-4" style="margin-bottom: 5px">
+                <div class="col-sm-6 col-md-4" style="margin-bottom: 5px">
                     <div class="offer-box">
                         <h3 class="text-center" style="color: #ff8f12; font-size: 16px;">Formule Location</h3>
                         <table class="table noborder" style="margin-bottom: 0px;margin-top: 20px">
@@ -71,7 +71,7 @@
                             <div class="col-sm-12">
                                 <div class="sep"></div>
                                 <h3 style="text-align: center"><span class="violet"><%= @offer[@chosen_version]['location'][:price_tag] %></span></h3>
-                                <p class="lead text-center"><%= @offer[@chosen_version]['location'][:condition] %></p>
+                                <p class="lead text-center"><%= raw @offer[@chosen_version]['location'][:condition] %></p>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 15px">
@@ -84,7 +84,7 @@
                 <div class="col-sm-4 hidden-xs hidden-sm" style="margin-bottom: 10px">
                     <%= image_tag @chosen_version == "ultime" ? "home/risebox_front.jpg" : "home/risebox_front_small.jpg", class: "img-responsive" %>
                 </div>
-                <div class="col-sm-4" style="margin-bottom: 5px">
+                <div class="col-sm-6 col-md-4" style="margin-bottom: 5px">
                     <div class="offer-box">
                         <h3 class="text-center" style="color: #ff8f12; font-size: 16px;">Formule Achat</h3>
                         <table class="table noborder" style="margin-bottom: 0px;margin-top: 20px">
@@ -111,7 +111,7 @@
                             <div class="col-sm-12">
                                 <div class="sep"></div>
                                 <h3 style="text-align: center"><span class="violet"><%= @offer[@chosen_version]['achat'][:price_tag] %></span></h3>
-                                <p class="lead text-center"><%= @offer[@chosen_version]['achat'][:condition] %></p>
+                                <p class="lead text-center"><%= raw @offer[@chosen_version]['achat'][:condition] %></p>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 15px">
