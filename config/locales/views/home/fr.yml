@@ -5,8 +5,6 @@ fr:
       mission: Notre mission
       specs: "La Risebox"
       program: "Réservez votre Risebox"
-      services: "Services"
-      office: "Au Bureau"
       tagline: Du bio pousse chez vous
     subscribe:
       placeholder: Mon email
@@ -67,12 +65,6 @@ fr:
     services:
       meta:
         og_title: 'La Risebox'
-        og_description: ""
-        description: ""
-        keywords: ""
-    office:
-      meta:
-        og_title: 'Risebox dans vote open-space'
         og_description: ""
         description: ""
         keywords: ""

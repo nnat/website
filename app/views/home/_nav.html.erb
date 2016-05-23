@@ -17,7 +17,6 @@
                 <li class="active"><%= link_to raw(t('.home')), root_path, id: 'home-nav-menu' %></li>
                 <li class="<%= 'active' if (@section == :specs)%>" ><%= link_to raw(t('.specs')), product_path, id: 'specs-nav-menu' %></li>
                 <li class="<%= 'active' if (@section == :services)%>" ><%= link_to raw(t('.services')), services_path, id: 'services-nav-menu' %></li>
-                <li class="<%= 'active' if (@section == :office)%>" ><%= link_to raw(t('.office')), office_path, id: 'office-nav-menu' %></li>
                 <li class="<%= 'active' if (@section == :mission)%>" ><%= link_to raw(t('.mission')), mission_path, id: 'mission-nav-menu' %></li>
                 <li class="<%= 'active' if (@section == :faq)%>" ><%= link_to raw(t('.faq')), faq_path, id: 'faq-nav-menu' %></li>
                 <!--
