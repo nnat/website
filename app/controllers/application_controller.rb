@@ -28,6 +28,9 @@ private
   def set_origin_token
     if params[:utm_source].present? && params[:utm_campaign].present? && params[:utm_content].present?
       concat_token = params[:utm_source] + '_' + params[:utm_campaign] + '_' + params[:utm_content]
+      if params[:utm_term].present?
+        concat_token = concat_token + '_' + params[:utm_term]
+      end
       cookies[:origin_token] = { :value => concat_token, :expires => 30.days.from_now }
     end
   end
