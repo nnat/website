@@ -3,10 +3,24 @@
     <meta property="og:description" content="<%= t '.meta.og_description' %>" />
     <meta property="description" content="<%= t '.meta.description' %>" />
     <meta property="keywords" content="<%= t '.meta.keywords' %>" />
+    <style>
+        h1 {
+            color: #000;
+            font-weight: 500;
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+        .header-v1 .navbar-nav > li > a {
+            color: #7a7a7a;
+        }
+
+        .header-v1 .navbar-nav > li.button-nav > a {
+            color: #fff;
+        }
+    </style>
 <% end %>
 
 <style>
-
 ._floatingForm.affix {
     position: relative;
 }
@@ -18,33 +32,33 @@
     }
 }
 </style>
-    
-<%= render 'home/nav' %>
 
- <br/><br/>
+<br/>
 
 <section id="features">
-    
     <div class="container">
-        <div class="row">
-            <div class="col-sm-8 col-sm-offset-2 center-title">
-                <h1 class="lead" style="margin-bottom: 10px; font-size: 30px">
-                    Aie, notre programme est complet, mais...
-                </h1>
-                <p class="lead">
-                    Laissez-nous vos coordonnées et nous vous proposerons la Risebox en priorité dès qu'elle sera disponible dans votre région.
-                </p>
-            </div>
-        </div>
+        <%= render 'home/nav' %>
+        <section id="features">
 
-        <div class="row">
-            <div class="col-sm-6 hidden-xs" style="margin-bottom: 10px">
-                <%= image_tag "home/program4.jpg", class: "img-responsive" %>
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 center-title">
+                    <h1 class="lead" style="margin-bottom: 10px; font-size: 30px">
+                        Désolé la Risebox n'est plus disponible...
+                    </h1>
+                    <p class="lead">
+                        Laissez-nous vos coordonnées et nous vous tiendrons informés.
+                    </p>
+                </div>
             </div>
-            <div class="col-sm-6" style="margin-bottom: 10px;">
-                <%= render 'form_closed' %>
-            </div>
-        </div>
 
+            <div class="row">
+                <div class="col-md-4 hidden-xs hidden-sm" style="margin-bottom: 10px">
+                    <%= image_tag @chosen_version == "ultime" ? "home/risebox_front.jpg" : "home/risebox_front_small_nospace.jpg", class: "img-responsive" %>
+                </div>
+                <div class="col-sm-6" style="margin-bottom: 10px;">
+                    <%= render 'form_closed' %>
+                </div>
+            </div>
+        </section>
     </div>
 </section>

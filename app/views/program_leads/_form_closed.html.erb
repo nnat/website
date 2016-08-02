@@ -1,6 +1,6 @@
 <div class="_floatingForm">
   <!-- <h3>Embarquez avec nous !</h3> -->
-  <%= form_for @lead, url: {action: "create"}, html: {role: 'form', method: :post, id: 'payment-form'} do |f| %>
+  <%= form_for @lead, url: create_program_lead_path(version: @chosen_version, offer: @chosen_offer), html: {role: 'form', method: :post, id: 'payment-form'} do |f| %>
     <div class="_payment-errors alert alert-danger" style="<%= @payment_error_message.present? ? nil : 'display:none' %>"><%= @payment_error_message %>
     </div>
     <div class="form-group">
@@ -24,6 +24,6 @@
         <%= f.text_field :post_code, class: "form-control input-lg", required: true, placeholder: "votre code postal" %>
     </div>
     
-    <%= f.submit "Je souhaite obtenir une Risebox" , class: "btn btn-success btn-lg btn-radius btn-block", id: 'payment-submit' %>
+    <%= f.submit "Tenez-moi informé" , class: "btn btn-success btn-lg btn-radius btn-block", id: 'payment-submit' %>
   <% end %>
 </div>
