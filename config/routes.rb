@@ -3,6 +3,7 @@ require 'resque/server'
 Rails.application.routes.draw do
 
   https_constraint = (Rails.env.production? ? {protocol: 'https://'} : {})
+  http_catchall    = (Rails.env.production? ? {protocol: 'http://'}  : -> (params, request) {false})
   https_catchall    = (Rails.env.production? ? {protocol: 'https://'}  : -> (params, request) {false})
   resque_app = Rack::Auth::Basic.new(Resque::Server) do |username, password|
     username == ENV['ADMIN_LOGIN'] && password == ENV['ADMIN_PWD']
