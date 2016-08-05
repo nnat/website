@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
 # mount protected_app in Rails
 
-  constraints protocol: 'https://' do
+  scope :constraints => { :protocol => "https" } do
     redirect { |params, request| "http://" + request.host_with_port + request.fullpath }
   end
 
