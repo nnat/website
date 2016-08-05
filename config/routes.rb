@@ -27,8 +27,8 @@ Rails.application.routes.draw do
     get '/metrics' => 'metrics#index'
     mount resque_app, at: '/jobs', as: 'jobs'
   end
-  
-  match "*path", constraints: https_catchall, via: [:get], to: redirect { |params, request| "http://" + request.host_with_port + request.fullpath } #Force HTTP in production as there is no more HTTPS
+
+  match "*path", constraints: https_catchall, via: [:get], to: 'application#raise_not_found!'
 
   get '/' => 'home#index'
 
