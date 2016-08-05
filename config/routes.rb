@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   https_constraint = (Rails.env.production? ? {protocol: 'https://'} : {})
   http_catchall    = (Rails.env.production? ? {protocol: 'http://'}  : -> (params, request) {false})
+  https_catchall    = (Rails.env.production? ? {protocol: 'https://'}  : -> (params, request) {false})
   resque_app = Rack::Auth::Basic.new(Resque::Server) do |username, password|
     username == ENV['ADMIN_LOGIN'] && password == ENV['ADMIN_PWD']
   end
@@ -27,6 +28,9 @@ Rails.application.routes.draw do
     mount resque_app, at: '/jobs', as: 'jobs'
   end
 
+  #Removed HTTPS => all traffic forced to http
+  match "(*path)", constraints: https_catchall, via: [:get], to: redirect { |params, request| "http://" + request.host_with_port + request.fullpath }
+  
   get '/' => 'home#index'
 
   scope "(:locale)", locale: /en|fr/ do
