@@ -11,10 +11,6 @@ Rails.application.routes.draw do
 
 # mount protected_app in Rails
 
-  scope :constraints => { :protocol => "https" } do
-    redirect { |params, request| "http://" + request.host_with_port + request.fullpath }
-  end
-
   # Concours 
   competition_url = "https://lafabrique-france.aviva.com/voting/projet/vue/851"
   constraints subdomain: "concours" do   
@@ -32,7 +28,13 @@ Rails.application.routes.draw do
     mount resque_app, at: '/jobs', as: 'jobs'
   end
 
+  # scope :constraints => { :protocol => "https" } do
+  #   redirect { |params, request| "http://" + request.host_with_port + request.fullpath }
+  # end
+  get '/', constraints: https_catchall, to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
   get '/' => 'home#index'
+  
+  match "*path", constraints: https_catchall, via: [:get], to: 'application#raise_not_found!'
 
   scope "(:locale)", locale: /en|fr/ do
     get 'comment-ca-marche' => 'home#faq',     as: 'faq'
