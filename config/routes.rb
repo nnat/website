@@ -11,7 +11,9 @@ Rails.application.routes.draw do
 
 # mount protected_app in Rails
 
-  match "*path", via: [:get], to: 'application#raise_not_found!'
+  constraints protocol: 'https://' do
+    redirect { |params, request| "http://" + request.host_with_port + request.fullpath
+  end
 
   # Concours 
   competition_url = "https://lafabrique-france.aviva.com/voting/projet/vue/851"
