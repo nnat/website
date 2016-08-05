@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
 # mount protected_app in Rails
 
+  match "*path", via: [:get], to: 'application#raise_not_found!'
+
   # Concours 
   competition_url = "https://lafabrique-france.aviva.com/voting/projet/vue/851"
   constraints subdomain: "concours" do   
@@ -27,8 +29,6 @@ Rails.application.routes.draw do
     get '/metrics' => 'metrics#index'
     mount resque_app, at: '/jobs', as: 'jobs'
   end
-
-  match "*path", constraints: https_catchall, via: [:get], to: 'application#raise_not_found!'
 
   get '/' => 'home#index'
 
