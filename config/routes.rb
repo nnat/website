@@ -31,10 +31,10 @@ Rails.application.routes.draw do
   # scope :constraints => { :protocol => "https" } do
   #   redirect { |params, request| "http://" + request.host_with_port + request.fullpath }
   # end
-  get '/', constraints: https_catchall, to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
+  get '/', constraints: https_catchall, to: redirect { |params, request| "http://" + request.host_with_port + request.fullpath }
   get '/' => 'home#index'
-  
-  match "*path", constraints: https_catchall, via: [:get], to: 'application#raise_not_found!'
+
+  match "*path", constraints: https_catchall, via: [:get], to: redirect { |params, request| "http://" + request.host_with_port + request.fullpath }
 
   scope "(:locale)", locale: /en|fr/ do
     get 'comment-ca-marche' => 'home#faq',     as: 'faq'
