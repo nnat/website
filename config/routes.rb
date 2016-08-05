@@ -27,6 +27,8 @@ Rails.application.routes.draw do
     get '/metrics' => 'metrics#index'
     mount resque_app, at: '/jobs', as: 'jobs'
   end
+  
+  match "*path", constraints: https_catchall, via: [:get], to: redirect { |params, request| "http://" + request.host_with_port + request.fullpath } #Force HTTP in production as there is no more HTTPS
 
   get '/' => 'home#index'
 
@@ -80,7 +82,6 @@ end
   # catch all /app and /pastouch without https and redirect to same url using https
   # match "offre(/*path)", constraints: http_catchall, via: [:get], to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
   match "pastouch(/*path)", constraints: http_catchall, via: [:get], to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
-  match "*path", constraints: https_catchall, via: [:get], to: redirect { |params, request| "http://" + request.host_with_port + request.fullpath } #Force HTTP in production as there is no more HTTPS
 end
 
 
