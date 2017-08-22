@@ -30,6 +30,7 @@ Rails.application.routes.draw do
 
   #Removed HTTPS => all traffic forced to http
   match "(*path)", constraints: https_catchall, via: [:get], to: redirect { |params, request| "http://" + request.host_with_port + request.fullpath }
+
   get '/' => 'end#index'
   get '/home' => 'home#index'
 
