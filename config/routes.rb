@@ -11,9 +11,9 @@ Rails.application.routes.draw do
 
 # mount protected_app in Rails
 
-  # Concours 
+  # Concours
   competition_url = "https://lafabrique-france.aviva.com/voting/projet/vue/851"
-  constraints subdomain: "concours" do   
+  constraints subdomain: "concours" do
     get "/" => redirect { |params| competition_url }
   end
   get '/concours_lafabrique' => redirect(competition_url)
@@ -30,8 +30,8 @@ Rails.application.routes.draw do
 
   #Removed HTTPS => all traffic forced to http
   match "(*path)", constraints: https_catchall, via: [:get], to: redirect { |params, request| "http://" + request.host_with_port + request.fullpath }
-  
-  get '/' => 'home#index'
+  get '/' => 'end#index'
+  get '/home' => 'home#index'
 
   scope "(:locale)", locale: /en|fr/ do
     get 'comment-ca-marche' => 'home#faq',     as: 'faq'
@@ -84,5 +84,3 @@ end
   # match "offre(/*path)", constraints: http_catchall, via: [:get], to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
   match "pastouch(/*path)", constraints: http_catchall, via: [:get], to: redirect { |params, request| "https://" + request.host_with_port + request.fullpath }
 end
-
-

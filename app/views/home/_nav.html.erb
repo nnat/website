@@ -8,12 +8,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <%= link_to image_tag("home/new_logo.png", width: '50', style: "margin-top:5px"), root_path, alt: 'Risebox' %>
+            <%= link_to image_tag("home/new_logo.png", width: '50', style: "margin-top:5px"), '/home', alt: 'Risebox' %>
             <!-- <a class="navbar-brand" href="index.html">Risebox</a> -->
         </div>
         <%# link_to image_tag("home/new_logo.png", width: '50'), root_path %>
         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav scroll-to navbar-nav"> 
+            <ul class="nav scroll-to navbar-nav">
                 <li class="active"><%= link_to raw(t('.home')), root_path, id: 'home-nav-menu' %></li>
                 <li class="<%= 'active' if (@section == :specs)%>" ><%= link_to raw(t('.specs')), product_path, id: 'specs-nav-menu' %></li>
                 <li class="<%= 'active' if (@section == :services)%>" ><%= link_to raw(t('.services')), services_path, id: 'services-nav-menu' %></li>
@@ -29,7 +29,7 @@
                     </ul>
                 </li> -->
             </ul>
-            <ul class="nav navbar-nav navbar-right"> 
+            <ul class="nav navbar-nav navbar-right">
                 <% unless @section == :program %>
                     <li class="button-nav"><%= link_to t('.program'), versions_path, id: 'program-nav-menu', class: "btn btn-warning btn-lg" %></li>
                 <% end %>

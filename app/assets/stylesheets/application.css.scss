@@ -27,6 +27,21 @@
 @import "timeline";
 @import "riseicon";
 
+div.end-banner > h1 {
+  color:black;
+  text-transform:none;
+  font-size: 21px;
+}
+
+div.end-banner > p.lead {
+  color:black;
+  font-size: 14px;
+}
+
+div.end-banner .banner-buttons a.btn {
+  font-size: 14px;
+}
+
 .nav-pills > li.important > a {
   color: #fff;
   background-color: #5bc0de;
@@ -48,6 +63,21 @@
       vertical-align: middle;
       float: none;
     }
+    div.end-banner > h1 {
+      color:black;
+      text-transform:none;
+      font-size: 45px;
+    }
+
+    div.end-banner > p.lead {
+      color:black;
+      font-size: 21px;
+    }
+
+    div.end-banner .banner-buttons a.btn {
+      font-size: 18px;
+    }
+
 }
 
 /* changes to the theme */
@@ -92,4 +122,3 @@ body {
 	color: #7a7a7a;
 	font-size: 15px;
 }
-
